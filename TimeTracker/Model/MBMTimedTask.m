@@ -19,14 +19,18 @@
     if (self) {
         _client = client;
         _summaryOfWork = summaryOfWork;
-        _hourlyRate = hourlyRate;
-        _hoursWorked = hoursWorked;
+        _hourlyRate = [NSNumber numberWithDouble:hourlyRate];
+        _hoursWorked = [NSNumber numberWithDouble:hoursWorked];
     }
     return self;
 }
 
 - (double)total {
-    return self.hoursWorked * self.hourlyRate;
+    return [self.hourlyRate doubleValue] * [self.hoursWorked doubleValue];
 }
+
+//- (NSNumber numberWithDouble:total)total {
+//    return [self.hoursWorked doubleValue] * [self.hourlyRate doubleValue];
+//}
 
 @end

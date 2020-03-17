@@ -14,8 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic) NSString *client;
 @property (nonatomic) NSString *summaryOfWork;
-@property (nonatomic) double hourlyRate;
-@property (nonatomic) double hoursWorked;
+@property (nonatomic) NSNumber *hourlyRate;
+@property (nonatomic) NSNumber *hoursWorked;
 @property (readonly, nonatomic) double total;
 
 
