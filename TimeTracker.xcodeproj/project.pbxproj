@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1B56799524215E8C0021454B /* JLATimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B56799424215E8C0021454B /* JLATimedTask.m */; };
+		1B56799A242166FB0021454B /* JLATimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B567999242166FB0021454B /* JLATimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		1B56799324215E8C0021454B /* JLATimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLATimedTask.h; sourceTree = "<group>"; };
 		1B56799424215E8C0021454B /* JLATimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLATimedTask.m; sourceTree = "<group>"; };
+		1B567998242166FB0021454B /* JLATimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JLATimedTaskController.h; sourceTree = "<group>"; };
+		1B567999242166FB0021454B /* JLATimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JLATimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		1B56799624215E950021454B /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1B567998242166FB0021454B /* JLATimedTaskController.h */,
+				1B567999242166FB0021454B /* JLATimedTaskController.m */,
 			);
 			name = "Model Controller";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				1B56799A242166FB0021454B /* JLATimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				1B56799524215E8C0021454B /* JLATimedTask.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
