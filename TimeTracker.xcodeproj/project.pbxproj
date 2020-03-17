@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		4C1641AD24215DD700145D67 /* MBMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1641AC24215DD700145D67 /* MBMTimedTask.m */; };
+		4C1641B0242169F900145D67 /* MBMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1641AF242169F900145D67 /* MBMTimedTaskController.m */; };
+		4C1641B32421748500145D67 /* MBMTimedTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1641B22421748500145D67 /* MBMTimedTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C1641AB24215DD700145D67 /* MBMTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBMTimedTask.h; sourceTree = "<group>"; };
+		4C1641AC24215DD700145D67 /* MBMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBMTimedTask.m; sourceTree = "<group>"; };
+		4C1641AE242169F900145D67 /* MBMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBMTimedTaskController.h; path = TimeTracker/Model/MBMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		4C1641AF242169F900145D67 /* MBMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBMTimedTaskController.m; path = TimeTracker/Model/MBMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		4C1641B12421748500145D67 /* MBMTimedTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MBMTimedTrackerViewController.h; sourceTree = "<group>"; };
+		4C1641B22421748500145D67 /* MBMTimedTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MBMTimedTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +67,9 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
+				4C1641AA24215DB700145D67 /* View Controllers */,
+				4C1641A924215DAC00145D67 /* Model Controller */,
+				4C1641A824215D9B00145D67 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -90,25 +99,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		467FC85B23F3768C00C15592 /* Model */ = {
+		4C1641A824215D9B00145D67 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				4C1641AB24215DD700145D67 /* MBMTimedTask.h */,
+				4C1641AC24215DD700145D67 /* MBMTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
+		4C1641A924215DAC00145D67 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
+				4C1641AE242169F900145D67 /* MBMTimedTaskController.h */,
+				4C1641AF242169F900145D67 /* MBMTimedTaskController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		4C1641AA24215DB700145D67 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C1641B12421748500145D67 /* MBMTimedTrackerViewController.h */,
+				4C1641B22421748500145D67 /* MBMTimedTrackerViewController.m */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +152,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MBM;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -181,9 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1641B32421748500145D67 /* MBMTimedTrackerViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				4C1641B0242169F900145D67 /* MBMTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				4C1641AD24215DD700145D67 /* MBMTimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +343,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +360,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = V5X7HQSSM6;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
