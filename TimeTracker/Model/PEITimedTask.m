@@ -12,8 +12,8 @@
 
 - (instancetype)initWithClientName:(NSString *)clientName
                        workSummary:(NSString *)workSummary
-                        hourlyRate:(int)hourlyrate
-                        timeWorked:(int)timeWorked {
+                        hourlyRate:(double)hourlyrate
+                        timeWorked:(double)timeWorked {
                             // total:(double *)total
     self = [super init];
     if (self) {

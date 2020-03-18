@@ -20,8 +20,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)initWithClientName:(NSString *)clientName
                        workSummary:(NSString *)workSummary
-                        hourlyRate:(int)hourlyrate
-                        timeWorked:(int)timeWorked;
+                        hourlyRate:(double)hourlyrate
+                        timeWorked:(double)timeWorked;
+
+-(void)addTask:(PEITimedTask *)task;
 
 
 @end
