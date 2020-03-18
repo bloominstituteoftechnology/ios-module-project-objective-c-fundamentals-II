@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		457153462421AD1000F1CDC5 /* PEITimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 457153452421AD1000F1CDC5 /* PEITimedTask.m */; };
+		4571534924226DF200F1CDC5 /* PEITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4571534824226DF200F1CDC5 /* PEITimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		457153442421AD1000F1CDC5 /* PEITimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEITimedTask.h; sourceTree = "<group>"; };
 		457153452421AD1000F1CDC5 /* PEITimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEITimedTask.m; sourceTree = "<group>"; };
+		4571534724226DF200F1CDC5 /* PEITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PEITimedTaskController.h; sourceTree = "<group>"; };
+		4571534824226DF200F1CDC5 /* PEITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PEITimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -47,6 +50,8 @@
 			children = (
 				457153442421AD1000F1CDC5 /* PEITimedTask.h */,
 				457153452421AD1000F1CDC5 /* PEITimedTask.m */,
+				4571534724226DF200F1CDC5 /* PEITimedTaskController.h */,
+				4571534824226DF200F1CDC5 /* PEITimedTaskController.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				457153462421AD1000F1CDC5 /* PEITimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				4571534924226DF200F1CDC5 /* PEITimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
