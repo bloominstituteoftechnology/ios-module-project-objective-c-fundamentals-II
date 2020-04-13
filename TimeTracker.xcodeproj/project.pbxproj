@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		92C6D2EB2443ED810048FAF7 /* TTATimeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6D2EA2443ED810048FAF7 /* TTATimeTracker.m */; };
+		92C6D2F02443F5F50048FAF7 /* TTATimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92C6D2EF2443F5F50048FAF7 /* TTATimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		92C6D2E92443ED810048FAF7 /* TTATimeTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTATimeTracker.h; sourceTree = "<group>"; };
 		92C6D2EA2443ED810048FAF7 /* TTATimeTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTATimeTracker.m; sourceTree = "<group>"; };
+		92C6D2EE2443F5F50048FAF7 /* TTATimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TTATimedTaskController.h; sourceTree = "<group>"; };
+		92C6D2EF2443F5F50048FAF7 /* TTATimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TTATimedTaskController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		92C6D2EC2443ED8F0048FAF7 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				92C6D2EE2443F5F50048FAF7 /* TTATimedTaskController.h */,
+				92C6D2EF2443F5F50048FAF7 /* TTATimedTaskController.m */,
 			);
 			name = "Model Controller";
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C6D2F02443F5F50048FAF7 /* TTATimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
