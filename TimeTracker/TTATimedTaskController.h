@@ -14,7 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTATimedTaskController : NSObject
 
-@property(nonatomic, readonly, copy) NSArray<TTATimeTracker *> *timedTasks;
+@property (nonatomic, readonly, copy) NSArray<TTATimeTracker *> *timedTasks;
+
+@property (nonatomic, readonly) NSUInteger taskCount;
+
+- (TTATimeTracker *)taskAtIndex:(NSUInteger)index;
+
+- (void)addTimedTask:(TTATimeTracker *)aTimedTask;
 
 @end
 
