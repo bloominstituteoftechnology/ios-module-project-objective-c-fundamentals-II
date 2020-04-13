@@ -12,11 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTATimeTracker : NSObject
 
-@property (nonatomic, readonly, copy) NSString *client;
-@property (nonatomic, readonly, copy) NSString *summary;
-@property (nonatomic, readonly) double hourlyRate;
-@property (nonatomic, readonly) double numberOfHours;
-@property (nonatomic, readonly) double totalCost;
+@property (nonatomic, copy) NSString *client;
+@property (nonatomic, copy) NSString *summary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) double numberOfHours;
+@property (nonatomic) double totalCost;
+
+- (instancetype)initWithClient:(NSString *)client
+                     summary:(NSString *)summary
+                  hourlyRate:(double)hourlyRate
+                 numberOfHours:(double)numberOfHours;
 
 @end
 

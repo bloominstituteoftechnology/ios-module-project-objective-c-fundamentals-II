@@ -10,4 +10,21 @@
 
 @implementation TTATimeTracker
 
+- (instancetype)initWithClient:(NSString *)client
+                       summary:(NSString *)summary
+                    hourlyRate:(double)hourlyRate
+                 numberOfHours:(double)numberOfHours
+
+{
+    if (self = [super init]) {
+        _client = client.copy;
+        _summary = summary.copy;
+        _hourlyRate = hourlyRate;
+        _numberOfHours = numberOfHours;
+    }
+    return self;
+}
+
+
+
 @end
