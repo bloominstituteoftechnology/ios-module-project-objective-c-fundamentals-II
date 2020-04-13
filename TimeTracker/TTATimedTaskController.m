@@ -8,6 +8,17 @@
 
 #import "TTATimedTaskController.h"
 
+@interface TTATimedTaskController () {
+    NSMutableArray *_internalTimedTask;
+    
+    
+}
+
+@end
+
+
 @implementation TTATimedTaskController
+
+
 
 @end
