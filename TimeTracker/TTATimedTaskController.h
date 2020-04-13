@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly, copy) NSArray<TTATimeTracker *> *timedTasks;
 
-@property (nonatomic, readonly) NSUInteger taskCount;
+@property (nonatomic, readonly) NSUInteger timedTasksCount;
 
 - (TTATimeTracker *)taskAtIndex:(NSUInteger)index;
 
