@@ -30,4 +30,9 @@
     return _internalTimedTask.copy;
 }
 
+- (NSUInteger)timedTasksCount
+{
+    return _internalTimedTask.count;
+}
+
 @end
