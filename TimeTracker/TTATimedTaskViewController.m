@@ -37,17 +37,46 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.timedTaskController = [[TTATimedTaskController alloc] init];
+    
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
+// IBActions
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)logTask:(id)sender
+{
+    _client = _clientTextField.text;
+    _summary = _summaryTextField.text;
+    _hourlyRate = [_hourlyRateTextField.text doubleValue];
+    _numberOfHours = [_numberOfHoursTextField.text doubleValue];
+    
+    [_timedTaskController addTimedTask:[[TTATimeTracker alloc] initWithClient:_client
+                                                                      summary:_summary
+                                                                   hourlyRate:_hourlyRate
+                                                                numberOfHours:_numberOfHours]];
+    [_tableView reloadData];
+    
 }
-*/
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [_timedTaskController timedTasksCount];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimeTrackerCell" forIndexPath:indexPath];
+    
+    TTATimeTracker *timedTask = [_timedTaskController taskAtIndex:indexPath.row];
+    NSNumber *totalCostDouble = [NSNumber numberWithDouble: timedTask.totalCost];
+    
+    cell.textLabel.text = timedTask.client;
+    cell.detailTextLabel.text = [totalCostDouble stringValue];
+    
+    
+    return cell;
+}
 
 @end
