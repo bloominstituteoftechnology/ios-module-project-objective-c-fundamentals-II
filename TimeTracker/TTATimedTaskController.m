@@ -10,8 +10,6 @@
 
 @interface TTATimedTaskController () {
     NSMutableArray *_internalTimedTask;
-    
-    
 }
 
 @end
@@ -19,6 +17,17 @@
 
 @implementation TTATimedTaskController
 
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalTimedTask = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
+- (NSArray<TTATimeTracker *> *)timedTasks
+{
+    return _internalTimedTask.copy;
+}
 
 @end
