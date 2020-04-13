@@ -25,6 +25,8 @@
     return self;
 }
 
-
+- (double)totalCost {
+    return _hourlyRate * _numberOfHours;
+}
 
 @end
