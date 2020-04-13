@@ -71,6 +71,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
                                         <rect key="frame" x="0.0" y="168" width="374" height="30"/>
                                         <state key="normal" title="Log Time"/>
+                                        <connections>
+                                            <action selector="logTask:" destination="QVk-7N-MGS" eventType="primaryActionTriggered" id="QDa-Yd-B1h"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -7,14 +7,29 @@
 //
 
 #import "TTATimedTaskViewController.h"
+#import "TTATimedTaskController.h"
+#import "TTATimeTracker.h"
 
 @interface TTATimedTaskViewController ()
 
+// Private Properties
+@property (nonatomic) NSString *client;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) double numberOfHours;
+//@property (nonatomic) double total;
+
+@property (nonatomic) TTATimedTaskController *timedTaskController;
+
+// Private IBOutlets
 @property (nonatomic) IBOutlet UITextField *clientTextField;
 @property (nonatomic) IBOutlet UITextField *summaryTextField;
 @property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (nonatomic) IBOutlet UITextField *numberOfHoursTextField;
 @property (nonatomic) IBOutlet UITableView *tableView;
+
+//Private methods
+//- (void)logTask;
 
 @end
 
