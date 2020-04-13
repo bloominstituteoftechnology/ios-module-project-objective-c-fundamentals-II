@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Tracker View Controller-->
+        <!--Timed Task View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="TTATimedTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
+                    <connections>
+                        <outlet property="clientTextField" destination="sqz-sU-Pxu" id="D8z-fS-ehW"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="PUT-wt-X51"/>
+                        <outlet property="numberOfHoursTextField" destination="hJY-xA-vK5" id="UuQ-bh-adb"/>
+                        <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="jqA-qC-QPY"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="b5k-LD-Xlj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
