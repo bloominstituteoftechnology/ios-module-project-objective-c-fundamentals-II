@@ -58,6 +58,10 @@
                                                                 numberOfHours:_numberOfHours]];
     [_tableView reloadData];
     
+    _clientTextField.text = @"";
+    _summaryTextField.text = @"";
+    _hourlyRateTextField.text = @"";
+    _numberOfHoursTextField.text = @"";
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -70,10 +74,9 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimeTrackerCell" forIndexPath:indexPath];
     
     TTATimeTracker *timedTask = [_timedTaskController taskAtIndex:indexPath.row];
-    NSNumber *totalCostDouble = [NSNumber numberWithDouble: timedTask.totalCost];
     
     cell.textLabel.text = timedTask.client;
-    cell.detailTextLabel.text = [totalCostDouble stringValue];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.totalCost];
     
     
     return cell;
