@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		B669F01424464A17002E27CE /* NPTTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = B669F01324464A17002E27CE /* NPTTimedTask.m */; };
 		B669F01724464E1C002E27CE /* NPTTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669F01624464E1C002E27CE /* NPTTimedTaskController.m */; };
+		B669F01A24465241002E27CE /* NPTTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B669F01924465241002E27CE /* NPTTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		B669F01324464A17002E27CE /* NPTTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTTimedTask.m; sourceTree = SOURCE_ROOT; };
 		B669F01524464E1C002E27CE /* NPTTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTTimedTaskController.h; sourceTree = "<group>"; };
 		B669F01624464E1C002E27CE /* NPTTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTTimedTaskController.m; sourceTree = "<group>"; };
+		B669F01824465241002E27CE /* NPTTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTTimeTrackerViewController.h; sourceTree = "<group>"; };
+		B669F01924465241002E27CE /* NPTTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				467FC85323F373C900C15592 /* Resources */,
 				B669F01524464E1C002E27CE /* NPTTimedTaskController.h */,
 				B669F01624464E1C002E27CE /* NPTTimedTaskController.m */,
+				B669F01824465241002E27CE /* NPTTimeTrackerViewController.h */,
+				B669F01924465241002E27CE /* NPTTimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				B669F01724464E1C002E27CE /* NPTTimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				B669F01424464A17002E27CE /* NPTTimedTask.m in Sources */,
+				B669F01A24465241002E27CE /* NPTTimeTrackerViewController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);

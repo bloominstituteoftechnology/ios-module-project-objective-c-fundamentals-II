@@ -7,14 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-
-NS_ASSUME_NONNULL_BEGIN
 @class NPTTimedTask;
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NPTTimedTaskController : NSObject
 
 @property (nonatomic,readonly) NSMutableArray<NPTTimedTask*> * timeTasks;
 
--(void)createTaskWithClient:(NSString*)client summary:(NSString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked;
+-(void)createTaskWithClient:(NSString*)client
+                    summary:(NSString*)summary
+                 hourlyRate:(double)hourlyRate
+                 timeWorked:(double)timeWorked;
 
 @end
 
