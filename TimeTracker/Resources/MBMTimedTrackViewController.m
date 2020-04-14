@@ -41,4 +41,35 @@
     self.tableView.delegate = self;
 }
 
+// MARK: - IBActions
+- (IBAction)logTime:(id)sender {
+    if (self.taskToUpdate == nil) {
+        _client = _clientNameTextField.text;
+        _summaryOfWork = _summaryTextField.text;
+        _hourlyRate = [_hourlyRateTextField.text doubleValue];
+        _hoursWorked = [_hoursWorkedTextField.text doubleValue];
+        
+        [self.timedTaskController createTimedTaskWithClient:_client summaryOfWork:_summaryOfWork hourlyRate:_hourlyRate hoursWorked:_hoursWorked];
+        [self.tableView reloadData];
+        
+        _clientNameTextField.text = nil;
+        _summaryTextField.text = nil;
+        _hourlyRateTextField.text = nil;
+        _hoursWorkedTextField.text = nil;
+    } else {
+        self.taskToUpdate.client = _clientNameTextField.text;
+        self.taskToUpdate.summaryOfWork = _summaryTextField.text;
+        self.taskToUpdate.hourlyRate = [NSNumber numberWithDouble:[_hourlyRateTextField.text doubleValue]];
+        self.taskToUpdate.hoursWorked = [NSNumber numberWithDouble:[_hoursWorkedTextField.text doubleValue]];
+        
+        [self.timedTaskController.timedTasks replaceObjectAtIndex:(self.index) withObject:self.taskToUpdate];
+        NSLog(@"%d is the index", self.index);
+        [self.tableView reloadData];
+        _clientNameTextField.text = nil;
+        _summaryTextField.text = nil;
+        _hourlyRateTextField.text = nil;
+        _hoursWorkedTextField.text = nil;
+    }
+}
+
 @end
