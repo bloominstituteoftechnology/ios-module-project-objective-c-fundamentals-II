@@ -13,6 +13,7 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		7270759E24464A85002FE24D /* CDGTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7270759D24464A85002FE24D /* CDGTimedTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7270759C24464A85002FE24D /* CDGTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGTimedTask.h; sourceTree = "<group>"; };
+		7270759D24464A85002FE24D /* CDGTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGTimedTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				467FC85C23F376B400C15592 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
+				7270759C24464A85002FE24D /* CDGTimedTask.h */,
+				7270759D24464A85002FE24D /* CDGTimedTask.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -182,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				7270759E24464A85002FE24D /* CDGTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
