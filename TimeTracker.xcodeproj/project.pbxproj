@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		7270759E24464A85002FE24D /* CDGTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7270759D24464A85002FE24D /* CDGTimedTask.m */; };
 		727075A1244650E3002FE24D /* CDGTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727075A0244650E3002FE24D /* CDGTimedTaskController.m */; };
+		727075A424465830002FE24D /* CDGTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 727075A324465830002FE24D /* CDGTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		7270759D24464A85002FE24D /* CDGTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGTimedTask.m; sourceTree = "<group>"; };
 		7270759F244650E3002FE24D /* CDGTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGTimedTaskController.h; sourceTree = "<group>"; };
 		727075A0244650E3002FE24D /* CDGTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGTimedTaskController.m; sourceTree = "<group>"; };
+		727075A224465830002FE24D /* CDGTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDGTimeTrackerViewController.h; sourceTree = "<group>"; };
+		727075A324465830002FE24D /* CDGTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CDGTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				7270759D24464A85002FE24D /* CDGTimedTask.m */,
 				7270759F244650E3002FE24D /* CDGTimedTaskController.h */,
 				727075A0244650E3002FE24D /* CDGTimedTaskController.m */,
+				727075A224465830002FE24D /* CDGTimeTrackerViewController.h */,
+				727075A324465830002FE24D /* CDGTimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				727075A424465830002FE24D /* CDGTimeTrackerViewController.m in Sources */,
 				727075A1244650E3002FE24D /* CDGTimedTaskController.m in Sources */,
 				7270759E24464A85002FE24D /* CDGTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
