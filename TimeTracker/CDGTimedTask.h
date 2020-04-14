@@ -14,19 +14,24 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: - Properties
 
-@property NSString *clientName;
-@property NSString *workoutDescription;
+@property (nonatomic, copy) NSString *clientName;
+@property (nonatomic, copy) NSString *workoutDescription;
 @property double hourlyRate;
 @property double hoursWorked;
-@property double total;
+- (double)total;
 
 // MARK: - Initializer
 
 -(instancetype)initWithClientName:(NSString *)clientName
                workoutDescription:(NSString *)workoutDescription
                        hourlyRate:(double)hourlyRate
-                      hoursWorked:(double)hoursWorked
-                            total:(double)total;
+                      hoursWorked:(double)hoursWorked;
+//                            total:(double)total;
+
+// MARK: - Methods
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
