@@ -13,6 +13,7 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		5CE57F192446550C00BD527A /* MBMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE57F182446550C00BD527A /* MBMTimedTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5CE57F172446550C00BD527A /* MBMTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBMTimedTask.h; path = TimeTracker/Resources/MBMTimedTask.h; sourceTree = SOURCE_ROOT; };
+		5CE57F182446550C00BD527A /* MBMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBMTimedTask.m; path = TimeTracker/Resources/MBMTimedTask.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +96,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5CE57F172446550C00BD527A /* MBMTimedTask.h */,
+				5CE57F182446550C00BD527A /* MBMTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				5CE57F192446550C00BD527A /* MBMTimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
