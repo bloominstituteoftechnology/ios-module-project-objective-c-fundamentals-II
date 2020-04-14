@@ -63,7 +63,7 @@
     
     NPTTimedTask * task = [self.timedTaskController.timeTasks objectAtIndex:indexPath.row];
     
-      NSString * total = [NSString stringWithFormat:@"%2f", task.totalPay];
+      NSString * total = [NSString stringWithFormat:@"%0.2f$", task.totalPay];
     
     cell.textLabel.text = task.client;
     cell.detailTextLabel.text = total;

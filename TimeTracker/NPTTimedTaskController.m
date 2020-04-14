@@ -21,10 +21,11 @@
     self = [super init];
     if (self) {
         _internalTask = [[NSMutableArray alloc]init];
+      
     }
     return self;
 }
--(NSArray<NPTTimedTask*>*)tasks {
+-(NSArray<NPTTimedTask*>*)timeTasks {
     return [self.internalTask copy];
 }
 
