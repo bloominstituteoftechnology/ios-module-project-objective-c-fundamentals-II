@@ -29,8 +29,8 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B669F01224464A17002E27CE /* NPTTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTTimedTask.h; sourceTree = SOURCE_ROOT; };
-		B669F01324464A17002E27CE /* NPTTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTTimedTask.m; sourceTree = SOURCE_ROOT; };
+		B669F01224464A17002E27CE /* NPTTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = NPTTimedTask.h; path = TimeTracker/Model/NPTTimedTask.h; sourceTree = SOURCE_ROOT; };
+		B669F01324464A17002E27CE /* NPTTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = NPTTimedTask.m; path = TimeTracker/Model/NPTTimedTask.m; sourceTree = SOURCE_ROOT; };
 		B669F01524464E1C002E27CE /* NPTTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTTimedTaskController.h; sourceTree = "<group>"; };
 		B669F01624464E1C002E27CE /* NPTTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NPTTimedTaskController.m; sourceTree = "<group>"; };
 		B669F01824465241002E27CE /* NPTTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NPTTimeTrackerViewController.h; sourceTree = "<group>"; };
@@ -52,7 +52,6 @@
 			isa = PBXGroup;
 			children = (
 				467FC83923F3738B00C15592 /* TimeTracker */,
-				467FC83823F3738B00C15592 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,22 +61,17 @@
 				467FC83723F3738B00C15592 /* TimeTracker.app */,
 			);
 			name = Products;
+			path = ../..;
 			sourceTree = "<group>";
 		};
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				B669F01224464A17002E27CE /* NPTTimedTask.h */,
-				B669F01324464A17002E27CE /* NPTTimedTask.m */,
 				467FC85D23F3784C00C15592 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
 				467FC85C23F376B400C15592 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
-				B669F01524464E1C002E27CE /* NPTTimedTaskController.h */,
-				B669F01624464E1C002E27CE /* NPTTimedTaskController.m */,
-				B669F01824465241002E27CE /* NPTTimeTrackerViewController.h */,
-				B669F01924465241002E27CE /* NPTTimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -108,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B669F01224464A17002E27CE /* NPTTimedTask.h */,
+				B669F01324464A17002E27CE /* NPTTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +111,9 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B669F01824465241002E27CE /* NPTTimeTrackerViewController.h */,
+				B669F01924465241002E27CE /* NPTTimeTrackerViewController.m */,
+				467FC83823F3738B00C15592 /* Products */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -122,6 +121,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B669F01524464E1C002E27CE /* NPTTimedTaskController.h */,
+				B669F01624464E1C002E27CE /* NPTTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";

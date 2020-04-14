@@ -32,7 +32,6 @@
 
 -(void)createTaskWithClient:(NSString*)client summary:(NSString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
     
-//    NPTTimedTask *task = [NPTTimedTask.new initWithClient:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
     NPTTimedTask * task = [[NPTTimedTask alloc] initWithClient:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
     
     [self.internalTask addObject:task];

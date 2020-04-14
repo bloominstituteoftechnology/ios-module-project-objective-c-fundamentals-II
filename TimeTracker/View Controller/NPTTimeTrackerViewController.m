@@ -12,10 +12,13 @@
 
 @interface NPTTimeTrackerViewController ()
 
-@property(nonatomic) NPTTimedTaskController *timedTaskController;
+//MARK:- Properties
 
+@property(nonatomic) NPTTimedTaskController *timedTaskController;
 @property(nonatomic) double timeWorked;
 @property(nonatomic) double hourlyRate;
+
+//MARK:- Outlets
 
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
 @property (strong, nonatomic) IBOutlet UITextField *summaryTextField;
@@ -41,6 +44,7 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
+//MARK:- Actions
 
 - (IBAction)logTimeButtonPressed:(UIButton *)sender {
     
@@ -59,7 +63,7 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"LogCell" forIndexPath:indexPath];
+    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
     NPTTimedTask * task = [self.timedTaskController.timeTasks objectAtIndex:indexPath.row];
     
