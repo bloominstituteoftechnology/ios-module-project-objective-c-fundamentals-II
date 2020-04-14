@@ -71,5 +71,38 @@
         _hoursWorkedTextField.text = nil;
     }
 }
+// MARK: - Methods
+- (NSNumberFormatter *)formatter {
+    if (!_formatter) {
+        _formatter = [[NSNumberFormatter alloc] init];
+        _formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    }
+    return _formatter;
+}
+
+// MARK: TableView DataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.timedTaskController.timedTasks.count;
+}
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    MBMTimedTask *task = self.timedTaskController.timedTasks[indexPath.row];
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [self.formatter stringFromNumber:@(task.total)];
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    MBMTimedTask *selectedTask = self.timedTaskController.timedTasks[indexPath.row];
+    _clientNameTextField.text = selectedTask.client;
+    _summaryTextField.text = selectedTask.summaryOfWork;
+    _hourlyRateTextField.text = [selectedTask.hourlyRate stringValue];
+    _hoursWorkedTextField.text = [selectedTask.hoursWorked stringValue];
+    
+    NSUInteger indexToUpdate = [self.timedTaskController.timedTasks indexOfObject:selectedTask];
+    self.index = (int) indexToUpdate;
+    self.taskToUpdate = selectedTask;
+}
 
 @end
