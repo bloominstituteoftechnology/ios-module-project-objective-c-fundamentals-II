@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		4EE489322446733800631A5F /* TimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE489312446733800631A5F /* TimedTask.m */; };
+		4EE489352446753600631A5F /* EPWTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EE489342446753600631A5F /* EPWTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4EE489302446733800631A5F /* TimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimedTask.h; sourceTree = "<group>"; };
 		4EE489312446733800631A5F /* TimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimedTask.m; sourceTree = "<group>"; };
+		4EE489332446753600631A5F /* EPWTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EPWTimedTaskController.h; path = TimeTracker/Storyboards/EPWTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		4EE489342446753600631A5F /* EPWTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EPWTimedTaskController.m; path = TimeTracker/Storyboards/EPWTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4EE489332446753600631A5F /* EPWTimedTaskController.h */,
+				4EE489342446753600631A5F /* EPWTimedTaskController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				4EE489322446733800631A5F /* TimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				4EE489352446753600631A5F /* EPWTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
