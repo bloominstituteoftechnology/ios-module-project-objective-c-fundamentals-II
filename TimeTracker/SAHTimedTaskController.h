@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 
+@class SAHTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SAHTimedTaskController : NSObject
+
+@property (nonatomic, readonly, copy) NSMutableArray<SAHTimedTask *> *timedTasks;
+
+- (instancetype)init;
+
+- (void) createTimedTaskWithClient:(NSString *)client summary:(NSString *)summary rate:(double)rate hoursWorked:(double)hoursWorked;
 
 @end
 
