@@ -20,8 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 -(instancetype)initWithClient:(NSString*)client
-                      summary:(NSString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked
-                     totalPay:(double)totalPay;
+                      summary:(NSString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked;
+                    
 
                      
 
