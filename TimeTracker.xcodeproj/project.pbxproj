@@ -13,6 +13,8 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		D2C0CF47244657F10010EEAE /* SAHTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C0CF46244657F10010EEAE /* SAHTimedTask.m */; };
+		D2C0CF4A24465A240010EEAE /* SAHTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = D2C0CF4924465A240010EEAE /* SAHTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D2C0CF45244657F10010EEAE /* SAHTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SAHTimedTask.h; path = TimeTracker/SAHTimedTask.h; sourceTree = SOURCE_ROOT; };
+		D2C0CF46244657F10010EEAE /* SAHTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SAHTimedTask.m; path = TimeTracker/SAHTimedTask.m; sourceTree = SOURCE_ROOT; };
+		D2C0CF4824465A240010EEAE /* SAHTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SAHTimedTaskController.h; path = TimeTracker/SAHTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		D2C0CF4924465A240010EEAE /* SAHTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SAHTimedTaskController.m; path = TimeTracker/SAHTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +99,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D2C0CF45244657F10010EEAE /* SAHTimedTask.h */,
+				D2C0CF46244657F10010EEAE /* SAHTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D2C0CF4824465A240010EEAE /* SAHTimedTaskController.h */,
+				D2C0CF4924465A240010EEAE /* SAHTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -183,7 +193,9 @@
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				D2C0CF4A24465A240010EEAE /* SAHTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				D2C0CF47244657F10010EEAE /* SAHTimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,7 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 7SF2KFH336;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -341,7 +353,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = VXUQXR6S56;
+				DEVELOPMENT_TEAM = 7SF2KFH336;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
