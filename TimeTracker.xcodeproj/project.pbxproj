@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		5CE57F192446550C00BD527A /* MBMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE57F182446550C00BD527A /* MBMTimedTask.m */; };
 		5CE57F1C24465A3500BD527A /* MBMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE57F1B24465A3500BD527A /* MBMTimedTaskController.m */; };
+		5CE57F1F24465E3000BD527A /* MBMTimedTrackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5CE57F1E24465E3000BD527A /* MBMTimedTrackViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		5CE57F182446550C00BD527A /* MBMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBMTimedTask.m; path = TimeTracker/Resources/MBMTimedTask.m; sourceTree = SOURCE_ROOT; };
 		5CE57F1A24465A3500BD527A /* MBMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBMTimedTaskController.h; path = TimeTracker/Resources/MBMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		5CE57F1B24465A3500BD527A /* MBMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBMTimedTaskController.m; path = TimeTracker/Resources/MBMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		5CE57F1D24465E3000BD527A /* MBMTimedTrackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MBMTimedTrackViewController.h; path = TimeTracker/Resources/MBMTimedTrackViewController.h; sourceTree = SOURCE_ROOT; };
+		5CE57F1E24465E3000BD527A /* MBMTimedTrackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MBMTimedTrackViewController.m; path = TimeTracker/Resources/MBMTimedTrackViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5CE57F1D24465E3000BD527A /* MBMTimedTrackViewController.h */,
+				5CE57F1E24465E3000BD527A /* MBMTimedTrackViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				5CE57F1C24465A3500BD527A /* MBMTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				5CE57F1F24465E3000BD527A /* MBMTimedTrackViewController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				5CE57F192446550C00BD527A /* MBMTimedTask.m in Sources */,
 			);

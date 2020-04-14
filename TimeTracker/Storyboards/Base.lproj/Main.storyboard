@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QVk-7N-MGS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QVk-7N-MGS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Tracker View Controller-->
+        <!--Timed Track View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="MBMTimedTrackViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,6 +87,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
+                    <connections>
+                        <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="I0f-zX-Hvz"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="WPq-y7-QTj"/>
+                        <outlet property="hoursWorkedTextField" destination="hJY-xA-vK5" id="uUL-eU-VKt"/>
+                        <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="s1E-8a-QqD"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="jdf-GM-oL6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
