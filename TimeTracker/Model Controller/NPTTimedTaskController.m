@@ -17,7 +17,7 @@
 
 @implementation NPTTimedTaskController
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _internalTask = [[NSMutableArray alloc]init];
@@ -25,12 +25,12 @@
     }
     return self;
 }
--(NSArray<NPTTimedTask*>*)timeTasks {
+- (NSArray<NPTTimedTask*>*)timeTasks {
     return [self.internalTask copy];
 }
 
 
--(void)createTaskWithClient:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
+- (void)createTaskWithClient:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
     
     NPTTimedTask * task = [[NPTTimedTask alloc] initWithClient:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
     
@@ -39,24 +39,24 @@
     
 }
 
--(void)updateTaskWithTask:(NPTTimedTask*)task client:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
+- (void)updateTaskWithTask:(NPTTimedTask*)task client:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
     
-    NSUInteger index = [self.timeTasks indexOfObject:task];
+//    NSUInteger index = [self.timeTasks indexOfObject:task];
     
     NPTTimedTask * scratch  = task;
     
-    [scratch.client setString:client];
+    scratch.client =client;
     
-    [scratch.summary setString:summary];
+    scratch.summary =summary;
     
     scratch.hourlyRate = hourlyRate;
     
     scratch.timeWorked = timeWorked;
     
-
-    [self.timeTasks removeObjectAtIndex:index];
-    
-    self.timeTasks[index] = scratch;
+//
+//    [self.timeTasks removeObjectAtIndex:index];
+//
+//    self.timeTasks[index] = scratch;
 }
 
 

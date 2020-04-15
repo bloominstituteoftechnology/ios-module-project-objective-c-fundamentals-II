@@ -12,16 +12,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPTTimedTaskController : NSObject
 
-@property (nonatomic,readonly) NSMutableArray<NPTTimedTask*> * timeTasks;
+@property (nonatomic,readonly) NSMutableArray<NPTTimedTask*> *timeTasks;
 
--(void)createTaskWithClient:(NSMutableString*)client
-                    summary:(NSMutableString*)summary
+- (void)createTaskWithClient:(NSString *)client
+                    summary:(NSString *)summary
                  hourlyRate:(double)hourlyRate
                  timeWorked:(double)timeWorked;
 
--(void)updateTaskWithTask:(NPTTimedTask*)task
-                   client:(NSMutableString*)client
-                  summary:(NSMutableString*)summary
+- (void)updateTaskWithTask:(NPTTimedTask *)task
+                   client:(NSString *)client
+                  summary:(NSString *)summary
                hourlyRate:(double)hourlyRate
                timeWorked:(double)timeWorked;
 @end

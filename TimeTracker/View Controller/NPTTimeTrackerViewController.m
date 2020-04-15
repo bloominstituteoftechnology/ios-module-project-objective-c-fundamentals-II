@@ -26,8 +26,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-
-
 @end
 
 
@@ -36,11 +34,15 @@
   
 //MARK:- View Life Cycle
 
--(void)viewDidLoad{
+- (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.isUpdated = NO;
+    
     self.timedTaskController = [[NPTTimedTaskController alloc] init];
+    
     [self.clientNameTextField becomeFirstResponder];
+    
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
@@ -48,19 +50,21 @@
 
 - (IBAction)logTimeButtonPressed:(UIButton *)sender {
     if (self.isUpdated) {
-        NSIndexPath * selectedIndexPath = [self.tableView indexPathForSelectedRow];
+        
+        NSIndexPath *selectedIndexPath = [self.tableView indexPathForSelectedRow];
         
         NPTTimedTask *task = [self.timedTaskController.timeTasks objectAtIndex:selectedIndexPath.row];
         
-        NSMutableString * client = [self.clientNameTextField.text mutableCopy];
+        NSMutableString *client = [self.clientNameTextField.text mutableCopy];
         
-        NSMutableString * summary = [self.self.summaryTextField.text mutableCopy];
+        NSMutableString *summary = [self.self.summaryTextField.text mutableCopy];
+        
         
         [self.timedTaskController updateTaskWithTask:task
                                               client:client
                                              summary:summary
-                                          hourlyRate:self.hourlyRate
-                                          timeWorked:self.timeWorked];
+                                          hourlyRate:[self.hourlyRateTextField.text doubleValue]
+                                          timeWorked:[self.timeWorkedTextField.text doubleValue]];
         
         [self.tableView reloadData];
         
@@ -81,17 +85,17 @@
 
 
 //MARK:- UITableViewDataSource
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.timedTaskController.timeTasks.count;
 }
 
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID forIndexPath:indexPath];
     
-    NPTTimedTask * task = [self.timedTaskController.timeTasks objectAtIndex:indexPath.row];
+    NPTTimedTask *task = [self.timedTaskController.timeTasks objectAtIndex:indexPath.row];
     
-      NSString * total = [NSString stringWithFormat:@"%0.2f$", task.totalPay];
+      NSString *total = [NSString stringWithFormat:@"%0.2f$", task.totalPay];
     
     cell.textLabel.text = task.client;
     
@@ -102,7 +106,7 @@
     
     NSIndexPath  *selectedIndexPath = [tableView indexPathForSelectedRow];
     
-    NPTTimedTask * selectedTask = [self.timedTaskController.timeTasks objectAtIndex:selectedIndexPath.row];
+    NPTTimedTask *selectedTask = [self.timedTaskController.timeTasks objectAtIndex:selectedIndexPath.row];
     
     [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
     
@@ -115,8 +119,7 @@
     self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.0f",selectedTask.timeWorked];
     
     self.isUpdated = YES;
-    
-    
+  
 }
 
 @end

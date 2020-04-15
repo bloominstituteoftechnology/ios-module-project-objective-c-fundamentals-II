@@ -11,8 +11,8 @@
 @implementation NPTTimedTask
 @synthesize totalPay = _totalPay;
 
--(instancetype)initWithClient:(NSMutableString*)client
-                      summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked
+- (instancetype)initWithClient:(NSMutableString *)client
+                      summary:(NSMutableString *)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked
                      {
     self = [super init];
     if (self) {
