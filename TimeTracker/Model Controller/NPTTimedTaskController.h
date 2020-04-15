@@ -14,11 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,readonly) NSMutableArray<NPTTimedTask*> * timeTasks;
 
--(void)createTaskWithClient:(NSString*)client
-                    summary:(NSString*)summary
+-(void)createTaskWithClient:(NSMutableString*)client
+                    summary:(NSMutableString*)summary
                  hourlyRate:(double)hourlyRate
                  timeWorked:(double)timeWorked;
 
+-(void)updateTaskWithTask:(NPTTimedTask*)task
+                   client:(NSMutableString*)client
+                  summary:(NSMutableString*)summary
+               hourlyRate:(double)hourlyRate
+               timeWorked:(double)timeWorked;
 @end
 
 NS_ASSUME_NONNULL_END

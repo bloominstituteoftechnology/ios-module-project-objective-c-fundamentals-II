@@ -30,13 +30,33 @@
 }
 
 
--(void)createTaskWithClient:(NSString*)client summary:(NSString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
+-(void)createTaskWithClient:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
     
     NPTTimedTask * task = [[NPTTimedTask alloc] initWithClient:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
     
     [self.internalTask addObject:task];
     
     
+}
+
+-(void)updateTaskWithTask:(NPTTimedTask*)task client:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
+    
+    NSUInteger index = [self.timeTasks indexOfObject:task];
+    
+    NPTTimedTask * scratch  = task;
+    
+    [scratch.client setString:client];
+    
+    [scratch.summary setString:summary];
+    
+    scratch.hourlyRate = hourlyRate;
+    
+    scratch.timeWorked = timeWorked;
+    
+
+    [self.timeTasks removeObjectAtIndex:index];
+    
+    self.timeTasks[index] = scratch;
 }
 
 
