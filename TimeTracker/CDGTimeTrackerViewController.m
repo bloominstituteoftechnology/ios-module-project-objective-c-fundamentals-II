@@ -13,7 +13,7 @@
 @interface CDGTimeTrackerViewController () <UITableViewDelegate, UITableViewDataSource>
 
 // Properties
-@property CDGTimedTaskController* timedTaskController;
+@property CDGTimedTaskController *timedTaskController;
 @property (nonatomic, copy) NSString *clientName;
 @property (nonatomic, copy) NSString *workoutDescription;
 @property double hourlyRate;
@@ -41,31 +41,34 @@
 }
 
 - (IBAction)logTimeTapped:(UIButton *)sender {
-    if
-        
-        (self.clientNameTextField.hasText && self.clientNameTextField.text.length > 0)
-        (self.workoutDescriptionTextField.hasText && self.workoutDescriptionTextField.text.length > 0)
-        (self.hourlyRateTextField.hasText && self.hourlyRateTextField.text.length > 0)
-        (self.timeWorkTextField.hasText && self.timeWorkTextField.text.length > 0);
-    {
-        self.clientName = self.clientNameTextField.text;
-        self.workoutDescription = self.timeWorkTextField.text;
-        double  doubleHourlyRate = [self.hourlyRateTextField.text doubleValue];
-        double timeWorked = [self.timeWorkTextField.text doubleValue];
-        self.hourlyRate = doubleHourlyRate;
-        self.hoursWorked = timeWorked;
-        
-        [[CDGTimedTaskController alloc] createTimedTask:self.clientName
-                                     workoutDescription:self.workoutDescription
-                                             hourlyRate:self.hourlyRate
-                                            hoursWorked:self.hoursWorked];
-        [self.taskTableView reloadData];
-        
-    } else {
-        return;;
+        if (self.clientNameTextField.hasText && self.workoutDescriptionTextField.hasText &&
+            self.hourlyRateTextField.hasText && self.timeWorkTextField.hasText) {
+            self.clientName = self.clientNameTextField.text;
+            self.workoutDescription = self.timeWorkTextField.text;
+            // @"abc".doubleValue of a non-number -> 0
+            // @"25abc".doubleValue -> 25
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            NSNumber *hourlyRate = [formatter numberFromString:self.hourlyRateTextField.text]; // can fail if String textfield is not a number
+            if (hourlyRate) { // if (hourlyRate != nil) {
+                self.hourlyRate = hourlyRate.doubleValue;
+            } else {
+                NSLog(@"Error: invalid number in hourlyRate input, ignore entry, or show UI to notify user");
+            }
+            NSNumber *timeWorked = [formatter numberFromString:self.timeWorkTextField.text]; // can fail if String textfield is not a number
+            if (timeWorked) { // if (timeWorked != nil) {
+                self.hoursWorked = timeWorked.doubleValue;
+            } else {
+                NSLog(@"Error: invalid number in hoursWorked input, ignore entry, or show UI to notify user");
+            }
+            [self.timedTaskController createTimedTask:self.clientName
+                                         workoutDescription:self.workoutDescription
+                                                 hourlyRate:self.hourlyRate
+                                                hoursWorked:self.hoursWorked];
+            [self.taskTableView reloadData];
+        } else {
+            return;
+        }
     }
-    
-}
 
 // TableView Data Source Methods
 

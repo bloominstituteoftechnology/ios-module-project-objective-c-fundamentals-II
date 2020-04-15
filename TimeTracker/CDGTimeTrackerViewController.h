@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CDGTimeTrackerViewController : UIViewController
 // <UITableViewDelegate, UITableViewDataSource>
 
-@property (nonatomic) CDGTimeTrackerViewController *timeTrackerController;
+@property (nonatomic) CDGTimeTrackerViewController *timeTrackerViewController;
 
 @end
 
