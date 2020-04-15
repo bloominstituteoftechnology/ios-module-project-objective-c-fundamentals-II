@@ -12,19 +12,18 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface NPTTimedTask : NSObject
 
-@property (nonatomic,readwrite,copy) NSMutableString *client;
-@property (nonatomic,readwrite,copy) NSMutableString *summary;
-@property (nonatomic,readwrite) double hourlyRate;
-@property (nonatomic,readwrite) double timeWorked;
-@property (nonatomic,readonly) double totalPay;
+@property (nonatomic, readwrite, copy) NSString *client;
+@property (nonatomic, readwrite, copy) NSString *summary;
+@property (nonatomic, readwrite)double hourlyRate;
+@property (nonatomic, readwrite)double timeWorked;
+@property (nonatomic, readonly)double totalPay;
 
 
--(instancetype)initWithClient:(NSMutableString*)client
-                      summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked;
+-(instancetype)initWithClient:(NSString *)client
+                      summary:(NSString *)summary
+                   hourlyRate:(double)hourlyRate
+                   timeWorked:(double)timeWorked;
                     
-
-                     
-
 
 @end
 

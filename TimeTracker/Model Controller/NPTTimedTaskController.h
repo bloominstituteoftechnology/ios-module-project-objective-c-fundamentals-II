@@ -10,7 +10,7 @@
 @class NPTTimedTask;
 NS_ASSUME_NONNULL_BEGIN
 
-@interface NPTTimedTaskController : NSObject
+@interface NPTTimedTaskController: NSObject
 
 @property (nonatomic,readonly) NSMutableArray<NPTTimedTask*> *timeTasks;
 

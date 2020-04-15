@@ -36,27 +36,17 @@
     
     [self.internalTask addObject:task];
     
-    
 }
 
 - (void)updateTaskWithTask:(NPTTimedTask*)task client:(NSMutableString*)client summary:(NSMutableString*)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked {
     
-//    NSUInteger index = [self.timeTasks indexOfObject:task];
-    
     NPTTimedTask * scratch  = task;
     
     scratch.client =client;
-    
     scratch.summary =summary;
-    
     scratch.hourlyRate = hourlyRate;
-    
     scratch.timeWorked = timeWorked;
-    
-//
-//    [self.timeTasks removeObjectAtIndex:index];
-//
-//    self.timeTasks[index] = scratch;
+
 }
 
 
