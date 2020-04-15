@@ -43,10 +43,10 @@
 - (IBAction)logTimeTapped:(UIButton *)sender {
     if
         
-//        (self.clientNameTextField.hasText && self.clientNameTextField.text.length > 0)
-//        (self.workoutDescriptionTextField.hasText && self.workoutDescriptionTextField.text.length > 0)
-         (self.hourlyRateTextField.hasText && self.hourlyRateTextField.text.length > 0)
-//        (self.timeWorkTextField.hasText && self.timeWorkTextField.text.length > 0);
+        (self.clientNameTextField.hasText && self.clientNameTextField.text.length > 0)
+        (self.workoutDescriptionTextField.hasText && self.workoutDescriptionTextField.text.length > 0)
+        (self.hourlyRateTextField.hasText && self.hourlyRateTextField.text.length > 0)
+        (self.timeWorkTextField.hasText && self.timeWorkTextField.text.length > 0);
     {
         self.clientName = self.clientNameTextField.text;
         self.workoutDescription = self.timeWorkTextField.text;
@@ -59,10 +59,10 @@
                                      workoutDescription:self.workoutDescription
                                              hourlyRate:self.hourlyRate
                                             hoursWorked:self.hoursWorked];
-        self.taskTableView.reloadData;
+        [self.taskTableView reloadData];
         
     } else {
-        return;
+        return;;
     }
     
 }
