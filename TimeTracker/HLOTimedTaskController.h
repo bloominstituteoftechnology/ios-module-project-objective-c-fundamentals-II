@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+// Class forward
+@class HLOTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HLOTimedTaskController : NSObject
+
+@property (nonatomic, readonly) NSMutableArray<HLOTimedTask *>*a;
+
+- (void)addTask:(HLOTimedTask *)task;
 
 @end
 
