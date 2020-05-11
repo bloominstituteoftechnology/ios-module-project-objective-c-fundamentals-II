@@ -17,6 +17,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *hoursField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+// MARK:- Actions
+- (IBAction)logTime:(UIButton *)sender;
+
 @end
 
 @implementation HLOTimeTrackerViewController
@@ -36,4 +39,6 @@
 }
 */
 
+- (IBAction)logTime:(UIButton *)sender {
+}
 @end
