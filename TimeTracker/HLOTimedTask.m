@@ -10,4 +10,17 @@
 
 @implementation HLOTimedTask
 
+- (instancetype)initWithClient:(NSString *)client summary:(NSString *)summary hourlyWage:(double)hourlyWage hoursWorked:(double)hoursWorked {
+    self = [super init];
+    if (self) {
+
+        _client = client;
+        _summary = summary;
+        _hourlyWage = hourlyWage;
+        _hoursWorked = hoursWorked;
+
+    }
+    return self;
+}
+
 @end
