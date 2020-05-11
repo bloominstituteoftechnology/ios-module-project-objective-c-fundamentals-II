@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSMutableArray<HLOTimedTask *>*a;
 
-- (void)addTask:(HLOTimedTask *)task;
+- (void)createTimedTaskWith:(NSString *)client summary:(NSString *)summary hourlyWage:(double)hourlyWage hoursWorked:(double)hoursWorked;
 
 @end
 
