@@ -92,6 +92,7 @@
                         <outlet property="hourlyField" destination="1s7-qi-GbT" id="HBf-St-7iZ"/>
                         <outlet property="hoursField" destination="hJY-xA-vK5" id="ci2-ly-abX"/>
                         <outlet property="summaryField" destination="Zaq-vp-K0H" id="i43-LY-zpe"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="K4T-7c-1ll"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

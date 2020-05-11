@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *summaryField;
 @property (weak, nonatomic) IBOutlet UITextField *hourlyField;
 @property (weak, nonatomic) IBOutlet UITextField *hoursField;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
