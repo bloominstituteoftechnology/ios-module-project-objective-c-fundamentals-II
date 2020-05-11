@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HLOTimedTask : NSObject
 
+@property (nonatomic) NSString *client;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hourlyWage;
+@property (nonatomic) double hoursWorked;
+@property (nonatomic, readonly) double total;
+
 @end
 
 NS_ASSUME_NONNULL_END
