@@ -10,4 +10,13 @@
 
 @implementation HLOTimedTaskController
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _tasks = [[NSMutableArray<HLOTimedTask *> alloc] init];
+    }
+    return self;
+}
+
+
 @end
