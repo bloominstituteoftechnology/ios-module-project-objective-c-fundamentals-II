@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-// Class forward
-@class HLOTimedTask;
+#import "HLOTimedTask.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

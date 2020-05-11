@@ -34,17 +34,24 @@
     if (!_taskController) {
         _taskController = [[HLOTimedTaskController alloc] init];
     }
+    self.tableView.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.taskController.tasks.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+
+    HLOTimedTask *task = self.taskController.tasks[indexPath.row];
+
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%0.02f", task.total] ;
+
+    return cell;
+}
 
 - (IBAction)logTime:(UIButton *)sender {
 }
