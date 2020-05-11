@@ -10,6 +10,12 @@
 
 @interface HLOTimeTrackerViewController () <UITableViewDataSource>
 
+// MARK:- Outlets
+@property (weak, nonatomic) IBOutlet UITextField *clientField;
+@property (weak, nonatomic) IBOutlet UITextField *summaryField;
+@property (weak, nonatomic) IBOutlet UITextField *hourlyField;
+@property (weak, nonatomic) IBOutlet UITextField *hoursField;
+
 @end
 
 @implementation HLOTimeTrackerViewController
