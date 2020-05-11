@@ -54,5 +54,9 @@
 }
 
 - (IBAction)logTime:(UIButton *)sender {
+    // COuld maybe add checkers to see that the user input numbers.
+    // Or maybe there's a way in interface builder to only allow numbers??
+    [self.taskController createTimedTaskWith:self.clientField.text summary:self.summaryField.text hourlyWage:self.hourlyField.text.doubleValue hoursWorked:self.hoursField.text.doubleValue];
+    [self.tableView reloadData];
 }
 @end
