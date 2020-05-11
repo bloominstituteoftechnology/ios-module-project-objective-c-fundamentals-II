@@ -7,6 +7,7 @@
 //
 
 #import "HLOTimeTrackerViewController.h"
+#import "HLOTimedTaskController.h"
 
 @interface HLOTimeTrackerViewController () <UITableViewDataSource>
 
@@ -19,6 +20,9 @@
 
 // MARK:- Actions
 - (IBAction)logTime:(UIButton *)sender;
+
+// MARK:- Properties
+@property HLOTimedTaskController *taskController;
 
 @end
 
