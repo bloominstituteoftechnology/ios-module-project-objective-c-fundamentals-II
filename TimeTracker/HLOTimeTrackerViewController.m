@@ -31,6 +31,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    if (!_taskController) {
+        _taskController = [[HLOTimedTaskController alloc] init];
+    }
 }
 
 /*
