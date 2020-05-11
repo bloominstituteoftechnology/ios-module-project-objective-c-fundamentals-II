@@ -7,16 +7,22 @@
 //
 
 #import "HLOTimedTaskController.h"
+#import "HLOTimedTask.h"
 
 @implementation HLOTimedTaskController
 
 - (instancetype)init {
     self = [super init];
     if (self) {
-        _tasks = [[NSMutableArray<HLOTimedTask *> alloc] init];
+        _tasks = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
+- (void)createTimedTaskWith:(NSString *)client summary:(NSString *)summary hourlyWage:(double)hourlyWage hoursWorked:(double)hoursWorked {
+    HLOTimedTask *newTask = [[HLOTimedTask alloc] initWithClient:client summary:summary hourlyWage:hourlyWage hoursWorked:hoursWorked];
+
+    [self.tasks addObject:newTask];
+}
 
 @end
