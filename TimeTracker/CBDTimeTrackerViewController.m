@@ -18,6 +18,7 @@
 @property (nonatomic) NSString *summary;
 @property (nonatomic) double hoursWorked;
 @property (nonatomic) double hourlyRate;
+@property (nonatomic) BOOL isEditing;
 
 // MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -38,10 +39,16 @@
     self.summary = self.summaryTextField.text;
     self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
     self.hoursWorked = [self.hoursWorkedTextField.text doubleValue];
-    [self.timedTaskController createTimedTaskWith:self.name
-                                          summary:self.summary
-                                       hourlyRate:self.hourlyRate
-                                      hoursWorked:self.hoursWorked];
+    if (_isEditing) {
+        
+    } else {
+        [self.timedTaskController createTimedTaskWith:self.name
+                                              summary:self.summary
+                                           hourlyRate:self.hourlyRate
+                                          hoursWorked:self.hoursWorked];
+    }
+    
+    
     [self updateViews];
 }
 
@@ -51,6 +58,7 @@
     self.timedTaskController = [[CBDTimedTaskController alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    self.isEditing = NO;
 }
 
 - (void)updateViews {
@@ -59,6 +67,7 @@
     self.summaryTextField.text = @"";
     self.hourlyRateTextField.text = @"";
     self.hoursWorkedTextField.text = @"";
+    self.isEditing = NO;
 }
 
 // MARK: - TableView Data Source
@@ -84,6 +93,7 @@
     self.summaryTextField.text = timedTask.summary;
     self.hoursWorkedTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hoursWorked];
     self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hourlyRate];
+    self.isEditing = YES;
 }
 
 @end
