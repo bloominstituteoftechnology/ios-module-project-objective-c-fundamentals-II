@@ -19,6 +19,11 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic) OTKTimedTaskController *taskController;
+@property (nonatomic) NSString *client;
+@property (nonatomic) NSString * workSummary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) int hoursWorked;
+@property (nonatomic, readonly) double total;
 
 @end
 
@@ -32,6 +37,16 @@
 }
 
 - (IBAction)logTime:(UIButton *)sender {
+    self.client = _clientNameTextField.text;
+    self.workSummary = _summaryTextField.text;
+    self.hourlyRate = [_hourlyRateTextField.text doubleValue];
+    self.hoursWorked = [_hoursWorkedTextField.text intValue];
+
+    [self.taskController createTimedTasksWithClient:self.client
+                                        workSummary:self.workSummary
+                                         hourlyRate:self.hourlyRate
+                                        hoursWorked:self.hoursWorked];
+    [self.tableView reloadData];
 }
 
 // MARK: - UITableViewDataSource
@@ -45,7 +60,7 @@
 
     OTKTimedTask *task = [self.taskController.timedTasks objectAtIndex:indexPath.row];
     cell.textLabel.text = task.client;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%f.2f", task.total];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"£%.2f", task.total];
 
     return cell;
 }
