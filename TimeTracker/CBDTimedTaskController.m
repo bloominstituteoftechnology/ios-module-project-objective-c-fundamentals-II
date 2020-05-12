@@ -24,4 +24,15 @@
     CBDTimedTask *timedTask = [[CBDTimedTask alloc] initWithName:name summary:summary hourlyRate:hourlyRate hoursWorked:hoursWorked];
     [self.timedTasks addObject:timedTask];
 }
+
+- (void)updateTimedTaskAt:(int)index
+                     name:(NSString *)name
+                  summary:(NSString *)summary
+               hourlyRate:(double)hourlyRate
+              hoursWorked:(double)hoursWorked {
+    [self.timedTasks objectAtIndex:index].name = name;
+    [self.timedTasks objectAtIndex:index].summary = summary;
+    [self.timedTasks objectAtIndex:index].hourlyRate = hourlyRate;
+    [self.timedTasks objectAtIndex:index].hoursWorked = hoursWorked;
+}
 @end

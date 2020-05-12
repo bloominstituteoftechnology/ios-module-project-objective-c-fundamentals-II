@@ -21,6 +21,12 @@ NS_ASSUME_NONNULL_BEGIN
                  hourlyRate:(double)hourlyRate
                 hoursWorked:(double)hoursWorked;
 
+- (void)updateTimedTaskAt:(int)index
+                     name:(NSString *)name
+                  summary:(NSString *)summary
+               hourlyRate:(double)hourlyRate
+              hoursWorked:(double)hoursWorked;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -19,6 +19,7 @@
 @property (nonatomic) double hoursWorked;
 @property (nonatomic) double hourlyRate;
 @property (nonatomic) BOOL isEditing;
+@property (nonatomic) int index;
 
 // MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -35,19 +36,25 @@
 
 // MARK: - IBActions
 - (IBAction)logTime:(UIButton *)sender {
+    // Set instance variables to current input
     self.name = self.nameTextField.text;
     self.summary = self.summaryTextField.text;
     self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
     self.hoursWorked = [self.hoursWorkedTextField.text doubleValue];
-    if (_isEditing) {
-        
+    
+    // if editing update, otherwise create new task
+    if (self.isEditing) {
+        [self.timedTaskController updateTimedTaskAt:self.index
+                                               name:self.name
+                                            summary:self.summary
+                                         hourlyRate:self.hourlyRate
+                                        hoursWorked:self.hoursWorked];
     } else {
         [self.timedTaskController createTimedTaskWith:self.name
                                               summary:self.summary
                                            hourlyRate:self.hourlyRate
                                           hoursWorked:self.hoursWorked];
     }
-    
     
     [self updateViews];
 }
@@ -94,6 +101,7 @@
     self.hoursWorkedTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hoursWorked];
     self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hourlyRate];
     self.isEditing = YES;
+    self.index = indexPath.row;
 }
 
 @end
