@@ -94,6 +94,7 @@
                         <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="bkZ-bb-1Do"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="2L3-Cb-a1x"/>
                         <outlet property="hoursWorkedTextField" destination="hJY-xA-vK5" id="JPX-XE-Nlp"/>
+                        <outlet property="logTimeButton" destination="yC4-dN-8qK" id="2dD-jN-0Ds"/>
                         <outlet property="tableView" destination="NGG-z0-Z9V" id="Rt1-AU-Whw"/>
                         <outlet property="workSummaryTextField" destination="Zaq-vp-K0H" id="Syw-oF-GXj"/>
                         <outletCollection property="textFields" destination="hJY-xA-vK5" id="KfB-o6-M7F"/>

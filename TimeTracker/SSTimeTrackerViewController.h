@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SSTimeTrackerViewController : UIViewController <UITableViewDataSource>
+@interface SSTimeTrackerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
