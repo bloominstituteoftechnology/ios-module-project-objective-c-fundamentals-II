@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		E2334961246B3948007FB5E2 /* CBDTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E2334960246B3948007FB5E2 /* CBDTimedTask.m */; };
 		E2334964246B44C5007FB5E2 /* CBDTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2334963246B44C5007FB5E2 /* CBDTimedTaskController.m */; };
+		E233496A246B4EAF007FB5E2 /* CBDTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E2334969246B4EAF007FB5E2 /* CBDTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		E2334960246B3948007FB5E2 /* CBDTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CBDTimedTask.m; path = TimeTracker/CBDTimedTask.m; sourceTree = SOURCE_ROOT; };
 		E2334962246B44C5007FB5E2 /* CBDTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBDTimedTaskController.h; path = TimeTracker/CBDTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		E2334963246B44C5007FB5E2 /* CBDTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CBDTimedTaskController.m; path = TimeTracker/CBDTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		E2334968246B4EAF007FB5E2 /* CBDTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CBDTimeTrackerViewController.h; path = TimeTracker/CBDTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		E2334969246B4EAF007FB5E2 /* CBDTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CBDTimeTrackerViewController.m; path = TimeTracker/CBDTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E2334968246B4EAF007FB5E2 /* CBDTimeTrackerViewController.h */,
+				E2334969246B4EAF007FB5E2 /* CBDTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			files = (
 				E2334961246B3948007FB5E2 /* CBDTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				E233496A246B4EAF007FB5E2 /* CBDTimeTrackerViewController.m in Sources */,
 				E2334964246B44C5007FB5E2 /* CBDTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
