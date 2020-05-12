@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13FBA88A246B3A1500B86C08 /* WHTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FBA889246B3A1500B86C08 /* WHTimedTask.m */; };
+		13FBA88D246B3DEF00B86C08 /* WHTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13FBA88C246B3DEF00B86C08 /* WHTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		13FBA888246B3A1500B86C08 /* WHTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHTimedTask.h; sourceTree = "<group>"; };
 		13FBA889246B3A1500B86C08 /* WHTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHTimedTask.m; sourceTree = "<group>"; };
+		13FBA88B246B3DEF00B86C08 /* WHTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WHTimedTaskController.h; sourceTree = "<group>"; };
+		13FBA88C246B3DEF00B86C08 /* WHTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WHTimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 			children = (
 				13FBA888246B3A1500B86C08 /* WHTimedTask.h */,
 				13FBA889246B3A1500B86C08 /* WHTimedTask.m */,
+				13FBA88B246B3DEF00B86C08 /* WHTimedTaskController.h */,
+				13FBA88C246B3DEF00B86C08 /* WHTimedTaskController.m */,
 				467FC85D23F3784C00C15592 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
 				467FC85C23F376B400C15592 /* View Controller */,
@@ -187,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				13FBA88D246B3DEF00B86C08 /* WHTimedTaskController.m in Sources */,
 				13FBA88A246B3A1500B86C08 /* WHTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
