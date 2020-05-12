@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface WHTimeTrackerViewController : UIViewController
+@interface WHTimeTrackerViewController : UIViewController <UITableViewDataSource>
 
 @end
 

@@ -7,8 +7,18 @@
 //
 
 #import "WHTimeTrackerViewController.h"
+#import "WHTimedTask.h"
+#import "WHTimedTaskController.h"
 
 @interface WHTimeTrackerViewController ()
+
+@property WHTimedTaskController *taskController;
+
+@property (strong, nonatomic) IBOutlet UITextField *clientTextField;
+@property (strong, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (strong, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,17 +26,36 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.taskController = [[WHTimedTaskController alloc] init];
+    //self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
+- (IBAction)logTime:(UIButton *)sender {
+    
+    [self.taskController createTimedTaskWith:self.clientTextField.text
+                                     summary:self.summaryTextField.text
+                                  hourlyRate:[self.hourlyRateTextField.text doubleValue]
+                                 hoursWorked:[self.timeWorkedTextField.text doubleValue]];
+    
+    [self.tableView reloadData];
+};
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.taskController.timedTasks.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    
+    WHTimedTask *task = [self.taskController.timedTasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", task.total];
+    
+    return cell;
+}
 
 @end
