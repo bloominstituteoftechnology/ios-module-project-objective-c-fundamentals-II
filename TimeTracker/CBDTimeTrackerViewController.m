@@ -59,6 +59,11 @@
     [self updateViews];
 }
 
+- (IBAction)resetTask:(UIBarButtonItem *)sender {
+    [self updateViews];
+}
+
+
 // MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
