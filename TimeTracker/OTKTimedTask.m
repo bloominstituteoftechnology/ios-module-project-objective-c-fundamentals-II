@@ -10,4 +10,22 @@
 
 @implementation OTKTimedTask
 
+- (instancetype)initWithClient:(NSString *)client
+                   workSummary:(NSString *)workSummary
+                    hourlyRate:(int)hourlyRate
+                   hoursWorked:(int)hoursWorked {
+    if (self = [super init]) {
+        _client = client;
+        _workSummary = workSummary;
+        _hourlyRate = hourlyRate;
+        _hoursWorked = hoursWorked;
+    }
+
+    return self;
+}
+
+- (int)total {
+    return _hourlyRate * _hoursWorked;
+}
+
 @end
