@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CC83680246B4A69008F8066 /* OTKTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC8367F246B4A69008F8066 /* OTKTimedTask.m */; };
+		2CC83683246B521D008F8066 /* OTKTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC83682246B521D008F8066 /* OTKTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		2CC8367E246B4A69008F8066 /* OTKTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OTKTimedTask.h; path = TimeTracker/OTKTimedTask.h; sourceTree = SOURCE_ROOT; };
 		2CC8367F246B4A69008F8066 /* OTKTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OTKTimedTask.m; path = TimeTracker/OTKTimedTask.m; sourceTree = SOURCE_ROOT; };
+		2CC83681246B521D008F8066 /* OTKTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = OTKTimedTaskController.h; path = TimeTracker/OTKTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		2CC83682246B521D008F8066 /* OTKTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = OTKTimedTaskController.m; path = TimeTracker/OTKTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				2CC83681246B521D008F8066 /* OTKTimedTaskController.h */,
+				2CC83682246B521D008F8066 /* OTKTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				2CC83680246B4A69008F8066 /* OTKTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				2CC83683246B521D008F8066 /* OTKTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
