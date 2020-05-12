@@ -47,9 +47,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    self.hourlyRateTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    self.hoursWorkedTextField.keyboardType = UIKeyboardTypeDecimalPad;
+    
+    for (UITextField *textField in self.textFields) {
+        textField.delegate = self;
+    }
 }
 
 // MARK: - Private Methods
@@ -113,6 +120,23 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     self.currentTask = self.taskController.tasks[indexPath.row];
     [self updateViews];
+    
+}
+
+// MARK: - Text Field Delegate
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if (textField == self.clientNameTextField) {
+        [self.workSummaryTextField becomeFirstResponder];
+    } else if (textField == self.workSummaryTextField) {
+        [self.hourlyRateTextField becomeFirstResponder];
+    } else if (textField == self.hourlyRateTextField) {
+        [self.hoursWorkedTextField becomeFirstResponder];
+    } else if (textField == self.hoursWorkedTextField) {
+        [self.hoursWorkedTextField resignFirstResponder];
+    }
+    
+    return true;
 }
 
 @end
