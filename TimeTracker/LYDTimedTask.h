@@ -11,11 +11,11 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface LYDTimedTask : NSObject
-@property NSString *client;
-@property NSString *summary;
-@property double hrRate;
-@property double hrs;
-@property double total;
+@property (nonatomic) NSString *client;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hrRate;
+@property (nonatomic) double hrs;
+@property (nonatomic, readonly) double total;
 
 - (instancetype)initWithClient:(NSString *)client
                        summary:(NSString *)summary
