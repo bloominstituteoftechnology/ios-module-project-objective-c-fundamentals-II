@@ -14,6 +14,10 @@
 
 // MARK: - Private Properties
 @property (nonatomic) CBDTimedTaskController *timedTaskController;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hoursWorked;
+@property (nonatomic) double hourlyRate;
 
 // MARK: - IBOutlets
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -28,13 +32,20 @@
 
 @implementation CBDTimeTrackerViewController
 
-// MARK: - Properties
-
 // MARK: - IBActions
 - (IBAction)logTime:(UIButton *)sender {
+    self.name = self.nameTextField.text;
+    self.summary = self.summaryTextField.text;
+    self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
+    self.hoursWorked = [self.hoursWorkedTextField.text doubleValue];
+    [self.timedTaskController createTimedTaskWith:self.name
+                                          summary:self.summary
+                                       hourlyRate:self.hourlyRate
+                                      hoursWorked:self.hoursWorked];
+    [self updateViews];
 }
 
-// MARK: - Initializer
+// MARK: - View Methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.timedTaskController = [[CBDTimedTaskController alloc] init];
@@ -42,23 +53,28 @@
     self.tableView.dataSource = self;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)updateViews {
+    [self.tableView reloadData];
+    self.nameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.hoursWorkedTextField.text = @"";
 }
-*/
 
 // MARK: - TableView Data Source
-//- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
-//    <#code#>
-//}
-//
-//- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    <#code#>
-//}
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
+                 cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell"
+                                                                 forIndexPath:indexPath];
+    
+    CBDTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = timedTask.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.total];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.timedTaskController.timedTasks.count;
+}
 
 @end
