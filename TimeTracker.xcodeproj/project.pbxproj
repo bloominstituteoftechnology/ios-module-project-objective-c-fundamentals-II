@@ -14,6 +14,8 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		AE658A4E246B2D2100E1146C /* LYDTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = AE658A4D246B2D2100E1146C /* LYDTimedTask.m */; };
+		AE658A51246B38FD00E1146C /* LYDTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE658A50246B38FD00E1146C /* LYDTimedTaskController.m */; };
+		AE658A54246B3BAF00E1146C /* LYDTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE658A53246B3BAF00E1146C /* LYDTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,10 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AE658A4C246B2D2100E1146C /* LYDTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDTimedTask.h; sourceTree = "<group>"; };
 		AE658A4D246B2D2100E1146C /* LYDTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDTimedTask.m; sourceTree = "<group>"; };
+		AE658A4F246B38FD00E1146C /* LYDTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDTimedTaskController.h; sourceTree = "<group>"; };
+		AE658A50246B38FD00E1146C /* LYDTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDTimedTaskController.m; sourceTree = "<group>"; };
+		AE658A52246B3BAF00E1146C /* LYDTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYDTimeTrackerViewController.h; sourceTree = "<group>"; };
+		AE658A53246B3BAF00E1146C /* LYDTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LYDTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +68,10 @@
 			isa = PBXGroup;
 			children = (
 				AE658A4C246B2D2100E1146C /* LYDTimedTask.h */,
+				AE658A4F246B38FD00E1146C /* LYDTimedTaskController.h */,
+				AE658A50246B38FD00E1146C /* LYDTimedTaskController.m */,
+				AE658A52246B3BAF00E1146C /* LYDTimeTrackerViewController.h */,
+				AE658A53246B3BAF00E1146C /* LYDTimeTrackerViewController.m */,
 				AE658A4D246B2D2100E1146C /* LYDTimedTask.m */,
 				467FC85D23F3784C00C15592 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
@@ -186,9 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE658A54246B3BAF00E1146C /* LYDTimeTrackerViewController.m in Sources */,
 				AE658A4E246B2D2100E1146C /* LYDTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				AE658A51246B38FD00E1146C /* LYDTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
