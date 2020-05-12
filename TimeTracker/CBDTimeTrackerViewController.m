@@ -77,4 +77,13 @@
     return self.timedTaskController.timedTasks.count;
 }
 
+// MARK: - TableView Delegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CBDTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    self.nameTextField.text = timedTask.name;
+    self.summaryTextField.text = timedTask.summary;
+    self.hoursWorkedTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hoursWorked];
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hourlyRate];
+}
+
 @end
