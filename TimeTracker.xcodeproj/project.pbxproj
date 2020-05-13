@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041383BD246B354C00511246 /* SSTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 041383BC246B354C00511246 /* SSTimedTask.m */; };
+		04377DDE246B3A150021F520 /* SSTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04377DDD246B3A150021F520 /* SSTimedTaskController.m */; };
+		04377DE1246B41F80021F520 /* SSTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04377DE0246B41F80021F520 /* SSTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041383BB246B354C00511246 /* SSTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SSTimedTask.h; sourceTree = "<group>"; };
+		041383BC246B354C00511246 /* SSTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SSTimedTask.m; sourceTree = "<group>"; };
+		04377DDC246B3A150021F520 /* SSTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSTimedTaskController.h; path = TimeTracker/SSTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		04377DDD246B3A150021F520 /* SSTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SSTimedTaskController.m; path = TimeTracker/SSTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		04377DDF246B41F80021F520 /* SSTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SSTimeTrackerViewController.h; path = TimeTracker/SSTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		04377DE0246B41F80021F520 /* SSTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SSTimeTrackerViewController.m; path = TimeTracker/SSTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				041383BB246B354C00511246 /* SSTimedTask.h */,
+				041383BC246B354C00511246 /* SSTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04377DDF246B41F80021F520 /* SSTimeTrackerViewController.h */,
+				04377DE0246B41F80021F520 /* SSTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				04377DDC246B3A150021F520 /* SSTimedTaskController.h */,
+				04377DDD246B3A150021F520 /* SSTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -181,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04377DE1246B41F80021F520 /* SSTimeTrackerViewController.m in Sources */,
+				041383BD246B354C00511246 /* SSTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				04377DDE246B3A150021F520 /* SSTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
