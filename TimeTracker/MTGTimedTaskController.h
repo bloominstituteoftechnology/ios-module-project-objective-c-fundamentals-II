@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+// forward class declaration
+@class MTGTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGTimedTaskController : NSObject
+
+@property (nonatomic, readwrite) NSMutableArray<MTGTimedTask *> *timedTasks;
+
+- (void)createTimedTaskWith:(NSString *)client
+                workSummary:(NSString *)workSummary
+                 hourlyRate:(double)hourlyRate
+                hoursWorked:(double)hoursWorked;
 
 @end
 
