@@ -29,6 +29,7 @@
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 - (void)updateViews;
+- (void)addOrUpdateTimedTask;
 
 @end
 
@@ -76,27 +77,37 @@
     }
 }
 
-// MARK: - IBActions
-
-- (IBAction)logTime:(UIButton *)sender {
-    double hourlyRate = self.hourlyRateTextField.text.doubleValue;
-    double hoursWorked = self.hoursWorkedTextField.text.doubleValue;
+- (void)addOrUpdateTimedTask {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    
+    NSNumber *hourlyRate = [formatter numberFromString:self.hourlyRateTextField.text];
+    NSNumber *hoursWorked = [formatter numberFromString:self.hoursWorkedTextField.text];
+    
+    if ([self.clientNameTextField.text isEqualToString:@""] || hourlyRate == nil || hoursWorked == nil)  {
+        return;
+    }
     
     if (self.currentTask != nil) {
         self.currentTask.clientName = self.clientNameTextField.text;
         self.currentTask.workSummary = self.workSummaryTextField.text;
-        self.currentTask.hourlyRate = hourlyRate;
-        self.currentTask.hoursWorked = hoursWorked;
+        self.currentTask.hourlyRate = hourlyRate.doubleValue;
+        self.currentTask.hoursWorked = hoursWorked.doubleValue;
         self.currentTask = nil;
     } else {
         [self.taskController addTimedTaskWithClientName:self.clientNameTextField.text
                                             workSummary:self.workSummaryTextField.text
-                                             hourlyRate:hourlyRate
-                                            hoursWorked:hoursWorked];
+                                             hourlyRate:hourlyRate.doubleValue
+                                            hoursWorked:hoursWorked.doubleValue];
     }
     
     [self updateViews];
     [self.tableView reloadData];
+}
+
+// MARK: - IBActions
+
+- (IBAction)logTime:(UIButton *)sender {
+    [self addOrUpdateTimedTask];
 }
 
 // MARK: - Table View Data Source
