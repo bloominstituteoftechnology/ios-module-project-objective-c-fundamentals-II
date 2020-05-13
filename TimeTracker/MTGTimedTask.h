@@ -14,11 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 
 // MARK: - Properties
 
-@property NSString *client;
-@property NSString *workSummary;
-@property double hourlyRate;
-@property double hoursWorked;
-@property double total;
+@property (nonatomic, readwrite) NSString *client;
+@property (nonatomic, readwrite) NSString *workSummary;
+@property (nonatomic, readwrite) double hourlyRate;
+@property (nonatomic, readwrite) double hoursWorked;
+@property (nonatomic, readonly) double total;
+
+- (instancetype)initWithClient:(NSString *)client
+                   workSummary:(NSString *)workSummary
+                    hourlyRate:(double)hourlyRate
+                   hoursWorked:(double)hoursWorked;
 
 @end
 
