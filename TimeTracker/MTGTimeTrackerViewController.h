@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class MTGTimedTaskController;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGTimeTrackerViewController : UIViewController
+
+@property MTGTimedTaskController *timedTaskController;
 
 @end
 
