@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		92E3A860246B7F4600054A96 /* MTGTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E3A85F246B7F4600054A96 /* MTGTimedTask.m */; };
 		92E3A863246BC37700054A96 /* MTGTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E3A862246BC37700054A96 /* MTGTimedTaskController.m */; };
+		92E3A866246BC70E00054A96 /* MTGTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E3A865246BC70E00054A96 /* MTGTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		92E3A85F246B7F4600054A96 /* MTGTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGTimedTask.m; sourceTree = "<group>"; };
 		92E3A861246BC37700054A96 /* MTGTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGTimedTaskController.h; sourceTree = "<group>"; };
 		92E3A862246BC37700054A96 /* MTGTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGTimedTaskController.m; sourceTree = "<group>"; };
+		92E3A864246BC70E00054A96 /* MTGTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MTGTimeTrackerViewController.h; sourceTree = "<group>"; };
+		92E3A865246BC70E00054A96 /* MTGTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +76,8 @@
 				92E3A85F246B7F4600054A96 /* MTGTimedTask.m */,
 				92E3A861246BC37700054A96 /* MTGTimedTaskController.h */,
 				92E3A862246BC37700054A96 /* MTGTimedTaskController.m */,
+				92E3A864246BC70E00054A96 /* MTGTimeTrackerViewController.h */,
+				92E3A865246BC70E00054A96 /* MTGTimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				92E3A863246BC37700054A96 /* MTGTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				92E3A860246B7F4600054A96 /* MTGTimedTask.m in Sources */,
+				92E3A866246BC70E00054A96 /* MTGTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
