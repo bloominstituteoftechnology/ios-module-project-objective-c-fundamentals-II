@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		E3837A47246B5C5D00951DDB /* MKTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E3837A46246B5C5D00951DDB /* MKTimedTask.m */; };
+		E3837A4A246B670400951DDB /* MKTimedController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3837A49246B670400951DDB /* MKTimedController.m */; };
+		E3837A4D246BC84A00951DDB /* MKTImeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3837A4C246BC84A00951DDB /* MKTImeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E3837A45246B5C5D00951DDB /* MKTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKTimedTask.h; path = TimeTracker/MKTimedTask.h; sourceTree = SOURCE_ROOT; };
+		E3837A46246B5C5D00951DDB /* MKTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKTimedTask.m; path = TimeTracker/MKTimedTask.m; sourceTree = SOURCE_ROOT; };
+		E3837A48246B670400951DDB /* MKTimedController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKTimedController.h; path = TimeTracker/MKTimedController.h; sourceTree = SOURCE_ROOT; };
+		E3837A49246B670400951DDB /* MKTimedController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKTimedController.m; path = TimeTracker/MKTimedController.m; sourceTree = SOURCE_ROOT; };
+		E3837A4B246BC84A00951DDB /* MKTImeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKTImeTrackerViewController.h; path = TimeTracker/MKTImeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		E3837A4C246BC84A00951DDB /* MKTImeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKTImeTrackerViewController.m; path = TimeTracker/MKTImeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3837A45246B5C5D00951DDB /* MKTimedTask.h */,
+				E3837A46246B5C5D00951DDB /* MKTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3837A4B246BC84A00951DDB /* MKTImeTrackerViewController.h */,
+				E3837A4C246BC84A00951DDB /* MKTImeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E3837A48246B670400951DDB /* MKTimedController.h */,
+				E3837A49246B670400951DDB /* MKTimedController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -181,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3837A4A246B670400951DDB /* MKTimedController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				E3837A47246B5C5D00951DDB /* MKTimedTask.m in Sources */,
+				E3837A4D246BC84A00951DDB /* MKTImeTrackerViewController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
