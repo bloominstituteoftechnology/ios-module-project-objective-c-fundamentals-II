@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MTGTimedTask : NSObject
 
+// MARK: - Properties
+
+@property NSString *client;
+@property NSString *workSummary;
+@property double hourlyRate;
+@property double hoursWorked;
+@property double total;
+
 @end
 
 NS_ASSUME_NONNULL_END
