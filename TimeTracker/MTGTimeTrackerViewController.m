@@ -34,21 +34,47 @@
 
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+
+    [self updateViews];
 }
 
 // MARK: - IBActions
 - (IBAction)logTime:(UIButton *)sender {
+    [self collectUserInputAndCreateTimedTask];
 }
 
-/*
-#pragma mark - Navigation
+- (void)collectUserInputAndCreateTimedTask {
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSString *client;
+    NSString *summary;
+    double hourlyRate;
+double timeWorked;
+
+client = self.clientTextField.text;
+summary = self.summaryTextField.text;
+// TODO: Is .text secretly an NSNumber?
+hourlyRate = [self.hourlyRateTextField.text doubleValue];
+timeWorked = [self.timeWorkedTextField.text doubleValue];
+
+    [self.timedTaskController createTimedTaskWith:client
+                                      workSummary:summary
+                                       hourlyRate:hourlyRate
+                                      hoursWorked:timeWorked];
+
+    [self clearUserInputs];
+    [self updateViews];
 }
-*/
+
+- (void)clearUserInputs {
+    self.clientTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.timeWorkedTextField.text = @"";
+}
+
+- (void)updateViews {
+    [self.tableView reloadData];
+}
 
 - (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
 
