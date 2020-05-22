@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class SKITimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SKITimedTaskController : NSObject
+
+@property (nonatomic, readwrite) NSMutableArray<SKITimedTask *> *timedTasks;
 
 @end
 
