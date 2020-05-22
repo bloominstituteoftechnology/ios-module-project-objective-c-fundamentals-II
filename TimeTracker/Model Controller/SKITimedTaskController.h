@@ -16,6 +16,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readwrite) NSMutableArray<SKITimedTask *> *timedTasks;
 
+- (void)createTimedTaskWith:(NSString *)clientName
+             workDescription:(NSString *)workDescription
+           hourlyRateCharged:(double)hourlyRateCharged
+           amountHoursWorked:(double)amountHoursWorked;
+
 @end
 
 NS_ASSUME_NONNULL_END
