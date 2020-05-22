@@ -10,6 +10,14 @@
 
 @interface SKITimeTrackerViewController ()
 
+
+// Private IBOutlets
+@property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (strong, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
+
+
 @end
 
 @implementation SKITimeTrackerViewController
@@ -18,6 +26,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+//MARK: - Actions
+- (IBAction)logTime:(id)sender {
+}
+
+
 
 /*
 #pragma mark - Navigation
