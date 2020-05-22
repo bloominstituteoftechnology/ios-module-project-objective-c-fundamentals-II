@@ -40,6 +40,9 @@
     _tableView.dataSource = self;
     _logTimeButton.enabled = NO;
     [self setUpTextFields];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissKeyboard)];
+
+    [self.view addGestureRecognizer:tap];
 }
 //MARK: - Actions
 - (IBAction)logTime:(id)sender {
@@ -81,6 +84,14 @@
     [_summaryTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [_hourlyRateTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
     [_timeWorkedTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+}
+
+-(void)dismissKeyboard
+{
+    [_clientNameTextField resignFirstResponder];
+    [_summaryTextField resignFirstResponder];
+    [_hourlyRateTextField resignFirstResponder];
+    [_timeWorkedTextField resignFirstResponder];
 }
 
 // MARK: - UITableViewDataSource
