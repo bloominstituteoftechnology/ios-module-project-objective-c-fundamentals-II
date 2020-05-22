@@ -13,6 +13,11 @@
 @interface SKITimeTrackerViewController ()
 // MARK: - Private Properties
 @property (nonatomic) SKITimedTaskController *timedTaskController;
+@property (nonatomic) NSString *clientName;
+@property (nonatomic) NSString *workDescription;
+@property (nonatomic) double hourlyRateCharged;
+@property (nonatomic) double amountHoursWorked;
+
 
 // Private IBOutlets
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
@@ -33,6 +38,15 @@
 }
 //MARK: - Actions
 - (IBAction)logTime:(id)sender {
+    self.clientName = self.clientNameTextField.text;
+    self.workDescription = self.summaryTextField.text;
+    self.hourlyRateCharged = [self.hourlyRateTextField.text doubleValue];
+    self.amountHoursWorked = [self.timeWorkedTextField.text doubleValue];
+    
+    [self.timedTaskController createTimedTaskWith:self.clientName
+                                  workDescription:self.workDescription
+                                hourlyRateCharged:self.hourlyRateCharged
+                                amountHoursWorked:self.amountHoursWorked];
 }
 
 // MARK: - UITableViewDataSource
