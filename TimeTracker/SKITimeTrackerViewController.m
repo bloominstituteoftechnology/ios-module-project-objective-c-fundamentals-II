@@ -26,6 +26,8 @@
 @property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
+//Private Methods
+- (void)updateViews;
 @end
 
 @implementation SKITimeTrackerViewController
@@ -47,6 +49,16 @@
                                   workDescription:self.workDescription
                                 hourlyRateCharged:self.hourlyRateCharged
                                 amountHoursWorked:self.amountHoursWorked];
+    [self updateViews];
+}
+
+- (void)updateViews
+{
+    [self.tableView reloadData];
+    self.clientNameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text =  @"";
+    self.timeWorkedTextField.text = @"";
 }
 
 // MARK: - UITableViewDataSource
