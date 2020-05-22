@@ -19,4 +19,15 @@
     }
     return self;
 }
+
+- (void)createTimedTaskWith:(NSString *)clientName
+            workDescription:(NSString *)workDescription
+          hourlyRateCharged:(double)hourlyRateCharged
+          amountHoursWorked:(double)amountHoursWorked {
+    SKITimedTask *timedTask = [[SKITimedTask alloc] initWithClientName: clientName
+                                                       workDescription: workDescription
+                                                     hourlyRateCharged: hourlyRateCharged
+                                                     amountHoursWorked: amountHoursWorked];
+    [_timedTasks addObject:timedTask];
+}
 @end
