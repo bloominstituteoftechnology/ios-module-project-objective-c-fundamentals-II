@@ -14,15 +14,24 @@
   workDescription:(NSString *)aWorkDescription
 hourlyRateCharged:(double)anHourlyRateCharged
 amountHoursWorked:(double)anAmountHoursWorked
-      totalAmount:(double)aTotalAmount
+
 {
-    if (self = [super init]) {
+    if (self = [super init])
+    {
         _clientName = aClientName;
         _workDescription = aWorkDescription;
         _hourlyRateCharged = anHourlyRateCharged;
         _amountHoursWorked = anAmountHoursWorked;
-        _totalAmount = aTotalAmount;
     }
     return self;
 }
+
+
+@synthesize totalAmount = _totalAmount;
+- (double)totalAmount
+{
+    _totalAmount = _amountHoursWorked * _hourlyRateCharged;
+    return _totalAmount;
+}
+
 @end
