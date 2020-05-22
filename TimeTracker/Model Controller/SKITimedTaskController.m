@@ -7,7 +7,16 @@
 //
 
 #import "SKITimedTaskController.h"
+#import "SKITimedTask.h"
 
 @implementation SKITimedTaskController
 
+-(instancetype)init
+{
+    if (self = [super init])
+    {
+        _timedTasks = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 @end
