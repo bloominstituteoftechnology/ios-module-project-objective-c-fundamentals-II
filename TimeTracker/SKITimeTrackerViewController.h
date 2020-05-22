@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SKITimedTaskController;
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SKITimeTrackerViewController : UIViewController
+@interface SKITimeTrackerViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
