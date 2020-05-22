@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface SKITimedTask : NSObject
 
-@property (nonatomic, readonly, copy) NSString *clientName;
-@property (nonatomic, readonly) NSString *workDescription;
-@property (nonatomic, readonly) double hourlyRateCharged;
-@property (nonatomic, readonly) double amountHoursWorked;
+@property (nonatomic) NSString *clientName;
+@property (nonatomic) NSString *workDescription;
+@property (nonatomic) double hourlyRateCharged;
+@property (nonatomic) double amountHoursWorked;
 @property (nonatomic, readonly) double totalAmount;
 
 - (instancetype)initWithClientName:(NSString *)aClientName
