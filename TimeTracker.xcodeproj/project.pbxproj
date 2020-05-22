@@ -137,8 +137,9 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = SKI;
 				LastUpgradeCheck = 1130;
-				ORGANIZATIONNAME = "Lambda School";
+				ORGANIZATIONNAME = Rutkowski;
 				TargetAttributes = {
 					467FC83623F3738B00C15592 = {
 						CreatedOnToolsVersion = 11.3.1;
