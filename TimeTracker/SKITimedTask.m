@@ -14,7 +14,6 @@
   workDescription:(NSString *)aWorkDescription
 hourlyRateCharged:(double)anHourlyRateCharged
 amountHoursWorked:(double)anAmountHoursWorked
-
 {
     if (self = [super init])
     {
