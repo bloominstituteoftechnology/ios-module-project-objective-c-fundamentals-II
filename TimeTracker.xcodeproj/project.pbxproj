@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4213EA292478164D00A507B0 /* SKITimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213EA282478164D00A507B0 /* SKITimedTask.m */; };
 		4213EA2C24781F7B00A507B0 /* SKITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213EA2B24781F7B00A507B0 /* SKITimedTaskController.m */; };
+		4213EA2F24782A9300A507B0 /* SKITimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4213EA2E24782A9300A507B0 /* SKITimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		4213EA282478164D00A507B0 /* SKITimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SKITimedTask.m; path = TimeTracker/SKITimedTask.m; sourceTree = SOURCE_ROOT; };
 		4213EA2A24781F7B00A507B0 /* SKITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SKITimedTaskController.h; path = "TimeTracker/Model Controller/SKITimedTaskController.h"; sourceTree = SOURCE_ROOT; };
 		4213EA2B24781F7B00A507B0 /* SKITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SKITimedTaskController.m; path = "TimeTracker/Model Controller/SKITimedTaskController.m"; sourceTree = SOURCE_ROOT; };
+		4213EA2D24782A9300A507B0 /* SKITimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SKITimeTrackerViewController.h; path = TimeTracker/SKITimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		4213EA2E24782A9300A507B0 /* SKITimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SKITimeTrackerViewController.m; path = TimeTracker/SKITimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4213EA2D24782A9300A507B0 /* SKITimeTrackerViewController.h */,
+				4213EA2E24782A9300A507B0 /* SKITimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4213EA2F24782A9300A507B0 /* SKITimeTrackerViewController.m in Sources */,
 				4213EA2C24781F7B00A507B0 /* SKITimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
