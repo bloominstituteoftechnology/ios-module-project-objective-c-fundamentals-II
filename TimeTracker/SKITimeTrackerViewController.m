@@ -16,7 +16,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *summaryTextField;
 @property (strong, nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
-
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -24,7 +24,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
 }
 //MARK: - Actions
 - (IBAction)logTime:(id)sender {

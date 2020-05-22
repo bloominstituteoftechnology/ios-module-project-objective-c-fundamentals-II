@@ -94,6 +94,7 @@
                         <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="oi2-lZ-spq"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="2Vn-ZN-xOK"/>
                         <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="scW-QW-LGm"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="HdE-aF-X1D"/>
                         <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="x8p-Ye-IhP"/>
                     </connections>
                 </viewController>
