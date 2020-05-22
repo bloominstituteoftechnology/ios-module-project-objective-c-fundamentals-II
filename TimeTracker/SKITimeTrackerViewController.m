@@ -7,6 +7,8 @@
 //
 
 #import "SKITimeTrackerViewController.h"
+#import "Model Controller/SKITimedTaskController.h" // Stupid Xcode
+#import "SKITimedTask.h"
 
 @interface SKITimeTrackerViewController ()
 // MARK: - Private Properties
@@ -25,6 +27,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _timedTaskController = [[SKITimedTaskController alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
 }
