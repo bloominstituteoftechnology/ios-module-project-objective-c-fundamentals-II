@@ -66,6 +66,7 @@
     self.summaryTextField.text = @"";
     self.hourlyRateTextField.text =  @"";
     self.timeWorkedTextField.text = @"";
+    _logTimeButton.enabled = NO;
 }
 
 - (void)textFieldDidChange:(UITextField *)textField
@@ -109,13 +110,35 @@
     return cell;
     
 }
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
+
+// Adds a "Delete" and "Edit" button when user swipes left on cell
+- (UISwipeActionsConfiguration *)tableView:(UITableView *)tableView trailingSwipeActionsConfigurationForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UIContextualAction *delete = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleDestructive
+                                                                         title:@"Delete"
+                                                                       handler:^(UIContextualAction * _Nonnull action,
+                                                                                 __kindof UIView * _Nonnull sourceView,
+                                                                                 void (^ _Nonnull completionHandler)(BOOL))
+    {
+        // Deletes cell at indexPath.row
         [self.timedTaskController.timedTasks removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }
-    NSLog(@"Deleted row.");
+        completionHandler(YES);
+    }];
+    
+    UIContextualAction *edit = [UIContextualAction contextualActionWithStyle:UIContextualActionStyleNormal
+                                                                       title:@"Edit"
+                                                                     handler:^(UIContextualAction * _Nonnull action,
+                                                                                 __kindof UIView * _Nonnull sourceView,
+                                                                                 void (^ _Nonnull completionHandler)(BOOL))
+    {
+        NSLog(@"index path of rename: %@", indexPath);
+        completionHandler(YES);
+    }];
+    
+    UISwipeActionsConfiguration *swipeActionConfig = [UISwipeActionsConfiguration configurationWithActions:@[edit, delete]];
+    swipeActionConfig.performsFirstActionWithFullSwipe = NO;
+    
+    return swipeActionConfig;
 }
 
 
