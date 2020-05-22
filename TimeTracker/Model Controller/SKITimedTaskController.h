@@ -21,7 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
            hourlyRateCharged:(double)hourlyRateCharged
            amountHoursWorked:(double)amountHoursWorked;
 
-- (void)updateTimedTaskAt:(int)index
+- (void)updateTimedTaskAt:(NSInteger)index
               clientName:(NSString *)clientName
          workDescription:(NSString *)workDescription
        hourlyRateCharged:(double)hourlyRateCharged

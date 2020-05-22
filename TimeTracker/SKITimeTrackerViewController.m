@@ -146,8 +146,8 @@
         SKITimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
         self.clientNameTextField.text = timedTask.clientName;
         self.summaryTextField.text = timedTask.workDescription;
-        self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hourlyRateCharged];
-        self.timeWorkedTextField.text = [NSString stringWithFormat:@"$%.2f", timedTask.totalAmount];
+        self.hourlyRateTextField.text = [NSString stringWithFormat:@"$%.2f", timedTask.hourlyRateCharged];
+        self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.amountHoursWorked];
         self.isEditing = YES;
         self.index = indexPath.row;
         NSLog(@"index path of rename: %@", indexPath);
