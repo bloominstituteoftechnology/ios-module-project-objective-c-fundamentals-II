@@ -9,7 +9,8 @@
 #import "SKITimeTrackerViewController.h"
 
 @interface SKITimeTrackerViewController ()
-
+// MARK: - Private Properties
+@property (nonatomic) SKITimedTaskController *timedTaskController;
 
 // Private IBOutlets
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
