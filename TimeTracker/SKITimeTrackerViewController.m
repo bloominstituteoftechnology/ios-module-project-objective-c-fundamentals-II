@@ -17,7 +17,8 @@
 @property (nonatomic) NSString *workDescription;
 @property (nonatomic) double hourlyRateCharged;
 @property (nonatomic) double amountHoursWorked;
-
+@property (nonatomic) BOOL isEditing;
+@property (nonatomic) NSInteger index;
 
 // Private IBOutlets
 @property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
@@ -46,15 +47,25 @@
 }
 //MARK: - Actions
 - (IBAction)logTime:(id)sender {
+    
     self.clientName = self.clientNameTextField.text;
     self.workDescription = self.summaryTextField.text;
     self.hourlyRateCharged = [self.hourlyRateTextField.text doubleValue];
     self.amountHoursWorked = [self.timeWorkedTextField.text doubleValue];
-    
-    [self.timedTaskController createTimedTaskWith:self.clientName
-                                  workDescription:self.workDescription
-                                hourlyRateCharged:self.hourlyRateCharged
-                                amountHoursWorked:self.amountHoursWorked];
+    if (self.isEditing) {
+        [self.timedTaskController updateTimedTaskAt:self.index
+                                         clientName:self.clientName
+                                      workDescription:self.workDescription
+                                    hourlyRateCharged:self.hourlyRateCharged
+                                    amountHoursWorked:self.amountHoursWorked];
+    } else {
+        [self.timedTaskController createTimedTaskWith:self.clientName
+                                      workDescription:self.workDescription
+                                    hourlyRateCharged:self.hourlyRateCharged
+                                    amountHoursWorked:self.amountHoursWorked];
+
+    }
+
     [self updateViews];
 }
 // Methods
@@ -67,6 +78,7 @@
     self.hourlyRateTextField.text =  @"";
     self.timeWorkedTextField.text = @"";
     _logTimeButton.enabled = NO;
+    self.isEditing = NO;
 }
 
 - (void)textFieldDidChange:(UITextField *)textField
@@ -131,6 +143,13 @@
                                                                                  __kindof UIView * _Nonnull sourceView,
                                                                                  void (^ _Nonnull completionHandler)(BOOL))
     {
+        SKITimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+        self.clientNameTextField.text = timedTask.clientName;
+        self.summaryTextField.text = timedTask.workDescription;
+        self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", timedTask.hourlyRateCharged];
+        self.timeWorkedTextField.text = [NSString stringWithFormat:@"$%.2f", timedTask.totalAmount];
+        self.isEditing = YES;
+        self.index = indexPath.row;
         NSLog(@"index path of rename: %@", indexPath);
         completionHandler(YES);
     }];
@@ -140,6 +159,5 @@
     
     return swipeActionConfig;
 }
-
 
 @end
