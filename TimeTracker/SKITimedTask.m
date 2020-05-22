@@ -10,4 +10,19 @@
 
 @implementation SKITimedTask
 
+- (instancetype)initWithClientName:(NSString *)aClientName
+  workDescription:(NSString *)aWorkDescription
+hourlyRateCharged:(double)anHourlyRateCharged
+amountHoursWorked:(double)anAmountHoursWorked
+      totalAmount:(double)aTotalAmount
+{
+    if (self = [super init]) {
+        _clientName = aClientName;
+        _workDescription = aWorkDescription;
+        _hourlyRateCharged = anHourlyRateCharged;
+        _amountHoursWorked = anAmountHoursWorked;
+        _totalAmount = aTotalAmount;
+    }
+    return self;
+}
 @end
