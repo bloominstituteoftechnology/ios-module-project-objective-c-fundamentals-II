@@ -25,6 +25,7 @@
 @property (strong, nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet UIButton *logTimeButton;
 
 //Private Methods
 - (void)updateViews;
@@ -37,6 +38,8 @@
     _timedTaskController = [[SKITimedTaskController alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
+    _logTimeButton.enabled = NO;
+    [self setUpTextFields];
 }
 //MARK: - Actions
 - (IBAction)logTime:(id)sender {
@@ -51,6 +54,7 @@
                                 amountHoursWorked:self.amountHoursWorked];
     [self updateViews];
 }
+// Methods
 
 - (void)updateViews
 {
@@ -59,6 +63,24 @@
     self.summaryTextField.text = @"";
     self.hourlyRateTextField.text =  @"";
     self.timeWorkedTextField.text = @"";
+}
+
+- (void)textFieldDidChange:(UITextField *)textField
+{
+    if (_clientNameTextField.text.length > 0 && _summaryTextField.text.length > 0 && _hourlyRateTextField.text.length > 0 && _timeWorkedTextField.text.length > 0)
+    {
+        _logTimeButton.enabled = YES;
+    } else {
+        _logTimeButton.enabled = NO;
+    }
+}
+
+- (void)setUpTextFields
+{
+    [_clientNameTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [_summaryTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [_hourlyRateTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
+    [_timeWorkedTextField addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
 // MARK: - UITableViewDataSource
@@ -74,7 +96,7 @@
     cell.textLabel.text = timedTask.clientName;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.totalAmount];
     return cell;
-
+    
 }
 
 @end
