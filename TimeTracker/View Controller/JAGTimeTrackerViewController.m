@@ -14,6 +14,7 @@
 
 // Private Properties
 @property (nonatomic) JAGTimedTaskController *timedTaskController;
+
 // Private IBOutlets
 @property (weak, nonatomic) IBOutlet UITextField *clientNameTextField;
 @property (weak, nonatomic) IBOutlet UITextField *summaryTextField;
@@ -34,6 +35,17 @@
 }
 
 - (IBAction)logTime:(id)sender {
+    [self.timedTaskController createTimedTaskWith:self.clientNameTextField.text
+                                         aSummary:self.summaryTextField.text
+                                   anHourlyRateOf:self.hourlyRateTextField.text.doubleValue
+                                      hoursWorked:self.hourlyRateTextField.text.doubleValue];
+    [self.timedTaskTableView reloadData];
+
+    self.clientNameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.hoursWorkedTextField.text = @"";
+
 }
 
 
