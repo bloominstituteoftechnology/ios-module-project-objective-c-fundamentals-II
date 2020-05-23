@@ -1,14 +1,14 @@
 //
-//  TimedTask.m
+//  JAGTimedTask.m
 //  TimeTracker
 //
 //  Created by Jessie Ann Griffin on 5/22/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
-#import "TimedTask.h"
+#import "JAGTimedTask.h"
 
-@implementation TimedTask
+@implementation JAGTimedTask
 
 - (instancetype)initWithClient:(NSString *)aClient
                        summary:(NSString *)aSummary
