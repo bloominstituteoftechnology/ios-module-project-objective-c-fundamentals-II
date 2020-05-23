@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FBA8AD4247969D600284EA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1FBA8AD3247969D500284EA8 /* README.md */; };
+		1FBA8ADA24796E5E00284EA8 /* TSATimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */; };
+		1FBA8ADD2479797200284EA8 /* TSATimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA8ADC2479797200284EA8 /* TSATimedTaskController.m */; };
+		1FFE6ED82479B4FF001C4750 /* TSATimedTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE6ED72479B4FF001C4750 /* TSATimedTaskViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FBA8AD3247969D500284EA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1FBA8AD824796E5E00284EA8 /* TSATimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSATimedTask.h; path = TimeTracker/TSATimedTask.h; sourceTree = SOURCE_ROOT; };
+		1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TSATimedTask.m; path = TimeTracker/TSATimedTask.m; sourceTree = SOURCE_ROOT; };
+		1FBA8ADB2479797200284EA8 /* TSATimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSATimedTaskController.h; path = TimeTracker/TSATimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		1FBA8ADC2479797200284EA8 /* TSATimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TSATimedTaskController.m; path = TimeTracker/TSATimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		1FFE6ED62479B4FF001C4750 /* TSATimedTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TSATimedTaskViewController.h; sourceTree = SOURCE_ROOT; };
+		1FFE6ED72479B4FF001C4750 /* TSATimedTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TSATimedTaskViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +53,7 @@
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
+				1FBA8AD3247969D500284EA8 /* README.md */,
 				467FC83923F3738B00C15592 /* TimeTracker */,
 				467FC83823F3738B00C15592 /* Products */,
 			);
@@ -93,6 +105,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA8AD824796E5E00284EA8 /* TSATimedTask.h */,
+				1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +114,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FFE6ED62479B4FF001C4750 /* TSATimedTaskViewController.h */,
+				1FFE6ED72479B4FF001C4750 /* TSATimedTaskViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +123,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA8ADB2479797200284EA8 /* TSATimedTaskController.h */,
+				1FBA8ADC2479797200284EA8 /* TSATimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -137,6 +155,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TSA;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -170,6 +189,7 @@
 			files = (
 				467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */,
 				467FC84723F3738C00C15592 /* Assets.xcassets in Resources */,
+				1FBA8AD4247969D600284EA8 /* README.md in Resources */,
 				467FC84523F3738B00C15592 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,8 +202,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				1FBA8ADD2479797200284EA8 /* TSATimedTaskController.m in Sources */,
+				1FFE6ED82479B4FF001C4750 /* TSATimedTaskViewController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				1FBA8ADA24796E5E00284EA8 /* TSATimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
