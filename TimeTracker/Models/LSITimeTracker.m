@@ -10,6 +10,20 @@
 
 @implementation LSITimeTracker
 
-- (NSMutableArray<LSITimeTracker *> *)timeEntry)
+- (instancetype)initWithName:(NSString *)aClientName
+                   taskNotes:(NSString *)aTaskNotes
+                        rate:(double)aRate
+                    manHours:(double)aManHours
+                    totalPay:(double)aTotalPay
+{
+    if (self = [super init]) {
+        _clientName = aClientName;
+        _taskNotes = aTaskNotes;
+        _rate = aRate;
+        _manHours = aManHours;
+        _totalPay = aTotalPay;
+    }
+    return self;
+}
 
 @end

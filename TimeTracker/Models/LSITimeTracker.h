@@ -18,7 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) double manHours;
 @property (nonatomic, readonly) double totalPay;
 
-- (instancetype)initWithName:(NSString *)aName
+- (instancetype)initWithName:(NSString *)aClientName
                    taskNotes:(NSString *)aTaskNotes
                         rate:(double)aRate
                     manHours:(double)aManHours
