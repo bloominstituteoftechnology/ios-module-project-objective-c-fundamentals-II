@@ -7,10 +7,27 @@
 //
 
 #import "TSATimedTaskViewController.h"
-#import "TSATimedTaskViewController.h"
+#import "TSATimedTaskController.h"
 #import "TSATimedTask.h"
 
-@interface TSATimedTaskViewController ()
+@interface TSATimedTaskViewController() <UITableViewDelegate, UITableViewDataSource>
+
+// private properties
+@property (nonatomic) double total;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) NSInteger hoursWorked;
+
+@property TSATimedTaskController *taskController;
+
+
+// Outlets
+
+@property (nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (nonatomic) IBOutlet UITextField *summaryTextField;
+@property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (nonatomic) IBOutlet UITableView *tableView;
+
 
 @end
 
@@ -18,17 +35,39 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.taskController = [[TSATimedTaskController alloc] init];
+
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 
-/*
+- (IBAction)logTime:(UIButton *)sender {
+    [self.taskController createTimedTaskWith:self.clientNameTextField.text
+                    summary:self.summaryTextField.text
+                    hourlyRate:[self.hourlyRateTextField.text doubleValue]
+                    hoursWorked:[self.timeWorkedTextField.text doubleValue]];
+    
+    [self.tableView reloadData];
+}
+
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return self.taskController.timedTasks.count;
 }
-*/
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TotalCell" forIndexPath:indexPath];
+    
+    TSATimedTask *task = [self.taskController.timedTasks objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", task.total];
+    
+    return cell;
+}
+
 
 @end

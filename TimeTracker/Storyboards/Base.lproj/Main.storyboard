@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Timed Task View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="TSATimedTaskViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
                                         <rect key="frame" x="0.0" y="168" width="374" height="30"/>
                                         <state key="normal" title="Log Time"/>
+                                        <connections>
+                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="NH4-KV-OKA"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,10 +90,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
+                    <connections>
+                        <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="SVo-Zr-VHS"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="7hK-2E-2si"/>
+                        <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="bsw-M0-pkL"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="gll-36-Umq"/>
+                        <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="60f-TW-ZjE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="151.33928571428569"/>
+            <point key="canvasLocation" x="71" y="117"/>
         </scene>
     </scenes>
 </document>
