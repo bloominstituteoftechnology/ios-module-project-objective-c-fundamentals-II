@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FBA8AD4247969D600284EA8 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1FBA8AD3247969D500284EA8 /* README.md */; };
+		1FBA8ADA24796E5E00284EA8 /* TSATimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -18,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		1FBA8AD3247969D500284EA8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		1FBA8AD824796E5E00284EA8 /* TSATimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TSATimedTask.h; path = TimeTracker/TSATimedTask.h; sourceTree = SOURCE_ROOT; };
+		1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TSATimedTask.m; path = TimeTracker/TSATimedTask.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1FBA8AD824796E5E00284EA8 /* TSATimedTask.h */,
+				1FBA8AD924796E5E00284EA8 /* TSATimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				1FBA8ADA24796E5E00284EA8 /* TSATimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
