@@ -8,6 +8,7 @@
 
 #import "JAGTimeTrackerViewController.h"
 #import "JAGTimedTaskController.h"
+#import "JAGTimedTask.h"
 
 @interface JAGTimeTrackerViewController ()
 
@@ -27,7 +28,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.timedTaskController = [[JAGTimedTaskController alloc] init];
+    self.timedTaskTableView.dataSource = self;
 }
 
 - (IBAction)logTime:(id)sender {
@@ -43,5 +46,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView
+                 cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    JAGTimedTask *task = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = task.client;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", task.totalBill];
+    return cell;
+}
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section
+{
+    return self.timedTaskController.timedTasks.count;
+}
 
 @end
