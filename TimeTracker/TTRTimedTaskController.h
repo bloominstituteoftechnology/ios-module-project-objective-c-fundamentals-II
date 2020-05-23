@@ -15,13 +15,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TTRTimedTaskController : NSObject
 
-@property (nonatomic, readwrite) NSArray<TTRTimedTask *> *timedTask;
+@property (nonatomic, readwrite) NSMutableArray<TTRTimedTask *> *timedTask;
 - (void)createTimedTaskWith:(NSString *)name
                     summary:(NSString *)summary
                  hourlyRate:(double)hourlyRate
                  totalHours:(double)totalHours;
 
-- (void)updateTotalTimes:(NSInteger)index name:(NSString *)name
+- (void)updateTotalTimes:(NSInteger)index
+                    name:(NSString *)name
                  summary:(NSString *)summary
                hourlyRate:(double)hourlyRate
                totalHours:(double)totalHours;

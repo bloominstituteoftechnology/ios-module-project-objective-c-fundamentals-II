@@ -13,10 +13,10 @@ NS_ASSUME_NONNULL_BEGIN
 @interface TTRTimedTask : NSObject
 
 //create properties for model
-@property (nonatomic, readonly, copy) NSString *name;
-@property (nonatomic, readonly, copy) NSString *summary;
-@property (nonatomic, readonly) double hourlyRate;
-@property (nonatomic, readonly) double totalHours;
+@property (nonatomic) NSString *name;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) double totalHours;
 @property (nonatomic) double totalCost;
 
 //add initializer

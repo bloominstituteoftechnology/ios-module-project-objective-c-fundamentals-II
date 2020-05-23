@@ -16,8 +16,8 @@
                   totalHours:(double)aTotalHours
 {
   if (self = [super init]) {
-    _name = aName.copy;
-    _summary = aSummary.copy;
+    _name = aName;
+    _summary = aSummary;
     _hourlyRate = aHourlyRate;
     _totalHours = aTotalHours;
   }
