@@ -12,17 +12,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TSATimedTask : NSObject
 
-@property NSString *client;
-@property NSString *summary;
-@property double hourlyRate;
-@property NSInteger hoursWorked;
-@property (readonly) double total;
+@property (nonatomic) NSString *client;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) NSInteger hoursWorked;
+@property (nonatomic, readonly) double total;
 
-- (instancetype)initWithClient:(NSString *)aClient
-                         total:(double)aTotal
-                       summary:(NSString *)aSummary
-                    hourlyRate:(double)aHourlyRate
-                   hoursWorked:(NSInteger)HoursWorked;
+- (instancetype)initWithClient:(NSString *)client
+                         total:(double)total
+                       summary:(NSString *)summary
+                    hourlyRate:(double)hourlyRate
+                   hoursWorked:(NSInteger)hoursWorked;
 @end
 
 NS_ASSUME_NONNULL_END
