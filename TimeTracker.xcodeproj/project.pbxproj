@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171737F72479A8F00059057B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 171737F62479A8F00059057B /* README.md */; };
+		171737FD2479AAD60059057B /* CLBTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 171737FC2479AAD60059057B /* CLBTimedTask.m */; };
+		171738002479AD070059057B /* CLBTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171737FF2479AD070059057B /* CLBTimedTaskController.m */; };
+		171738032479AE450059057B /* CLBTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 171738022479AE450059057B /* CLBTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		171737F62479A8F00059057B /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		171737FB2479AAD60059057B /* CLBTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBTimedTask.h; sourceTree = SOURCE_ROOT; };
+		171737FC2479AAD60059057B /* CLBTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBTimedTask.m; sourceTree = SOURCE_ROOT; };
+		171737FE2479AD070059057B /* CLBTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		171737FF2479AD070059057B /* CLBTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		171738012479AE450059057B /* CLBTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLBTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		171738022479AE450059057B /* CLBTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLBTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +53,7 @@
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
+				171737F62479A8F00059057B /* README.md */,
 				467FC83923F3738B00C15592 /* TimeTracker */,
 				467FC83823F3738B00C15592 /* Products */,
 			);
@@ -93,6 +105,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				171737FB2479AAD60059057B /* CLBTimedTask.h */,
+				171737FC2479AAD60059057B /* CLBTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +114,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				171738012479AE450059057B /* CLBTimeTrackerViewController.h */,
+				171738022479AE450059057B /* CLBTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +123,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				171737FE2479AD070059057B /* CLBTimedTaskController.h */,
+				171737FF2479AD070059057B /* CLBTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -137,6 +155,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CLB;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -170,6 +189,7 @@
 			files = (
 				467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */,
 				467FC84723F3738C00C15592 /* Assets.xcassets in Resources */,
+				171737F72479A8F00059057B /* README.md in Resources */,
 				467FC84523F3738B00C15592 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -181,9 +201,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171738032479AE450059057B /* CLBTimeTrackerViewController.m in Sources */,
+				171737FD2479AAD60059057B /* CLBTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				171738002479AD070059057B /* CLBTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
