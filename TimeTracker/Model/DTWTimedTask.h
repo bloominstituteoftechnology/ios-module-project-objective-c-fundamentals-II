@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DTWTimedTask : NSObject
 
+@property (nonatomic, copy) NSString *client;
+@property (nonatomic, copy) NSString *summary;
+@property (nonatomic) double hourlyRate;
+@property (nonatomic) double hoursWorked;
+@property (nonatomic, readonly) double total;
+
 @end
 
 NS_ASSUME_NONNULL_END
