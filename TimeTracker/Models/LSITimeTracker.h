@@ -12,10 +12,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITimeTracker : NSObject
 
-@property (nonatomic, readonly, copy) NSString *clientName;
-@property (nonatomic, readonly) NSString *taskNotes;
-@property (nonatomic, readonly) double rate;
-@property (nonatomic, readonly) double manHours;
+@property (nonatomic, copy) NSString *clientName;
+@property (nonatomic) NSString *taskNotes;
+@property (nonatomic) double rate;
+@property (nonatomic) double manHours;
 @property (nonatomic, readonly) double totalPay;
 
 - (instancetype)initWithName:(NSString *)aClientName
