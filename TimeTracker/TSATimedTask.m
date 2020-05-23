@@ -10,17 +10,23 @@
 
 @implementation TSATimedTask
 
-- (instancetype)initWithClient:(NSString *)client total:(double)total summary:(NSString *)summary hourlyRate:(double)hourlyRate hoursWorked:(NSInteger)hoursWorked {
+- (instancetype)initWithClient:(NSString *)client
+                       summary:(NSString *)summary
+                    hourlyRate:(double)hourlyRate
+                   hoursWorked:(NSInteger)hoursWorked {
     
     if (self = [super init]) {
         
         _client = client.copy;
-        _total = total;
         _summary = summary;
         _hourlyRate = hourlyRate;
         _hoursWorked = hoursWorked;
     }
     return self;
+}
+
+- (double)total {
+    return _hourlyRate * _hoursWorked;
 }
 
 @end
