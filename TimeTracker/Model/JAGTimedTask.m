@@ -18,15 +18,15 @@
     if (self = [super init]) {
         _client = aClient;
         _summary = aSummary;
-        _hourlyRate = anHourlyRate;
-        _hoursWorked = hoursWorked;
+        self.hourlyRate = anHourlyRate;
+        self.hoursWorked = hoursWorked;
     }
     return self;
 }
 
 - (double)totalBill
 {
-    return _hourlyRate * _hoursWorked;
+    return self.hourlyRate * self.hoursWorked;
 }
 
 @end

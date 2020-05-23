@@ -38,7 +38,7 @@
     [self.timedTaskController createTimedTaskWith:self.clientNameTextField.text
                                          aSummary:self.summaryTextField.text
                                    anHourlyRateOf:self.hourlyRateTextField.text.doubleValue
-                                      hoursWorked:self.hourlyRateTextField.text.doubleValue];
+                                      hoursWorked:self.hoursWorkedTextField.text.doubleValue];
     [self.timedTaskTableView reloadData];
 
     self.clientNameTextField.text = @"";
