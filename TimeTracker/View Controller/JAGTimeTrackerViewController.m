@@ -7,8 +7,19 @@
 //
 
 #import "JAGTimeTrackerViewController.h"
+#import "JAGTimedTaskController.h"
 
 @interface JAGTimeTrackerViewController ()
+
+// Private Properties
+@property (nonatomic) JAGTimedTaskController *timedTaskController;
+// Private IBOutlets
+@property (weak, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hoursWorkedTextField;
+@property (weak, nonatomic) IBOutlet UITableView *timedTaskTableView;
+
 
 @end
 
@@ -18,6 +29,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+- (IBAction)logTime:(id)sender {
+}
+
 
 /*
 #pragma mark - Navigation

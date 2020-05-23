@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JAGTimeTrackerViewController : UIViewController
+@interface JAGTimeTrackerViewController : UIViewController <UITableViewDataSource>
 
 @end
 
