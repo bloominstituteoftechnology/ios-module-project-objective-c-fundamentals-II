@@ -10,4 +10,25 @@
 
 @implementation TTRTimedTask
 
+- (instancetype)initWithName:(NSString *)aName
+                     summary:(NSString *)aSummary
+                  hourlyRate:(double)aHourlyRate
+                  totalHours:(double)aTotalHours
+{
+  if (self = [super init]) {
+    _name = aName.copy;
+    _summary = aSummary.copy;
+    _hourlyRate = aHourlyRate;
+    _totalHours = aTotalHours;
+  }
+  return self;
+}
+
+@synthesize totalCost = _totalCost;
+-(double)totalCost
+{
+  _totalCost = _totalHours * _hourlyRate;
+  return _totalCost;
+}
+
 @end

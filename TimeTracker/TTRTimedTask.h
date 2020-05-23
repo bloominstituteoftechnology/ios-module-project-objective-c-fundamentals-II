@@ -16,14 +16,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSString *name;
 @property (nonatomic, readonly, copy) NSString *summary;
 @property (nonatomic, readonly) double hourlyRate;
-@property (nonatomic, readonly) NSInteger totalHours;
+@property (nonatomic, readonly) double totalHours;
 @property (nonatomic) double totalCost;
 
 //add initializer
 - (instancetype)initWithName:(NSString *)aName
                      summary:(NSString *)aSummary
                   hourlyRate:(double)aHourlyRate
-                  totalHours:(NSInteger)aTotalHours;
+                  totalHours:(double)aTotalHours;
                                   
 
 @end
