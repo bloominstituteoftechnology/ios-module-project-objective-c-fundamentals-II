@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		95E94BE82478AE33004450F3 /* JAGTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E94BE72478AE33004450F3 /* JAGTimedTask.m */; };
 		95E94BEB2478B21B004450F3 /* JAGTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E94BEA2478B21B004450F3 /* JAGTimedTaskController.m */; };
+		95E94BEE2478B638004450F3 /* JAGTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95E94BED2478B638004450F3 /* JAGTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		95E94BE72478AE33004450F3 /* JAGTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAGTimedTask.m; sourceTree = "<group>"; };
 		95E94BE92478B21B004450F3 /* JAGTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JAGTimedTaskController.h; path = TimeTracker/JAGTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		95E94BEA2478B21B004450F3 /* JAGTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JAGTimedTaskController.m; path = TimeTracker/JAGTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		95E94BEC2478B638004450F3 /* JAGTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAGTimeTrackerViewController.h; sourceTree = "<group>"; };
+		95E94BED2478B638004450F3 /* JAGTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JAGTimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				95E94BEC2478B638004450F3 /* JAGTimeTrackerViewController.h */,
+				95E94BED2478B638004450F3 /* JAGTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				95E94BE82478AE33004450F3 /* JAGTimedTask.m in Sources */,
+				95E94BEE2478B638004450F3 /* JAGTimeTrackerViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				95E94BEB2478B21B004450F3 /* JAGTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
