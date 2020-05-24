@@ -20,4 +20,16 @@
     return self;
 }
 
+- (void)createTimedTaskWithClient:(NSString *)client
+                          summary:(NSString *)summary
+                       hourlyRate:(double)hourlyRate
+                      hoursWorked:(double)hoursWorked
+{
+    DTWTimedTask *newTimedTask = [[DTWTimedTask alloc] initWithClient:client
+                                                              summary:summary
+                                                           hourlyRate:hourlyRate
+                                                          hoursWorked:hoursWorked];
+    [_timedTasks addObject:newTimedTask];
+}
+
 @end
