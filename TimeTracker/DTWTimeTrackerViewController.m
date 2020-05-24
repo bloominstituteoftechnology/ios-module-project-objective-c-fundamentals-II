@@ -30,6 +30,8 @@
     [super viewDidLoad];
     
     self.timedTaskController = [[DTWTimedTaskController alloc] init];
+    
+    self.tableView.dataSource = self;
 }
 
 // IBActions
