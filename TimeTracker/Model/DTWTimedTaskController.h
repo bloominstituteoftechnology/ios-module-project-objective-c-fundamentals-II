@@ -8,9 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@class DTWTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface DTWTimedTaskController : NSObject
+
+@property (nonatomic, copy) NSMutableArray<DTWTimedTask *> *timedTasks;
 
 @end
 
