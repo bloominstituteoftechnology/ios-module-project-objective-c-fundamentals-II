@@ -10,6 +10,13 @@
 
 @interface DTWTimeTrackerViewController ()
 
+// Private IBOutlets
+@property (nonatomic) IBOutlet UITextField *clientTextField;
+@property (nonatomic) IBOutlet UITextField *summaryTextField;
+@property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation DTWTimeTrackerViewController
@@ -17,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+// IBActions
+- (IBAction)logTime:(id)sender
+{
+    
 }
 
 /*
