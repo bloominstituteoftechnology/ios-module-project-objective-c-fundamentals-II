@@ -7,7 +7,17 @@
 //
 
 #import "DTWTimedTaskController.h"
+#import "DTWTimedTask.h"
 
 @implementation DTWTimedTaskController
+
+// Initializer
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _timedTasks = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 @end
