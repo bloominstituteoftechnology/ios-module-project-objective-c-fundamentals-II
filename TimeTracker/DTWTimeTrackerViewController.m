@@ -37,7 +37,10 @@
 // IBActions
 - (IBAction)logTime:(id)sender
 {
-    
+    [self.timedTaskController createTimedTaskWithClient:self.clientTextField.text
+                                                summary:self.summaryTextField.text
+                                             hourlyRate:self.hourlyRateTextField.text.doubleValue
+                                            hoursWorked:self.timeWorkedTextField.text.doubleValue];
 }
 
 // UITableViewDataSource
