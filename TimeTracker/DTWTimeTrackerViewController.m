@@ -69,4 +69,15 @@
     return cell;
 }
 
+// UITableViewDelegate
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DTWTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    
+    self.clientTextField.text = timedTask.client;
+    self.summaryTextField.text = timedTask.summary;
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%f", timedTask.hourlyRate];
+    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%f", timedTask.hoursWorked];
+}
+
 @end
