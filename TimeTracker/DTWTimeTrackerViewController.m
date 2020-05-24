@@ -40,6 +40,24 @@
     
 }
 
+// UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.timedTaskController.timedTasks count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
+    
+    DTWTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = timedTask.client;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", timedTask.total];
+    
+    return cell;
+}
+
 /*
 #pragma mark - Navigation
 
