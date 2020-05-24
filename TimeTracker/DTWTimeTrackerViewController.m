@@ -7,8 +7,13 @@
 //
 
 #import "DTWTimeTrackerViewController.h"
+#import "DTWTimedTaskController.h"
+#import "DTWTimedTask.h"
 
 @interface DTWTimeTrackerViewController ()
+
+// Private Properties
+@property (nonatomic) DTWTimedTaskController *timedTaskController;
 
 // Private IBOutlets
 @property (nonatomic) IBOutlet UITextField *clientTextField;
