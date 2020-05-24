@@ -41,6 +41,13 @@
                                                 summary:self.summaryTextField.text
                                              hourlyRate:self.hourlyRateTextField.text.doubleValue
                                             hoursWorked:self.timeWorkedTextField.text.doubleValue];
+    
+    self.clientTextField.text = nil;
+    self.summaryTextField.text = nil;
+    self.hourlyRateTextField.text = nil;
+    self.timeWorkedTextField.text = nil;
+    
+    [self.tableView reloadData];
 }
 
 // UITableViewDataSource
@@ -56,7 +63,7 @@
     DTWTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
     
     cell.textLabel.text = timedTask.client;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", timedTask.total];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.total];
     
     return cell;
 }
