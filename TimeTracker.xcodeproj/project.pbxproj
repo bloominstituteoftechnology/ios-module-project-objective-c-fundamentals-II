@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		631EA5AE2479DDBE00D2E70B /* DTWTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA5AD2479DDBE00D2E70B /* DTWTimedTask.m */; };
 		631EA5B12479E37500D2E70B /* DTWTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA5B02479E37500D2E70B /* DTWTimedTaskController.m */; };
+		631EA5C7247A501300D2E70B /* DTWTimedTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 631EA5C6247A501300D2E70B /* DTWTimedTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		631EA5AD2479DDBE00D2E70B /* DTWTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DTWTimedTask.m; sourceTree = "<group>"; };
 		631EA5AF2479E37500D2E70B /* DTWTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTWTimedTaskController.h; path = TimeTracker/Model/DTWTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		631EA5B02479E37500D2E70B /* DTWTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DTWTimedTaskController.m; path = TimeTracker/Model/DTWTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		631EA5C5247A501300D2E70B /* DTWTimedTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTWTimedTaskViewController.h; path = "../../../../../../General-iOS/Objective-C/DTWTimedTaskViewController.h"; sourceTree = "<group>"; };
+		631EA5C6247A501300D2E70B /* DTWTimedTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DTWTimedTaskViewController.m; path = "../../../../../../General-iOS/Objective-C/DTWTimedTaskViewController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				631EA5C5247A501300D2E70B /* DTWTimedTaskViewController.h */,
+				631EA5C6247A501300D2E70B /* DTWTimedTaskViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				631EA5B12479E37500D2E70B /* DTWTimedTaskController.m in Sources */,
+				631EA5C7247A501300D2E70B /* DTWTimedTaskViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				631EA5AE2479DDBE00D2E70B /* DTWTimedTask.m in Sources */,
