@@ -43,10 +43,18 @@
 // IBActions
 - (IBAction)logTime:(id)sender
 {
-    [self.timedTaskController createTimedTaskWithClient:self.clientTextField.text
-                                                summary:self.summaryTextField.text
-                                             hourlyRate:self.hourlyRateTextField.text.doubleValue
-                                            hoursWorked:self.timeWorkedTextField.text.doubleValue];
+    if (self.selectedIndexPath == nil) {
+        [self.timedTaskController createTimedTaskWithClient:self.clientTextField.text
+                                                    summary:self.summaryTextField.text
+                                                 hourlyRate:self.hourlyRateTextField.text.doubleValue
+                                                hoursWorked:self.timeWorkedTextField.text.doubleValue];
+    } else {
+        [self.timedTaskController updateTimedTaskAtIndex:self.selectedIndexPath.row
+                                              withClient:self.clientTextField.text
+                                                 summary:self.summaryTextField.text
+                                              hourlyRate:self.hourlyRateTextField.text.doubleValue
+                                             hoursWorked:self.timeWorkedTextField.text.doubleValue];
+    }
     
     [self clearAllTextViews];
     [self.tableView reloadData];

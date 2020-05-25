@@ -32,4 +32,16 @@
     [_timedTasks addObject:newTimedTask];
 }
 
+- (void)updateTimedTaskAtIndex:(NSInteger)index
+                    withClient:(NSString *)client
+                       summary:(NSString *)summary
+                    hourlyRate:(double)hourlyRate
+                   hoursWorked:(double)hoursWorked
+{
+    _timedTasks[index].client = client;
+    _timedTasks[index].summary = summary;
+    _timedTasks[index].hourlyRate = hourlyRate;
+    _timedTasks[index].hoursWorked = hoursWorked;
+}
+
 @end
