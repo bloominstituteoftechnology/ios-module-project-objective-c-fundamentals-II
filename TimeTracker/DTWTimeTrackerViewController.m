@@ -14,6 +14,7 @@
 
 // Private Properties
 @property (nonatomic) DTWTimedTaskController *timedTaskController;
+@property (nonatomic) NSIndexPath *selectedIndexPath;
 
 // Private IBOutlets
 @property (nonatomic) IBOutlet UITextField *clientTextField;
@@ -35,6 +36,8 @@
     
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
+    
+    self.cancelButton.hidden = YES;
 }
 
 // IBActions
@@ -45,12 +48,33 @@
                                              hourlyRate:self.hourlyRateTextField.text.doubleValue
                                             hoursWorked:self.timeWorkedTextField.text.doubleValue];
     
+    [self clearAllTextViews];
+    [self.tableView reloadData];
+    self.selectedIndexPath = nil;
+}
+
+- (IBAction)cancelEditing:(id)sender
+{
+    self.logTimeButton.titleLabel.text = @"Log Time";
+    self.cancelButton.hidden = YES;
+    
+    [self clearAllTextViews];
+    [self deselectRow];
+}
+
+// Private Methods
+- (void)clearAllTextViews
+{
     self.clientTextField.text = nil;
     self.summaryTextField.text = nil;
     self.hourlyRateTextField.text = nil;
     self.timeWorkedTextField.text = nil;
-    
-    [self.tableView reloadData];
+}
+
+- (void)deselectRow
+{
+    [self.tableView deselectRowAtIndexPath:self.selectedIndexPath animated:NO];
+    self.selectedIndexPath = nil;
 }
 
 // UITableViewDataSource
@@ -80,6 +104,11 @@
     self.summaryTextField.text = timedTask.summary;
     self.hourlyRateTextField.text = [NSString stringWithFormat:@"%f", timedTask.hourlyRate];
     self.timeWorkedTextField.text = [NSString stringWithFormat:@"%f", timedTask.hoursWorked];
+    
+    self.logTimeButton.titleLabel.text = @"Save Changes";
+    self.cancelButton.hidden = NO;
+    
+    self.selectedIndexPath = indexPath;
 }
 
 @end

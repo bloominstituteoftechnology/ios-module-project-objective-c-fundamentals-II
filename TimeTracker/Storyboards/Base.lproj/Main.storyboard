@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="296" width="375" height="496"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimedTaskCell" textLabel="cd5-ta-KIw" detailTextLabel="OBw-YS-6xU" style="IBUITableViewCellStyleValue1" id="wyu-Z3-utQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimedTaskCell" textLabel="cd5-ta-KIw" detailTextLabel="OBw-YS-6xU" style="IBUITableViewCellStyleValue1" id="wyu-Z3-utQ">
                                         <rect key="frame" x="0.0" y="28" width="375" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wyu-Z3-utQ" id="ISI-x0-3xP">
@@ -72,7 +72,7 @@
                                         <rect key="frame" x="0.0" y="168" width="335" height="30"/>
                                         <state key="normal" title="Log Time"/>
                                         <connections>
-                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="BLJ-8i-zr7"/>
+                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="w5Y-Br-AgX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H5-CH-ooR">
@@ -81,7 +81,7 @@
                                             <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="8jh-6q-8Qr"/>
+                                            <action selector="cancelEditing:" destination="QVk-7N-MGS" eventType="touchUpInside" id="uN6-g2-s1S"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -89,12 +89,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="NGG-z0-Z9V" firstAttribute="top" secondItem="2Xn-BO-YQ6" secondAttribute="bottom" constant="8" id="9O6-yx-HSO"/>
                             <constraint firstItem="NGG-z0-Z9V" firstAttribute="trailing" secondItem="iFM-0g-Kt5" secondAttribute="trailing" id="ClQ-nG-gh7"/>
                             <constraint firstItem="NGG-z0-Z9V" firstAttribute="leading" secondItem="iFM-0g-Kt5" secondAttribute="leading" id="SL4-jy-8e9"/>
                             <constraint firstItem="2Xn-BO-YQ6" firstAttribute="leading" secondItem="iFM-0g-Kt5" secondAttribute="leading" constant="20" id="Uqp-Kx-nZp"/>
-                            <constraint firstItem="NGG-z0-Z9V" firstAttribute="top" secondItem="2Xn-BO-YQ6" secondAttribute="bottom" constant="8" id="Y1Y-09-uBD"/>
                             <constraint firstItem="iFM-0g-Kt5" firstAttribute="trailing" secondItem="2Xn-BO-YQ6" secondAttribute="trailing" constant="20" id="Yox-qG-EBN"/>
                             <constraint firstAttribute="bottom" secondItem="NGG-z0-Z9V" secondAttribute="bottom" constant="20" symbolic="YES" id="hxX-Of-pKQ"/>
+                            <constraint firstItem="NGG-z0-Z9V" firstAttribute="centerX" secondItem="yH6-Y7-uP0" secondAttribute="centerX" id="kMU-OF-8qR"/>
                             <constraint firstItem="2Xn-BO-YQ6" firstAttribute="top" secondItem="iFM-0g-Kt5" secondAttribute="top" constant="8" id="ygK-al-FCb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
@@ -111,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176.81159420289856" y="151.33928571428569"/>
+            <point key="canvasLocation" x="176.80000000000001" y="150.73891625615764"/>
         </scene>
     </scenes>
 </document>
