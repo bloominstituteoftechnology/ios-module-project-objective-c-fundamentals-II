@@ -102,8 +102,8 @@
     
     self.clientTextField.text = timedTask.client;
     self.summaryTextField.text = timedTask.summary;
-    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%f", timedTask.hourlyRate];
-    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%f", timedTask.hoursWorked];
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%g", timedTask.hourlyRate];
+    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%g", timedTask.hoursWorked];
     
     self.logTimeButton.titleLabel.text = @"Save Changes";
     self.cancelButton.hidden = NO;
