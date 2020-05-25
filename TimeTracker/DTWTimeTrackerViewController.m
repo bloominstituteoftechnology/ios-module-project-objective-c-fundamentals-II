@@ -21,6 +21,8 @@
 @property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic) IBOutlet UIButton *logTimeButton;
+@property (nonatomic) IBOutlet UIButton *cancelButton;
 
 @end
 

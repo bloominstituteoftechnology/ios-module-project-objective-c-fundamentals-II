@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NGG-z0-Z9V">
-                                <rect key="frame" x="0.0" y="258" width="375" height="534"/>
+                                <rect key="frame" x="0.0" y="296" width="375" height="496"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TimedTaskCell" textLabel="cd5-ta-KIw" detailTextLabel="OBw-YS-6xU" style="IBUITableViewCellStyleValue1" id="wyu-Z3-utQ">
@@ -46,7 +46,7 @@
                                 </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-BO-YQ6">
-                                <rect key="frame" x="20" y="52" width="335" height="198"/>
+                                <rect key="frame" x="20" y="52" width="335" height="236"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Client Name:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sqz-sU-Pxu">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="34"/>
@@ -75,6 +75,15 @@
                                             <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="BLJ-8i-zr7"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6H5-CH-ooR">
+                                        <rect key="frame" x="0.0" y="206" width="335" height="30"/>
+                                        <state key="normal" title="Cancel">
+                                            <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="8jh-6q-8Qr"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -91,8 +100,10 @@
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
                     <connections>
+                        <outlet property="cancelButton" destination="6H5-CH-ooR" id="sVa-qk-9fI"/>
                         <outlet property="clientTextField" destination="sqz-sU-Pxu" id="yEH-ac-stm"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="l8j-ln-wpI"/>
+                        <outlet property="logTimeButton" destination="yC4-dN-8qK" id="kIn-vN-jM0"/>
                         <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="6VV-yB-hzb"/>
                         <outlet property="tableView" destination="NGG-z0-Z9V" id="y8m-ni-yYJ"/>
                         <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="Kh5-Rm-lDU"/>
