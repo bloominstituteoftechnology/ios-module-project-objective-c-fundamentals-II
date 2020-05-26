@@ -15,11 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readwrite) NSMutableArray<DSCTimeTask *> *timeTasks;
 
-//@property(nonatomic, readonly) NSUInteger taskCount;
-
-//- (DSCTimeTask *)taskAtIndex:(NSUInteger)index;
-//- (void)addTask:(DSCTimeTask *)aTask;
-
 - (void)createTimedTaskWithClient:(NSString *)clientName
                       workSummary:(NSString *)workSummary
                       rateCharged:(double)rateCharged

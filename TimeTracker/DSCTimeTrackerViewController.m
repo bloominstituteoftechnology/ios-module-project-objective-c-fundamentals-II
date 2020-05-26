@@ -44,7 +44,6 @@
     
 }
 
-
 - (void)calculateTotal
 {
     self.clientName = self.clientNameTextField.text;
@@ -77,10 +76,8 @@
                                        rateCharged:self.hourlyRate
                                        hoursWorked:self.timeWorked];
                                   
-
     [self.tableView reloadData];
     [self updateViews];
-    
 }
 
 // MARK: - IBActions
@@ -111,7 +108,6 @@
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", task.total];
     return cell;
 }
-
    
 // MARK: - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

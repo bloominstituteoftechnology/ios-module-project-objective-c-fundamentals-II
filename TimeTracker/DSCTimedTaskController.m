@@ -16,19 +16,9 @@
     if (self = [super init])
     {
         _timeTasks = [[NSMutableArray alloc]init];
-        
-//        [self addTestData];
     }
     return self;
 }
-
-//- (void)addTestData
-//{
-//    DSCTimeTask *aTask = [[DSCTimeTask alloc]initWithClient:@"Denis" workSummary:@"HairCut" rateCharged:50.00 hoursWorked:2.00];
-//    [_timeTasks addObject:aTask];
-//    [_timeTasks addObject:[[DSCTimeTask alloc]initWithClient:@"Steven" workSummary:@"Whateve's" rateCharged:39.00 hoursWorked:55.00]];
-//}
-
 
 - (void)createTimedTaskWithClient:(NSString *)clientName
                       workSummary:(NSString *)workSummary
@@ -43,8 +33,5 @@
     
     [self.timeTasks addObject:task];
 }
-
-
-
 
 @end
