@@ -13,7 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DSCTimedTaskController : NSObject
 
-@property (nonatomic, copy) NSMutableArray<DSCTimeTask *> *timeTasks;
+@property (nonatomic, readonly) NSMutableArray<DSCTimeTask *> *timeTasks;
 
 @property(nonatomic, readonly) NSUInteger taskCount;
 
@@ -21,7 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)addTask:(DSCTimeTask *)aTask;
 
 - (void)createTimedTaskWithClient:(NSString *)clientName
-                      workSummary:(NSString *)workSummary rateCharged:(double)rateCharged hoursWorked:(double)hoursWorked;
+                      workSummary:(NSString *)workSummary
+                      rateCharged:(double)rateCharged
+                      hoursWorked:(double)hoursWorked;
 
 
 @end

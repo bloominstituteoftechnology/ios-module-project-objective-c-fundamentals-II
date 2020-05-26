@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		12411E6E247A882600BF0DD0 /* DSCTimeTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 12411E6D247A882600BF0DD0 /* DSCTimeTask.m */; };
 		12411E71247C066000BF0DD0 /* DSCTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12411E70247C066000BF0DD0 /* DSCTimedTaskController.m */; };
+		12411E74247C131700BF0DD0 /* DSCTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12411E73247C131700BF0DD0 /* DSCTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		12411E6D247A882600BF0DD0 /* DSCTimeTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DSCTimeTask.m; path = TimeTracker/DSCTimeTask.m; sourceTree = SOURCE_ROOT; };
 		12411E6F247C066000BF0DD0 /* DSCTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DSCTimedTaskController.h; path = TimeTracker/DSCTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		12411E70247C066000BF0DD0 /* DSCTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DSCTimedTaskController.m; path = TimeTracker/DSCTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		12411E72247C131700BF0DD0 /* DSCTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DSCTimeTrackerViewController.h; path = TimeTracker/DSCTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		12411E73247C131700BF0DD0 /* DSCTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = DSCTimeTrackerViewController.m; path = TimeTracker/DSCTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				12411E72247C131700BF0DD0 /* DSCTimeTrackerViewController.h */,
+				12411E73247C131700BF0DD0 /* DSCTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 				12411E6E247A882600BF0DD0 /* DSCTimeTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				12411E74247C131700BF0DD0 /* DSCTimeTrackerViewController.m in Sources */,
 				12411E71247C066000BF0DD0 /* DSCTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);

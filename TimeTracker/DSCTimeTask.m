@@ -11,7 +11,9 @@
 @implementation DSCTimeTask
 
 - (instancetype)initWithClient:(NSString *)aClient
-                   workSummary:(NSString *)aSummaryOfWork rateCharged:(double)aRateCharged hoursWorked:(double)aWorkedHours
+                   workSummary:(NSString *)aSummaryOfWork
+                   rateCharged:(double)aRateCharged
+                   hoursWorked:(double)aWorkedHours
 {
     if (self = [super init]) {
         _client = aClient.copy;
