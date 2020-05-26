@@ -17,17 +17,17 @@
     {
         _timeTasks = [[NSMutableArray alloc]init];
         
-        [self addTestData];
+//        [self addTestData];
     }
     return self;
 }
 
-- (void)addTestData
-{
-    DSCTimeTask *aTask = [[DSCTimeTask alloc]initWithClient:@"Denis" workSummary:@"HairCut" rateCharged:50.00 hoursWorked:2.00];
-    [_timeTasks addObject:aTask];
-    [_timeTasks addObject:[[DSCTimeTask alloc]initWithClient:@"Steven" workSummary:@"Whateve's" rateCharged:39.00 hoursWorked:55.00]];
-}
+//- (void)addTestData
+//{
+//    DSCTimeTask *aTask = [[DSCTimeTask alloc]initWithClient:@"Denis" workSummary:@"HairCut" rateCharged:50.00 hoursWorked:2.00];
+//    [_timeTasks addObject:aTask];
+//    [_timeTasks addObject:[[DSCTimeTask alloc]initWithClient:@"Steven" workSummary:@"Whateve's" rateCharged:39.00 hoursWorked:55.00]];
+//}
 
 
 - (void)createTimedTaskWithClient:(NSString *)clientName
@@ -45,26 +45,6 @@
 }
 
 
-#pragma mark - Convenience Accessors
 
-- (NSArray<DSCTimeTask *> *)tasks
-{
-    return _timeTasks.copy;
-}
-
-- (NSUInteger)taskCount
-{
-    return _timeTasks.count;
-}
-
-- (DSCTimeTask *)taskAtIndex:(NSUInteger)index
-{
-    return _timeTasks[index];
-}
-
-- (void)addTask:(DSCTimeTask *)aTask
-{
-    [_timeTasks addObject:aTask];
-}
 
 @end

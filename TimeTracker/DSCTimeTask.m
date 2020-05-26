@@ -24,8 +24,10 @@
     return self;
 }
 
+@synthesize total = _total;
 - (double)total {
-    return self.hoursWorked * self.rateCharged;
+    _total = _hoursWorked * _rateCharged;
+    return _total;
 }
 
 @end

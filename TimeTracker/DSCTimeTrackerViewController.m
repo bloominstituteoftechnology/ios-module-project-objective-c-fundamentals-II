@@ -42,7 +42,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    [self calculateTotal];
 }
 
 
@@ -60,48 +59,54 @@
 
 -(void)updateViews
 {
-    self.clientNameTextField.text = self.clientName;
-    self.summaryTextField.text = self.workSummary;
-    self.hourlyRateTextField.text = [NSString stringWithFormat:@"$%.2f", self.hourlyRate];
-    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.2f", self.timeWorked];
+    [self.tableView reloadData];
+
+    self.clientNameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text =@"";
+    self.timeWorkedTextField.text = @"";
+
 }
 
 -(void)saveTaskNameAndTotal
 {
     [self calculateTotal];
-    
-    [self.taskController addTask:[[DSCTimeTask alloc]
-                                  initWithClient:self.clientName
-                                  workSummary:self.workSummary
-                                  rateCharged:self.hourlyRate
-                                  hoursWorked:self.timeWorked]];
+                                  
+    [self.taskController createTimedTaskWithClient:self.clientName
+                                       workSummary:self.workSummary
+                                       rateCharged:self.hourlyRate
+                                       hoursWorked:self.timeWorked];
+                                  
+
     [self.tableView reloadData];
+    [self updateViews];
     
 }
 
 // MARK: - IBActions
 
-- (IBAction)logTime:(id)sender
+- (IBAction)logTime:(UIButton *)sender
 {
-    NSLog(@"task Name: %@", self.clientName);
-    NSLog(@"task rate: %f", self.hourlyRate);
-    NSLog(@"task hours: %f", self.timeWorked);
-    NSLog(@"task summary: %@", self.workSummary);
+    self.clientName = self.clientNameTextField.text;
+    self.workSummary = self.summaryTextField.text;
+    self.hourlyRate = [self.hourlyRateTextField.text doubleValue];
+    self.timeWorked = [self.timeWorkedTextField.text doubleValue];
+    
     [self saveTaskNameAndTotal];
 }
 
 // MARK: - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.taskController.timeTasks.count;
 }
-
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
     
-    DSCTimeTask *task = [self.taskController taskAtIndex:indexPath.row];
+    DSCTimeTask *task = [self.taskController.timeTasks objectAtIndex:indexPath.row];
     cell.textLabel.text = task.client;
     cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", task.total];
     return cell;
@@ -111,14 +116,17 @@
 // MARK: - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    DSCTimeTask *task = [self.taskController taskAtIndex:indexPath.row];
+    DSCTimeTask *task = [self.taskController.timeTasks  objectAtIndex:indexPath.row];
     self.clientName = task.client;
     self.hourlyRate = task.rateCharged;
     self.workSummary = task.workSummary;
     self.timeWorked = task.hoursWorked;
     
-    [self updateViews];
-    [self calculateTotal];
+    self.clientNameTextField.text = self.clientName;
+    self.summaryTextField.text = self.workSummary;
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2F", self.hourlyRate];
+    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.2F", self.timeWorked];
+    
 }
 
 @end
