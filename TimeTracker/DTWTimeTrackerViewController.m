@@ -63,7 +63,11 @@
 
 - (IBAction)cancelEditing:(id)sender
 {
-    self.logTimeButton.titleLabel.text = @"Log Time";
+    [UIView setAnimationsEnabled:NO];
+    [self.logTimeButton setTitle:@"Log Time" forState:UIControlStateNormal];
+    [self.logTimeButton layoutIfNeeded];
+    [UIView setAnimationsEnabled:YES];
+    
     self.cancelButton.hidden = YES;
     
     [self clearAllTextViews];
@@ -113,7 +117,11 @@
     self.hourlyRateTextField.text = [NSString stringWithFormat:@"%g", timedTask.hourlyRate];
     self.timeWorkedTextField.text = [NSString stringWithFormat:@"%g", timedTask.hoursWorked];
     
-    self.logTimeButton.titleLabel.text = @"Save Changes";
+    [UIView setAnimationsEnabled:NO];
+    [self.logTimeButton setTitle:@"Save Changes" forState:UIControlStateNormal];
+    [self.logTimeButton layoutIfNeeded];
+    [UIView setAnimationsEnabled:YES];
+    
     self.cancelButton.hidden = NO;
     
     self.selectedIndexPath = indexPath;
