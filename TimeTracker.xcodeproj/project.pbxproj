@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		E0E751582478DB2C00BF9B93 /* TTRTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E751572478DB2C00BF9B93 /* TTRTimedTask.m */; };
+		E0E7515B2478DFCA00BF9B93 /* TTRTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E7515A2478DFCA00BF9B93 /* TTRTimedTaskController.m */; };
+		E0E7515E2478FF1200BF9B93 /* TTRTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0E7515D2478FF1200BF9B93 /* TTRTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0E751562478DB2C00BF9B93 /* TTRTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTRTimedTask.h; path = TimeTracker/TTRTimedTask.h; sourceTree = SOURCE_ROOT; };
+		E0E751572478DB2C00BF9B93 /* TTRTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTRTimedTask.m; path = TimeTracker/TTRTimedTask.m; sourceTree = SOURCE_ROOT; };
+		E0E751592478DFCA00BF9B93 /* TTRTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTRTimedTaskController.h; path = TimeTracker/TTRTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		E0E7515A2478DFCA00BF9B93 /* TTRTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTRTimedTaskController.m; path = TimeTracker/TTRTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		E0E7515C2478FF1200BF9B93 /* TTRTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTRTimeTrackerViewController.h; path = TimeTracker/TTRTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		E0E7515D2478FF1200BF9B93 /* TTRTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTRTimeTrackerViewController.m; path = TimeTracker/TTRTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0E751562478DB2C00BF9B93 /* TTRTimedTask.h */,
+				E0E751572478DB2C00BF9B93 /* TTRTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E0E7515C2478FF1200BF9B93 /* TTRTimeTrackerViewController.h */,
+				E0E7515D2478FF1200BF9B93 /* TTRTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				E0E751592478DFCA00BF9B93 /* TTRTimedTaskController.h */,
+				E0E7515A2478DFCA00BF9B93 /* TTRTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = TTR;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -182,6 +198,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				E0E7515E2478FF1200BF9B93 /* TTRTimeTrackerViewController.m in Sources */,
+				E0E751582478DB2C00BF9B93 /* TTRTimedTask.m in Sources */,
+				E0E7515B2478DFCA00BF9B93 /* TTRTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
