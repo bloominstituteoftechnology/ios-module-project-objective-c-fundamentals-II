@@ -109,9 +109,10 @@
   TTRTimedTask *timedTask = [self.timeController.timedTask objectAtIndex:indexPath.row];
   
   cell.textLabel.text = timedTask.name;
-  cell.detailTextLabel.text = timedTask.summary;
+  cell.detailTextLabel.text = [NSString stringWithFormat:@"Total Cost:$ %g",timedTask.totalCost];
   return cell;
 }
+
 
 // MARK: - UITableViewDelegate
 
