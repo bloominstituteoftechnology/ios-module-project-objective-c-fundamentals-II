@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class TimedTaskController;
 NS_ASSUME_NONNULL_BEGIN
 
 @interface TimeTrackerViewController : UIViewController
+
+@property (nonatomic) TimedTaskController *timeTaskController;
 
 @end
 
