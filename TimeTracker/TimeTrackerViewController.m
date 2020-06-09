@@ -27,10 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.timeTaskController = [[TimedTaskController alloc] init];
     // Do any additional setup after loading the view.
 }
 - (IBAction)logTimeTapped:(UIButton *)sender {
 }
+
+
 
 /*
 #pragma mark - Navigation
