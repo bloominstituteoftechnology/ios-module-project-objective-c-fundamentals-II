@@ -22,6 +22,8 @@
     return self;
 }
 
+// MARK: - Methods
+
 - (void)createTimedTaskWith:(NSString *)name
                     summary:(NSString *)summary
                  hourlyRate:(double)hourlyRate

@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 //
 //- (void)addTip:(LSITip *)tip;
 
+// MARK: - Create a mutable Array
+
 @property (nonatomic, readwrite) NSMutableArray<MJPTimedTask *> *timedTasks;
 
 - (void)createTimedTaskWith:(NSString *)name

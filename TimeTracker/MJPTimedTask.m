@@ -23,6 +23,7 @@
     return self;
 }
 
+// https://stackoverflow.com/questions/19784454/when-should-i-use-synthesize-explicitly
 @synthesize total = _total;
 - (double)total {
     _total = _hourlyRate * _hoursWorked;

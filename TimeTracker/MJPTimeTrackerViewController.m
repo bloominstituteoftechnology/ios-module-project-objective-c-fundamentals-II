@@ -74,7 +74,7 @@
 
     MJPTimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
     cell.textLabel.text = timedTask.name;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.total];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%0.2f", timedTask.total];  // <-- rounding value here.
     return cell;
 
 }
