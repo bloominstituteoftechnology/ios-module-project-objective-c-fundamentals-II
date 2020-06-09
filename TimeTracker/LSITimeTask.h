@@ -16,7 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property NSString *summmary;
 @property double hourlyRate;
 @property double timeWorked;
-@property double total;
+@property (readonly) double total;
+
+
+- (instancetype)initWithClientName:(NSString *)clientName summary:(NSString *)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked totle:(double)total;
 
 
 
