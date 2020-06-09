@@ -12,6 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITimeTask : NSObject
 
+@property NSString *clientName;
+@property NSString *summmary;
+@property double hourlyRate;
+@property double timeWorked;
+@property double total;
+
+
+
 @end
 
 NS_ASSUME_NONNULL_END
