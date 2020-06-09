@@ -20,5 +20,18 @@
     return self;
 
 }
+
+- (void)createTimedTaskWith:(NSString *)client
+   summary:(NSString *)summary
+hourlyRate:(double)hourlyRate
+timeWorked:(double)timeWorked
+{
+    
+   LSITimeTask *newTimedTask = [[LSITimeTask alloc] initWithClientName:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
+    
+    [self.timeTask addObject:newTimedTask];
+}
+
+
 @end
 
