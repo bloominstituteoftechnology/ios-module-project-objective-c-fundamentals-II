@@ -7,8 +7,19 @@
 //
 
 #import "TimeTrackerViewController.h"
+#import "LSITimeTask.h"
+#import "TimedTaskController.h"
 
-@interface TimeTrackerViewController ()
+@interface TimeTrackerViewController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (strong, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+
+
 
 @end
 
@@ -17,6 +28,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+- (IBAction)logTimeTapped:(UIButton *)sender {
 }
 
 /*
