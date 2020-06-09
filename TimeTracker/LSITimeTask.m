@@ -10,25 +10,24 @@
 
 @implementation LSITimeTask
 
-- (instancetype)initWithClientName:(NSString *)clientName summary:(NSString *)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked totle:(double)total
+- (instancetype)initWithClientName:(NSString *)clientName summary:(NSString *)summary hourlyRate:(double)hourlyRate timeWorked:(double)timeWorked
 {
     
-    if (self = [super init]) { // becareful not to do == it will produce a BUG
-        _clientName = clientName;
-        _summmary = summary;
-        _hourlyRate = hourlyRate;
-        _timeWorked = timeWorked;
-        
-        
-    }
-    
-    return self;
+    self = [super init];
+
+      if (self != nil) {
+          _clientName = clientName;
+          _summmary = summary;
+          _hourlyRate = hourlyRate;
+          _timeWorked = timeWorked;
+      }
+      return self;
 
 }
 
 - (double)total
 {
-    return _hourlyRate * _timeWorked;
+    return self.hourlyRate * self.timeWorked;
 }
 
 

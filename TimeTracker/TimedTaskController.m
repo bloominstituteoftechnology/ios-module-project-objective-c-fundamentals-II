@@ -8,6 +8,19 @@
 
 #import "TimedTaskController.h"
 #import "LSITimeTask.h"
+
+@interface TimedTaskController () {
+    // (Optional) Private instance variables
+}
+
+// Private Properties
+
+// Private Outlets
+
+// Private methods
+
+@end
+
 @implementation TimedTaskController
 
 
@@ -18,16 +31,16 @@
         _timeTask = [[NSMutableArray alloc] init];
     }
     return self;
-
+    
 }
 
 - (void)createTimedTaskWith:(NSString *)client
-   summary:(NSString *)summary
-hourlyRate:(double)hourlyRate
-timeWorked:(double)timeWorked
+                    summary:(NSString *)summary
+                 hourlyRate:(double)hourlyRate
+                 timeWorked:(double)timeWorked
 {
     
-   LSITimeTask *newTimedTask = [[LSITimeTask alloc] initWithClientName:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
+    LSITimeTask *newTimedTask = [[LSITimeTask alloc] initWithClientName:client summary:summary hourlyRate:hourlyRate timeWorked:timeWorked];
     
     [self.timeTask addObject:newTimedTask];
 }

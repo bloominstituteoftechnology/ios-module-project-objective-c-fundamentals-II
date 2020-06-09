@@ -18,9 +18,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
 
-
-
-
 @end
 
 @implementation TimeTrackerViewController
@@ -28,9 +25,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     self.timeTaskController = [[TimedTaskController alloc] init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    [self updateViews];
 }
 - (IBAction)logTimeTapped:(UIButton *)sender {
     NSString *client;
@@ -55,13 +54,13 @@
     [self.tableView reloadData];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.timeTaskController.timeTask.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
     
     LSITimeTask *timeTask = [self.timeTaskController.timeTask objectAtIndex:indexPath.row];
     cell.textLabel.text = timeTask.clientName;

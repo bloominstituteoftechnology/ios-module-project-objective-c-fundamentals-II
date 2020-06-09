@@ -12,7 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface TimedTaskController : NSObject
 
-@property (nonatomic, readonly) NSMutableArray<LSITimeTask *>*timeTask;
+@property (nonatomic, readonly) NSMutableArray<LSITimeTask *> *timeTask;
 
 - (void)createTimedTaskWith:(NSString *)client
                 summary:(NSString *)summary

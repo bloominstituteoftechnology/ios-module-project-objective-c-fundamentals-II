@@ -10,7 +10,7 @@
         <!--Time Tracker View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="TimeTrackerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -44,6 +44,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QVk-7N-MGS" id="f8a-7B-rtP"/>
+                                    <outlet property="delegate" destination="QVk-7N-MGS" id="B8J-vc-D44"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-BO-YQ6">
                                 <rect key="frame" x="20" y="52" width="374" height="198"/>
@@ -94,7 +98,7 @@
                         <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="amf-5l-Kui"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="7Vq-Qg-lNn"/>
                         <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="n8b-Bv-ha3"/>
-                        <outlet property="tableView" destination="NGG-z0-Z9V" id="ILW-tF-uxn"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="GXv-Sg-wD4"/>
                         <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="s2O-MK-j0W"/>
                     </connections>
                 </viewController>
