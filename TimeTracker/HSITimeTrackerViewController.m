@@ -43,24 +43,41 @@
 }
 
 - (void)updateViews {
-//    if (self.currentTask) {
-//        self.nameTextField.text = self.currentTask.client;
-//        self.summaryTextField.text = self.currentTask.summary;
-//        self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.2f", self.currentTask.hourlyRate];
-//        self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.2f", self.currentTask.hoursWorked];
-//    }
+    self.nameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.timeWorkedTextField.text = @"";
+
+    [self.nameTextField becomeFirstResponder];
 
     [self.tableView reloadData];
 }
 
 - (void) saveTask {
-    double hoursWorked = [self.timeWorkedTextField.text doubleValue]; // BUG: if user doesn't exit last textField, hours don't get saved
-    HSITimedTask *task = [[HSITimedTask alloc] initWithClient:self.currentTask.client
-                                                      summary:self.currentTask.summary
-                                                   hourlyRate:self.currentTask.hourlyRate
-                                                  hoursWorked:hoursWorked];
-    [self.taskController createTimedTask:task];
-    [self updateViews];
+    BOOL emptyFields = [self emptyTextFields];
+    if (!emptyFields) {
+        double hoursWorked = [self.timeWorkedTextField.text doubleValue]; // BUG: if user doesn't exit last textField, hours don't get saved without this line
+        HSITimedTask *task = [[HSITimedTask alloc] initWithClient: self.currentTask.client
+                                                          summary: self.currentTask.summary
+                                                       hourlyRate: self.currentTask.hourlyRate
+                                                      hoursWorked: hoursWorked];
+        [self.taskController createTimedTask:task];
+        [self updateViews];
+    }
+
+}
+
+- (BOOL) emptyTextFields {
+    NSString *trimmedName = [self.nameTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    NSString *trimmedRate = [self.hourlyRateTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+
+    NSString *trimmedHours = [self.timeWorkedTextField.text stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    if (![trimmedName isEqualToString: @""] && ![trimmedRate isEqualToString: @""]  && ![trimmedHours isEqualToString: @""]) {
+        return NO;
+    } else {
+        return YES;
+    }
 }
 
 // MARK: - IBActions -
