@@ -10,4 +10,21 @@
 
 @implementation HSITimedTask
 
+- (instancetype)initWithClient:(NSString *)client summary:(NSString *)summary hourlyRate:(double)hourlyRate hoursWorked:(double)hoursWorked;
+{
+    self = [super init];
+    if (self) {
+        _client = client;
+        _summary = summary;
+        _hourlyRate = hourlyRate;
+        _hoursWorked = hoursWorked;
+    }
+    return self;
+}
+
+- (double)total
+{
+    return self.hourlyRate * self.hoursWorked;
+}
+
 @end
