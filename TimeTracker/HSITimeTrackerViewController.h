@@ -10,9 +10,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class HSITimedTaskController;
+
 @interface HSITimeTrackerViewController : UIViewController
 
-
+@property (nonatomic) HSITimedTaskController *taskController;
 
 @end
 
