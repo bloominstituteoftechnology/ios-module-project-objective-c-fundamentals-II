@@ -14,6 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSMutableArray<LSITimeTask *>*timeTask;
 
+- (void)createTimedTask:(NSString *)client
+                summary:(NSString *)summary
+             hourlyRate:(double)hourlyRate
+             timeWorked:(double)timeWorked;
+
 @end
 
 NS_ASSUME_NONNULL_END
