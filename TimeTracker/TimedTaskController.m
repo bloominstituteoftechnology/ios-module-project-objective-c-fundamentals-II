@@ -7,7 +7,18 @@
 //
 
 #import "TimedTaskController.h"
-
+#import "LSITimeTask.h"
 @implementation TimedTaskController
 
+
+- (instancetype)init {
+    
+    self = [super init];
+    if (self) {
+        _timeTask = [[NSMutableArray alloc] init];
+    }
+    return self;
+
+}
 @end
+
