@@ -8,9 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+@class HSITimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HSITimedTaskController : NSObject
+
+@property(readonly) NSArray<HSITimedTask *> *tasks;
+
+- (void) createTimedTask:(HSITimedTask *)task;
 
 @end
 
