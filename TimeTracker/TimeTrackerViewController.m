@@ -33,11 +33,29 @@
     self.tableView.dataSource = self;
 }
 - (IBAction)logTimeTapped:(UIButton *)sender {
+    NSString *client;
+    NSString *summary;
+    double hourlyTotal;
+    double timeWorked;
+    
+    client = self.clientNameTextField.text;
+    summary = self.summaryTextField.text;
+    hourlyTotal = [self.hourlyRateTextField.text doubleValue];
+    timeWorked = [self.timeWorkedTextField.text doubleValue];
+    
+    [self.timeTaskController createTimedTaskWith:client
+                                         summary:summary
+                                      hourlyRate:hourlyTotal
+                                      timeWorked:timeWorked];
+    
+    [self updateViews];
 }
 
+- (void)updateViews {
+    [self.tableView reloadData];
+}
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return self.timeTaskController.timeTask.count;
 }
 
