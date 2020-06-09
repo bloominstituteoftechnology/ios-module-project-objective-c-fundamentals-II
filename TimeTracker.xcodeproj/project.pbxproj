@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2765F2972490193300CB1CA6 /* CMDTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765F2962490193300CB1CA6 /* CMDTimedTask.m */; };
+		2765F29A24901A2900CB1CA6 /* CMDTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765F29924901A2900CB1CA6 /* CMDTimedTaskController.m */; };
+		2765F29D24901B9200CB1CA6 /* CMDTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2765F29C24901B9200CB1CA6 /* CMDTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2765F2952490193300CB1CA6 /* CMDTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDTimedTask.h; sourceTree = "<group>"; };
+		2765F2962490193300CB1CA6 /* CMDTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDTimedTask.m; sourceTree = "<group>"; };
+		2765F29824901A2900CB1CA6 /* CMDTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDTimedTaskController.h; sourceTree = "<group>"; };
+		2765F29924901A2900CB1CA6 /* CMDTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDTimedTaskController.m; sourceTree = "<group>"; };
+		2765F29B24901B9200CB1CA6 /* CMDTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMDTimeTrackerViewController.h; sourceTree = "<group>"; };
+		2765F29C24901B9200CB1CA6 /* CMDTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMDTimeTrackerViewController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +72,12 @@
 				467FC85C23F376B400C15592 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
+				2765F2952490193300CB1CA6 /* CMDTimedTask.h */,
+				2765F2962490193300CB1CA6 /* CMDTimedTask.m */,
+				2765F29824901A2900CB1CA6 /* CMDTimedTaskController.h */,
+				2765F29924901A2900CB1CA6 /* CMDTimedTaskController.m */,
+				2765F29B24901B9200CB1CA6 /* CMDTimeTrackerViewController.h */,
+				2765F29C24901B9200CB1CA6 /* CMDTimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CMD;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -182,8 +198,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				2765F29D24901B9200CB1CA6 /* CMDTimeTrackerViewController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				2765F29A24901A2900CB1CA6 /* CMDTimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				2765F2972490193300CB1CA6 /* CMDTimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
