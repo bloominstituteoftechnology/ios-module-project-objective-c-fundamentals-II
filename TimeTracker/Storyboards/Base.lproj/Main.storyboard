@@ -10,7 +10,7 @@
         <!--Time Tracker View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="HAOTimeTrackerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,16 +61,19 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hourly Rate:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1s7-qi-GbT">
                                         <rect key="frame" x="0.0" y="84" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time worked (in hours):" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJY-xA-vK5">
                                         <rect key="frame" x="0.0" y="126" width="374" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
                                         <rect key="frame" x="0.0" y="168" width="374" height="30"/>
                                         <state key="normal" title="Log Time"/>
+                                        <connections>
+                                            <action selector="logTime:" destination="QVk-7N-MGS" eventType="touchUpInside" id="4Gy-Ky-Ryn"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,6 +90,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
+                    <connections>
+                        <outlet property="clientTextField" destination="sqz-sU-Pxu" id="adB-kt-Qce"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="R89-9A-Xnp"/>
+                        <outlet property="hoursWorkedTextField" destination="hJY-xA-vK5" id="nJZ-vo-JbN"/>
+                        <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="Ulp-9P-gKb"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="AQs-3O-Hwf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
