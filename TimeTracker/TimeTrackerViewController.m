@@ -29,12 +29,28 @@
     [super viewDidLoad];
     
     self.timeTaskController = [[TimedTaskController alloc] init];
-    // Do any additional setup after loading the view.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
 }
 - (IBAction)logTimeTapped:(UIButton *)sender {
 }
 
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
+    return self.timeTaskController.timeTask.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    UITableViewCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
+    
+    LSITimeTask *timeTask = [self.timeTaskController.timeTask objectAtIndex:indexPath.row];
+    cell.textLabel.text = timeTask.clientName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timeTask.total];
+    
+    return cell;
+}
 
 /*
 #pragma mark - Navigation
