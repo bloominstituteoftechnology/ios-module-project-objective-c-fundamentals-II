@@ -14,7 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		D70CB2CD24798F0C003F7A27 /* LSITimeTracker.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CB2CC24798F0C003F7A27 /* LSITimeTracker.m */; };
-		D70CB2D124799AE9003F7A27 /* LSITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = D70CB2D024799AE9003F7A27 /* LSITimedTaskController.m */; };
+		D743665624952F8A00576D4D /* LSITimedTaskControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D743665524952F8A00576D4D /* LSITimedTaskControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D70CB2CB24798F0C003F7A27 /* LSITimeTracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimeTracker.h; sourceTree = "<group>"; };
 		D70CB2CC24798F0C003F7A27 /* LSITimeTracker.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimeTracker.m; sourceTree = "<group>"; };
-		D70CB2CF24799AE9003F7A27 /* LSITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimedTaskController.h; sourceTree = "<group>"; };
-		D70CB2D024799AE9003F7A27 /* LSITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimedTaskController.m; sourceTree = "<group>"; };
+		D743665424952F8A00576D4D /* LSITimedTaskControllerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimedTaskControllerViewController.h; sourceTree = "<group>"; };
+		D743665524952F8A00576D4D /* LSITimedTaskControllerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimedTaskControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,8 +107,8 @@
 		D70CB2CE24799AD2003F7A27 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D70CB2CF24799AE9003F7A27 /* LSITimedTaskController.h */,
-				D70CB2D024799AE9003F7A27 /* LSITimedTaskController.m */,
+				D743665424952F8A00576D4D /* LSITimedTaskControllerViewController.h */,
+				D743665524952F8A00576D4D /* LSITimedTaskControllerViewController.m */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -187,8 +187,8 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				D70CB2CD24798F0C003F7A27 /* LSITimeTracker.m in Sources */,
-				D70CB2D124799AE9003F7A27 /* LSITimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				D743665624952F8A00576D4D /* LSITimedTaskControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

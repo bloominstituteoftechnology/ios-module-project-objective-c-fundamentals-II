@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QVk-7N-MGS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QVk-7N-MGS">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Time Tracker View Controller-->
+        <!--Timed Task Controller View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="LSITimedTaskControllerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -71,6 +71,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yC4-dN-8qK">
                                         <rect key="frame" x="0.0" y="168" width="374" height="30"/>
                                         <state key="normal" title="Log Time"/>
+                                        <connections>
+                                            <action selector="logTimeButtonTapped:" destination="QVk-7N-MGS" eventType="touchUpInside" id="DDy-dT-yVt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -87,6 +90,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="iFM-0g-Kt5"/>
                     </view>
+                    <connections>
+                        <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="f8V-Fo-XXA"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="c3R-tC-ns1"/>
+                        <outlet property="logTimeButton" destination="yC4-dN-8qK" id="wWx-oW-PKb"/>
+                        <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="UD9-gD-QDj"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="GO8-dR-CL0"/>
+                        <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="ri6-RL-SkW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

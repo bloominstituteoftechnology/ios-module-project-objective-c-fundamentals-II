@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LSITimeTracker : NSObject
 
+
 @property (nonatomic, copy) NSString *clientName;
 @property (nonatomic) NSString *taskNotes;
 @property (nonatomic) double rate;
