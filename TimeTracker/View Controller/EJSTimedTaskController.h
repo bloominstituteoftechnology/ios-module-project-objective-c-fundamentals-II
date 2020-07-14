@@ -10,7 +10,16 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class EJSTimedTask;
+
 @interface EJSTimedTaskController : NSObject
+
+@property (readonly, nonatomic) NSMutableArray<EJSTimedTask *> *timedTasks;
+
+-(void)createTimedTasksWithClientName:(NSString *)clientName
+                              summary:(NSString *)summary
+                           hourlyRate:(double)hourlyRate
+                          hoursWorked:(double)hoursWorked;
 
 @end
 
