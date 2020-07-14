@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		5E28698724BE54BD00CA6813 /* CAMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E28698624BE54BD00CA6813 /* CAMTimedTask.m */; };
 		5E2E4D9024BE7434002B00B9 /* CAMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4D8F24BE7434002B00B9 /* CAMTimedTaskController.m */; };
+		5E2E4D9324BE78E4002B00B9 /* CAMTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E2E4D9224BE78E4002B00B9 /* CAMTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		5E28698624BE54BD00CA6813 /* CAMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMTimedTask.m; sourceTree = "<group>"; };
 		5E2E4D8E24BE7434002B00B9 /* CAMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAMTimedTaskController.h; path = TimeTracker/CAMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		5E2E4D8F24BE7434002B00B9 /* CAMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CAMTimedTaskController.m; path = TimeTracker/CAMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		5E2E4D9124BE78E4002B00B9 /* CAMTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CAMTimeTrackerViewController.h; path = TimeTracker/CAMTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		5E2E4D9224BE78E4002B00B9 /* CAMTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CAMTimeTrackerViewController.m; path = TimeTracker/CAMTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5E2E4D9124BE78E4002B00B9 /* CAMTimeTrackerViewController.h */,
+				5E2E4D9224BE78E4002B00B9 /* CAMTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -202,6 +207,7 @@
 			files = (
 				5E2E4D9024BE7434002B00B9 /* CAMTimedTaskController.m in Sources */,
 				5E28698724BE54BD00CA6813 /* CAMTimedTask.m in Sources */,
+				5E2E4D9324BE78E4002B00B9 /* CAMTimeTrackerViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
