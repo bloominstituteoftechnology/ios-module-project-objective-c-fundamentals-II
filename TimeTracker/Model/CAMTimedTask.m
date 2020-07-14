@@ -25,4 +25,9 @@
     return self;
 }
 
+- (double)total
+{
+    return self.rate * self.hours;
+}
+
 @end
