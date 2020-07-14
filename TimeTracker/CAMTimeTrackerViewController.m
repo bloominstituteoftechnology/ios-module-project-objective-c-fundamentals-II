@@ -7,6 +7,7 @@
 //
 
 #import "CAMTimeTrackerViewController.h"
+#import "CAMTimedTaskController.h"
 
 @interface CAMTimeTrackerViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
@@ -15,7 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *hoursTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tasksTableView;
 
-
+@property (nonatomic) CAMTimedTaskController *taskController;
 
 @end
 
@@ -25,7 +26,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.taskController = [[CAMTimedTaskController alloc] init];
+    self.tasksTableView.dataSource = self;
 }
 
 /*
