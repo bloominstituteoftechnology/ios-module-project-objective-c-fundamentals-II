@@ -13,6 +13,7 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		5E28698724BE54BD00CA6813 /* CAMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E28698624BE54BD00CA6813 /* CAMTimedTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5E28698524BE54BD00CA6813 /* CAMTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAMTimedTask.h; sourceTree = "<group>"; };
+		5E28698624BE54BD00CA6813 /* CAMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CAMTimedTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +64,7 @@
 				467FC85D23F3784C00C15592 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
 				467FC85C23F376B400C15592 /* View Controller */,
-				467FC85423F373D300C15592 /* Storyboards */,
+				5E28698824BE54F000CA6813 /* Views */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
 			path = TimeTracker;
@@ -93,6 +96,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5E28698524BE54BD00CA6813 /* CAMTimedTask.h */,
+				5E28698624BE54BD00CA6813 /* CAMTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -109,6 +114,14 @@
 			children = (
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		5E28698824BE54F000CA6813 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				467FC85423F373D300C15592 /* Storyboards */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +150,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CAM;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -181,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E28698724BE54BD00CA6813 /* CAMTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
