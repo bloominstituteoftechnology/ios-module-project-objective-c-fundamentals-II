@@ -9,10 +9,19 @@
 #import "CAMTimeTrackerViewController.h"
 
 @interface CAMTimeTrackerViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hoursTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tasksTableView;
+
+
 
 @end
 
 @implementation CAMTimeTrackerViewController
+- (IBAction)logTime:(id)sender {
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
