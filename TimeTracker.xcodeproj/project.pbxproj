@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		5A40AC3524BDCC9300818E64 /* SABTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40AC3424BDCC9300818E64 /* SABTimedTask.m */; };
 		5A40AC3824BE108D00818E64 /* SABTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40AC3724BE108D00818E64 /* SABTimedTaskController.m */; };
+		5A40AC3B24BE1D0500818E64 /* SABTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5A40AC3A24BE1D0500818E64 /* SABTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		5A40AC3424BDCC9300818E64 /* SABTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SABTimedTask.m; sourceTree = "<group>"; };
 		5A40AC3624BE108D00818E64 /* SABTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SABTimedTaskController.h; path = TimeTracker/SABTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		5A40AC3724BE108D00818E64 /* SABTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SABTimedTaskController.m; path = TimeTracker/SABTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		5A40AC3924BE1D0500818E64 /* SABTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SABTimeTrackerViewController.h; path = TimeTracker/SABTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		5A40AC3A24BE1D0500818E64 /* SABTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SABTimeTrackerViewController.m; path = TimeTracker/SABTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A40AC3924BE1D0500818E64 /* SABTimeTrackerViewController.h */,
+				5A40AC3A24BE1D0500818E64 /* SABTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				5A40AC3524BDCC9300818E64 /* SABTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				5A40AC3B24BE1D0500818E64 /* SABTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
