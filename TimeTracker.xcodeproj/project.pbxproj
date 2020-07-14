@@ -14,7 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		7978707724BE517700293EA3 /* EJSTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978707624BE517700293EA3 /* EJSTimedTask.m */; };
-		7978707A24BE51C000293EA3 /* TimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978707924BE51C000293EA3 /* TimeTrackerViewController.m */; };
+		7978707A24BE51C000293EA3 /* EJSTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978707924BE51C000293EA3 /* EJSTimeTrackerViewController.m */; };
 		7978707D24BE51FA00293EA3 /* EJSTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7978707C24BE51FA00293EA3 /* EJSTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
@@ -31,8 +31,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7978707524BE517700293EA3 /* EJSTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EJSTimedTask.h; sourceTree = SOURCE_ROOT; };
 		7978707624BE517700293EA3 /* EJSTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EJSTimedTask.m; sourceTree = SOURCE_ROOT; };
-		7978707824BE51C000293EA3 /* TimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrackerViewController.h; sourceTree = "<group>"; };
-		7978707924BE51C000293EA3 /* TimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTrackerViewController.m; sourceTree = "<group>"; };
+		7978707824BE51C000293EA3 /* EJSTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EJSTimeTrackerViewController.h; sourceTree = "<group>"; };
+		7978707924BE51C000293EA3 /* EJSTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EJSTimeTrackerViewController.m; sourceTree = "<group>"; };
 		7978707B24BE51FA00293EA3 /* EJSTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = EJSTimedTaskController.h; path = "TimeTracker/View Controller/EJSTimedTaskController.h"; sourceTree = SOURCE_ROOT; };
 		7978707C24BE51FA00293EA3 /* EJSTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = EJSTimedTaskController.m; path = "TimeTracker/View Controller/EJSTimedTaskController.m"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -111,8 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7978707824BE51C000293EA3 /* TimeTrackerViewController.h */,
-				7978707924BE51C000293EA3 /* TimeTrackerViewController.m */,
+				7978707824BE51C000293EA3 /* EJSTimeTrackerViewController.h */,
+				7978707924BE51C000293EA3 /* EJSTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -196,7 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7978707A24BE51C000293EA3 /* TimeTrackerViewController.m in Sources */,
+				7978707A24BE51C000293EA3 /* EJSTimeTrackerViewController.m in Sources */,
 				7978707D24BE51FA00293EA3 /* EJSTimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				7978707724BE517700293EA3 /* EJSTimedTask.m in Sources */,
