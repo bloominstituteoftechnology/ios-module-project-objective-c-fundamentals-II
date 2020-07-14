@@ -10,13 +10,25 @@
 
 @implementation CAMTimedTaskController
 
--(instancetype)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
         _timedTasks = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)createTimedTaskWithName:(NSString *)name
+                        summary:(NSString *)summary
+                           rate:(double)rate
+                          hours:(double)hours
+{
+    CAMTimedTask *newTask = [[CAMTimedTask alloc] initWithName:name
+                                                       summary:summary
+                                                          rate:rate
+                                                         hours:hours];
+    [self.timedTasks addObject: newTask];
 }
 
 @end
