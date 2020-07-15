@@ -22,6 +22,12 @@
 
 @implementation CAMTimeTrackerViewController
 - (IBAction)logTime:(id)sender {
+    [self.taskController createTimedTaskWithName: self.nameTextField.text
+                                         summary: self.summaryTextField.text
+                                            rate: [self.rateTextField.text doubleValue]
+                                           hours: [self.hoursTextField.text doubleValue]];
+    
+    
 }
 
 - (void)viewDidLoad {
@@ -38,24 +44,13 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [self.tasksTableView dequeueReusableCellWithIdentifier: @"TaskCell"];
-    
     CAMTimedTask *task = [self.taskController.timedTasks objectAtIndex:indexPath.row];
-    
-    
     
     cell.textLabel.text = task.name;
     cell.detailTextLabel.text = [NSString stringWithFormat: @"$%.2f", task.total];
+    
     return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
