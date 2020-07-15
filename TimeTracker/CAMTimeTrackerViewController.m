@@ -30,6 +30,24 @@
     self.tasksTableView.dataSource = self;
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.taskController.timedTasks count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [self.tasksTableView dequeueReusableCellWithIdentifier: @"TaskCell"];
+    
+    CAMTimedTask *task = [self.taskController.timedTasks objectAtIndex:indexPath.row];
+    
+    
+    
+    cell.textLabel.text = task.name;
+    cell.detailTextLabel.text = [NSString stringWithFormat: @"$%.2f", task.total];
+    return cell;
+}
+
 /*
 #pragma mark - Navigation
 
