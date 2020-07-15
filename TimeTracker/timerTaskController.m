@@ -14,12 +14,8 @@
     // (Optional)Private instance variables.
 }
 
-// Private Properties
-@property (nonatomic, readwrite) NSMutableArray<LSITimedTask *> *internalTasks;
+@property (nonatomic) NSMutableArray<LSITimedTask *> *internalTasks;
 
-// Private Outlets
-
-// Private methods
 @end
 
 @implementation timerTaskController
@@ -40,7 +36,6 @@
 
 - (void)createTimedTask:(LSITimedTask *)task {
     [self.internalTasks addObject:task];
-    
 }
 
 

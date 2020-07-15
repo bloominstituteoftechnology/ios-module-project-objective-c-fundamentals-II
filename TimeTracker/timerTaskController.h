@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface timerTaskController : NSObject
 
-@property (nonatomic, readonly)NSArray<LSITimedTask *> *timedTasks;
+@property (nonatomic, readonly)NSArray<LSITimedTask *> *tasks;
 
 //Also in the header define a createTimedTaskWith function that takes in each of the 4 settable properties of a TimedTask.
 - (void)createTimedTask:(LSITimedTask *)task;
