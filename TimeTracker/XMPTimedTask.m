@@ -10,13 +10,14 @@
 
 @implementation XMPTimedTask
 
-- (instancetype)initWithClientName:(NSString*)clientName summary:(NSString*)summary hourlyRate:(float)hourlyRate hoursWorked:(float)hoursWorked {
+- (instancetype)initWithClientName:(NSString*)clientName summary:(NSString*)summary hourlyRate:(float)hourlyRate hoursWorked:(float)hoursWorked total:(float)total {
     self = [super init];
     if(self) {
         _clientName = clientName;
         _summary = summary;
         _hourlyRate = hourlyRate;
         _hoursWorked = hoursWorked;
+        _total = hourlyRate * hoursWorked;
     }
     return self;
 }
