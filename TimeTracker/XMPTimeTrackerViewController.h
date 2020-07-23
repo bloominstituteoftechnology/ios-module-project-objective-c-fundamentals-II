@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface XMPTimeTrackerViewController : UIViewController
+@interface XMPTimeTrackerViewController : UIViewController <UITableViewDataSource>
 
 @end
 

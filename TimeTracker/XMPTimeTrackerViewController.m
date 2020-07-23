@@ -19,11 +19,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     XMPTimedTaskController* controllerTest = [[XMPTimedTaskController alloc] init];
+    
+    /*
     [controllerTest createTimedTaskWithClientName:@"Joe" summary:@"Paint a fence" hourlyRate:10.00 hoursWorked:4.00];
     [controllerTest createTimedTaskWithClientName:@"Bob" summary:@"Weld a pipe" hourlyRate:15.00 hoursWorked:2.00];
     NSLog(@"timedTasks = %@", controllerTest.timedTasks.description);
     XMPTimedTask* selectedTask = [controllerTest.timedTasks objectAtIndex:0];
     NSLog(@"timedTasks[0].clientName = %@", selectedTask.clientName);
+    */
 }
 
 @end
