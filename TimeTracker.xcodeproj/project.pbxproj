@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		13B6DB4424C9E6050016522E /* XMPTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6DB4324C9E6050016522E /* XMPTimedTask.m */; };
 		13B6DB4724C9EC770016522E /* XMPTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6DB4624C9EC770016522E /* XMPTimedTaskController.m */; };
+		13B6DB4A24C9F63C0016522E /* XMPTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6DB4924C9F63C0016522E /* XMPTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		13B6DB4324C9E6050016522E /* XMPTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XMPTimedTask.m; path = TimeTracker/XMPTimedTask.m; sourceTree = SOURCE_ROOT; };
 		13B6DB4524C9EC770016522E /* XMPTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMPTimedTaskController.h; path = TimeTracker/XMPTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		13B6DB4624C9EC770016522E /* XMPTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XMPTimedTaskController.m; path = TimeTracker/XMPTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		13B6DB4824C9F63C0016522E /* XMPTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMPTimeTrackerViewController.h; path = TimeTracker/XMPTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		13B6DB4924C9F63C0016522E /* XMPTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XMPTimeTrackerViewController.m; path = TimeTracker/XMPTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13B6DB4824C9F63C0016522E /* XMPTimeTrackerViewController.h */,
+				13B6DB4924C9F63C0016522E /* XMPTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13B6DB4A24C9F63C0016522E /* XMPTimeTrackerViewController.m in Sources */,
 				13B6DB4424C9E6050016522E /* XMPTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				13B6DB4724C9EC770016522E /* XMPTimedTaskController.m in Sources */,
