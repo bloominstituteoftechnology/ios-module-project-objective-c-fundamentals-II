@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13B6DB4424C9E6050016522E /* XMPTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6DB4324C9E6050016522E /* XMPTimedTask.m */; };
+		13B6DB4724C9EC770016522E /* XMPTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B6DB4624C9EC770016522E /* XMPTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		13B6DB4224C9E6050016522E /* XMPTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMPTimedTask.h; path = TimeTracker/XMPTimedTask.h; sourceTree = SOURCE_ROOT; };
 		13B6DB4324C9E6050016522E /* XMPTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XMPTimedTask.m; path = TimeTracker/XMPTimedTask.m; sourceTree = SOURCE_ROOT; };
+		13B6DB4524C9EC770016522E /* XMPTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = XMPTimedTaskController.h; path = TimeTracker/XMPTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		13B6DB4624C9EC770016522E /* XMPTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = XMPTimedTaskController.m; path = TimeTracker/XMPTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				13B6DB4524C9EC770016522E /* XMPTimedTaskController.h */,
+				13B6DB4624C9EC770016522E /* XMPTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 			files = (
 				13B6DB4424C9E6050016522E /* XMPTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				13B6DB4724C9EC770016522E /* XMPTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
