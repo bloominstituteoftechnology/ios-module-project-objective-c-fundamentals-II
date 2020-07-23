@@ -11,14 +11,18 @@
 #import "XMPTimedTask.h"
 
 @interface XMPTimeTrackerViewController ()
-
+@property (weak, nonatomic) IBOutlet UITextField *clientTF;
+@property (weak, nonatomic) IBOutlet UITextField *summaryTF;
+@property (weak, nonatomic) IBOutlet UITextField *hourlyRateTF;
+@property (weak, nonatomic) IBOutlet UITextField *timeWorkedTF;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 @end
 
 @implementation XMPTimeTrackerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XMPTimedTaskController* controllerTest = [[XMPTimedTaskController alloc] init];
+    XMPTimedTaskController* taskController = [[XMPTimedTaskController alloc] init];
     
     /*
     [controllerTest createTimedTaskWithClientName:@"Joe" summary:@"Paint a fence" hourlyRate:10.00 hoursWorked:4.00];
@@ -27,6 +31,11 @@
     XMPTimedTask* selectedTask = [controllerTest.timedTasks objectAtIndex:0];
     NSLog(@"timedTasks[0].clientName = %@", selectedTask.clientName);
     */
+    
+    
+}
+
+- (IBAction)logTime:(UIButton *)sender {
 }
 
 @end
