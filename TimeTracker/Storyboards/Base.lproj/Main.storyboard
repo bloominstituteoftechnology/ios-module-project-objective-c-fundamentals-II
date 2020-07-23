@@ -44,6 +44,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="QVk-7N-MGS" id="zac-aY-DPy"/>
+                                    <outlet property="delegate" destination="QVk-7N-MGS" id="PON-iH-j5L"/>
+                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2Xn-BO-YQ6">
                                 <rect key="frame" x="20" y="52" width="374" height="198"/>
