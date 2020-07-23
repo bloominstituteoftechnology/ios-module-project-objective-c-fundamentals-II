@@ -16,13 +16,15 @@
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateTF;
 @property (weak, nonatomic) IBOutlet UITextField *timeWorkedTF;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property XMPTimedTaskController* timedTaskController;
 @end
 
 @implementation XMPTimeTrackerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    XMPTimedTaskController* taskController = [[XMPTimedTaskController alloc] init];
+    tableView.dataSource = self;
+    self.timedTaskController = [[XMPTimedTaskController alloc] init];
     
     /*
     [controllerTest createTimedTaskWithClientName:@"Joe" summary:@"Paint a fence" hourlyRate:10.00 hoursWorked:4.00];
@@ -36,6 +38,7 @@
 }
 
 - (IBAction)logTime:(UIButton *)sender {
+    
 }
 
 @end
