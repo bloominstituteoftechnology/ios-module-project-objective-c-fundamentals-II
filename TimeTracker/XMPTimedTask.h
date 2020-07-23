@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface XMPTimedTask : NSObject
 
+- (instancetype)initWithClientName:(NSString*)clientName summary:(NSString*)summary, hourlyRate:(float)hourlyRate, hoursWorked:(float)hoursWorked;
+
+@property NSString *clientName;
+@property NSString *summary;
+@property float hourlyRate;
+@property float hoursWorked;
+
 @end
 
 NS_ASSUME_NONNULL_END
