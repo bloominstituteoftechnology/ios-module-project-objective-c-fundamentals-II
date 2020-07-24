@@ -17,13 +17,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateTF;
 @property (weak, nonatomic) IBOutlet UITextField *timeWorkedTF;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-@property XMPTimedTaskController* timedTaskController;
-@property BOOL isEditing;
-@property NSInteger atIndex;
+@property (nonatomic) XMPTimedTaskController* timedTaskController;
+@property (nonatomic) BOOL isEditing;
+@property (nonatomic) NSInteger atIndex;
 @end
 
 @implementation XMPTimeTrackerViewController
-
 // MARK: - IBActions
 - (IBAction)logTime:(UIButton *)sender {
     if(_clientTF.text.length > 0 && _hourlyRateTF.text.length > 0 && _timeWorkedTF.text.length > 0) {
@@ -84,7 +83,6 @@
 
 // Select row to edit object
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"Selected row %ld", (long)indexPath.row);
     XMPTimedTask* selectedTask = _timedTaskController.timedTasks[indexPath.row];
     _clientTF.text = selectedTask.clientName;
     _summaryTF.text = selectedTask.summary;
@@ -99,6 +97,11 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [_timedTaskController.timedTasks removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        _clientTF.text = @"";
+        _summaryTF.text = @"";
+        _hourlyRateTF.text = @"";
+        _timeWorkedTF.text = @"";
+        _isEditing = NO;
     }
 }
 

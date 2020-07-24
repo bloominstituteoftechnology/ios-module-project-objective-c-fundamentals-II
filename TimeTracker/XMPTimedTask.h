@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithClientName:(NSString*)clientName summary:(NSString*)summary hourlyRate:(float)hourlyRate hoursWorked:(float)hoursWorked;
 
-@property NSString *clientName;
-@property NSString *summary;
-@property float hourlyRate;
-@property float hoursWorked;
-@property float total;
+@property (nonatomic) NSString *clientName;
+@property (nonatomic) NSString *summary;
+@property (nonatomic) float hourlyRate;
+@property (nonatomic) float hoursWorked;
+@property (nonatomic) float total;
 
 @end
 
