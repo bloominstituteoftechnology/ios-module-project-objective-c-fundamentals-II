@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CLMTimeTrackerViewController : UIViewController <UITableViewDataSource>
+@interface CLMTimeTrackerViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
 @end
 

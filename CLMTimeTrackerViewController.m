@@ -31,6 +31,8 @@
     [super viewDidLoad];
     
     self.timedTaskController = [[CLMTimedTaskController alloc] init];
+    self.tableView.dataSource = self;
+    self.tableView.delegate = self;
 }
 
 // MARK: - IBAction
