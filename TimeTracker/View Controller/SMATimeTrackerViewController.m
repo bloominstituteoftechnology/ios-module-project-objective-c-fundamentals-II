@@ -10,6 +10,12 @@
 
 @interface SMATimeTrackerViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *workSummaryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (weak, nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation SMATimeTrackerViewController
@@ -17,6 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)logTimeTapped:(id)sender {
 }
 
 /*
