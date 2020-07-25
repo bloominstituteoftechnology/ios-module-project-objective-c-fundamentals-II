@@ -7,6 +7,7 @@
 //
 
 #import "CLPTimeTrackerViewController.h"
+#import "CLPTimedTaskController.h"
 
 @interface CLPTimeTrackerViewController ()
 
@@ -14,6 +15,9 @@
 @property (nonatomic) IBOutlet UITextField *summaryTextField;
 @property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (nonatomic) IBOutlet UITextField *hoursWorkedTextField;
+@property (nonatomic) IBOutlet UITableView *tableView;
+
+@property (nonatomic) CLPTimedTaskController *timedTaskController;
 
 @end
 
@@ -21,7 +25,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    _timedTaskController = [[CLPTimedTaskController alloc] init];
+    _tableView.dataSource = self;
 }
 
 - (IBAction)logTime:(UIButton *)sender {
