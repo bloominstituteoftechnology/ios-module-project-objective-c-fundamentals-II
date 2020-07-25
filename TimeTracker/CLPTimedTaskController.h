@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+@class CLPTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CLPTimedTaskController : NSObject
+
+@property (nonatomic, readonly, copy) NSMutableArray<CLPTimedTask *> *timedTasks;
+@property (nonatomic, readonly) NSUInteger count;
+
+- (void)createTimedTaskWithClient:(NSString *)client
+                          summary:(NSString *)summary
+                       hourlyRate:(NSDecimalNumber *)hourlyRate
+                      hoursWorked:(NSDecimalNumber *)hoursWorked;
 
 @end
 
