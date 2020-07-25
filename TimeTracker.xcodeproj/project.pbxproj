@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		66F731FF24CCA8A3009FF9C3 /* SMATimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */; };
+		66F7320324CCAB78009FF9C3 /* SMATimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66F731FD24CCA8A3009FF9C3 /* SMATimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMATimedTask.h; sourceTree = "<group>"; };
 		66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMATimedTask.m; sourceTree = "<group>"; };
+		66F7320124CCAB78009FF9C3 /* SMATimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMATimedTaskController.h; sourceTree = "<group>"; };
+		66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMATimedTaskController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +64,7 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				66F7320024CCAB60009FF9C3 /* Model Controller */,
 				66F731FC24CCA889009FF9C3 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
@@ -98,6 +102,15 @@
 				66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		66F7320024CCAB60009FF9C3 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66F7320124CCAB78009FF9C3 /* SMATimedTaskController.h */,
+				66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */,
+			);
+			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +186,7 @@
 				66F731FF24CCA8A3009FF9C3 /* SMATimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				66F7320324CCAB78009FF9C3 /* SMATimedTaskController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
