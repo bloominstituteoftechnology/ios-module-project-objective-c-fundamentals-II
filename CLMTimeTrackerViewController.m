@@ -7,6 +7,7 @@
 //
 
 #import "CLMTimeTrackerViewController.h"
+#import "CLMTimedTaskController.h"
 
 @interface CLMTimeTrackerViewController ()
 
@@ -17,13 +18,19 @@
 @property (nonatomic) IBOutlet UITextField *hoursWorked;
 @property (nonatomic) IBOutlet UITableView *tableView;
 
+
+//MARK: - Properties
+@property CLMTimedTaskController *timedTaskController;
+
+
 @end
 
 @implementation CLMTimeTrackerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.timedTaskController = [[CLMTimedTaskController alloc] init];
 }
 
 // MARK: - IBAction
