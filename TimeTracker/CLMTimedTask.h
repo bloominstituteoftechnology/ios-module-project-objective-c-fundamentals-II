@@ -12,6 +12,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CLMTimedTask : NSObject
 
+// Properties
+@property (nonatomic, readonly, copy) NSString *client;
+@property (nonatomic, readonly, copy) NSString *summary;
+@property (nonatomic, readonly) double hourlyRate;
+@property (nonatomic, readonly) NSInteger hoursWorked;
+@property (nonatomic, readonly) double total;
+
 @end
 
 NS_ASSUME_NONNULL_END
