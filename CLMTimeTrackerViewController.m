@@ -22,7 +22,11 @@
 
 //MARK: - Properties
 @property CLMTimedTaskController *timedTaskController;
+@property CLMTimedTask *taskToEdit;
 
+- (void) updateViews;
+- (void) logTime;
+- (void) addOrEditTask;
 
 @end
 
@@ -44,18 +48,44 @@
 }
 
 // MARK: - Functions
-- (void) logTime {
-    NSString *client = self.client.text;
-    NSString *summary = self.summary.text;
-    double hourlyRate = [self.hourlyRate.text doubleValue];
-    int hoursWorked = [self.hoursWorked.text intValue];
+- (void) updateViews
+{
+    if (self.taskToEdit) {
+        self.client.text = self.taskToEdit.client;
+        self.summary.text = self.taskToEdit.summary;
+        self.hourlyRate.text = [NSString localizedStringWithFormat:@"%.2f", self.taskToEdit.hourlyRate];
+        self.hoursWorked.text = [NSString localizedStringWithFormat:@"%.2ld", self.taskToEdit.hoursWorked];
+    } else {
+        self.client.text = @"";
+        self.summary.text = @"";
+        self.hoursWorked.text = @"";
+        self.hourlyRate.text = @"";
+    }
+}
+
+- (void) addOrEditTask
+{
+    if (self.taskToEdit) {
+        self.taskToEdit.client = self.client.text;
+        self.taskToEdit.summary = self.summary.text;
+        self.taskToEdit.hourlyRate = [self.hourlyRate.text doubleValue];
+        self.taskToEdit.hoursWorked = [self.hoursWorked.text intValue];
+    } else {
+        NSString *client = self.client.text;
+        NSString *summary = self.summary.text;
+        double hourlyRate = [self.hourlyRate.text doubleValue];
+        int hoursWorked = [self.hoursWorked.text intValue];
+        
+        [self.timedTaskController createTimedTaskWithClient:client summary:summary hoursWorked:hoursWorked hourlyRate:hourlyRate];
+    }
     
-    [self.timedTaskController createTimedTaskWithClient:client summary:summary hoursWorked:hoursWorked hourlyRate:hourlyRate];
-    
-    self.client.text = @"";
-    self.summary.text = @"";
-    self.hoursWorked.text = @"";
-    self.hourlyRate.text = @"";
+    [self updateViews];
+    [self.tableView reloadData];
+}
+
+- (void) logTime
+{
+    [self addOrEditTask];
 }
 
 /*
@@ -82,6 +112,15 @@
     cell.detailTextLabel.text = [NSString localizedStringWithFormat:@"$%.2f", task.total];
     
     return cell;
+}
+
+// MARK: - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    self.taskToEdit = self.timedTaskController.timedTasks[indexPath.row];
+    [self updateViews];
+    
 }
 
 @end
