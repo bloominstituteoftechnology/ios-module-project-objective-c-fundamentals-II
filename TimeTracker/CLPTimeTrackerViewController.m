@@ -32,7 +32,18 @@
 }
 
 - (IBAction)logTime:(UIButton *)sender {
-    
+    NSDecimalNumber *hourlyRate = [NSDecimalNumber decimalNumberWithString:_hourlyRateTextField.text];
+    NSDecimalNumber *hoursWorked = [NSDecimalNumber decimalNumberWithString:_hoursWorkedTextField.text];
+    [_timedTaskController createTimedTaskWithClient:_clientNameTextField.text
+                                            summary:_summaryTextField.text
+                                         hourlyRate:hourlyRate
+                                        hoursWorked:hoursWorked];
+    [_tableView reloadData];
+    _clientNameTextField.text = @"";
+    _summaryTextField.text = @"";
+    _hourlyRateTextField.text = @"";
+    _hoursWorkedTextField.text = @"";
+    [self.view endEditing:YES];
 }
 
 
