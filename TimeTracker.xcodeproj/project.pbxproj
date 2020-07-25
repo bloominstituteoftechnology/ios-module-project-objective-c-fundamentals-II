@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3AEBCD5F24CBBB4500BC7C7C /* CLMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBCD5E24CBBB4500BC7C7C /* CLMTimedTask.m */; };
 		3AEBCD6224CBBFC800BC7C7C /* CLMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBCD6124CBBFC800BC7C7C /* CLMTimedTaskController.m */; };
+		3AEBCD6B24CBC73F00BC7C7C /* CLMTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AEBCD6A24CBC73F00BC7C7C /* CLMTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		3AEBCD5E24CBBB4500BC7C7C /* CLMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLMTimedTask.m; path = TimeTracker/CLMTimedTask.m; sourceTree = SOURCE_ROOT; };
 		3AEBCD6024CBBFC800BC7C7C /* CLMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		3AEBCD6124CBBFC800BC7C7C /* CLMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		3AEBCD6924CBC73F00BC7C7C /* CLMTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CLMTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		3AEBCD6A24CBC73F00BC7C7C /* CLMTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CLMTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3AEBCD6924CBC73F00BC7C7C /* CLMTimeTrackerViewController.h */,
+				3AEBCD6A24CBC73F00BC7C7C /* CLMTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 				3AEBCD5F24CBBB4500BC7C7C /* CLMTimedTask.m in Sources */,
+				3AEBCD6B24CBC73F00BC7C7C /* CLMTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
