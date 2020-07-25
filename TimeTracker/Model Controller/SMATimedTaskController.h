@@ -8,9 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
+@class SMATimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SMATimedTaskController : NSObject
+
+@property (nonatomic, copy) NSMutableArray<SMATimedTask *> *timedTasks;
+
+-(void)createTimedTaskWithClientName:(NSString *)clientName
+                                   workSummary:(NSString *)aWorkSummary
+                                    hourlyRate:(double)aHourlyRate
+                                    timeWorked:(double)aTimeWorked;
 
 @end
 
