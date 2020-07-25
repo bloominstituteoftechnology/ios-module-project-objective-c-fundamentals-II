@@ -10,6 +10,11 @@
 
 @interface CLPTimeTrackerViewController ()
 
+@property (nonatomic) IBOutlet UITextField *clientNameTextField;
+@property (nonatomic) IBOutlet UITextField *summaryTextField;
+@property (nonatomic) IBOutlet UITextField *hourlyRateTextField;
+@property (nonatomic) IBOutlet UITextField *hoursWorkedTextField;
+
 @end
 
 @implementation CLPTimeTrackerViewController
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+- (IBAction)logTime:(UIButton *)sender {
+    
 }
 
 /*
