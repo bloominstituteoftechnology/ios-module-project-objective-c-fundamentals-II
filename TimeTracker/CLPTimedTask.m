@@ -10,4 +10,23 @@
 
 @implementation CLPTimedTask
 
+- (instancetype)initWithClient:(NSString *)client
+                       summary:(NSString *)summary
+                    hourlyRate:(NSDecimalNumber *)hourlyRate
+                   hoursWorked:(NSDecimalNumber *)hoursWorked
+{
+    if (self = [super init]) {
+        _client = client.copy;
+        _summary = summary.copy;
+        _hourlyRate = hourlyRate;
+        _hoursWorked = hoursWorked;
+    }
+    return self;
+}
+
+- (NSDecimalNumber *)total
+{
+    return [self.hourlyRate decimalNumberByMultiplyingBy:self.hoursWorked];
+}
+
 @end
