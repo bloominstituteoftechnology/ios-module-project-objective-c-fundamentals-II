@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		66F731FF24CCA8A3009FF9C3 /* SMATimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */; };
+		66F7320324CCAB78009FF9C3 /* SMATimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */; };
+		66F7320824CCAE33009FF9C3 /* SMATimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66F7320724CCAE33009FF9C3 /* SMATimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		66F731FD24CCA8A3009FF9C3 /* SMATimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMATimedTask.h; sourceTree = "<group>"; };
+		66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMATimedTask.m; sourceTree = "<group>"; };
+		66F7320124CCAB78009FF9C3 /* SMATimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMATimedTaskController.h; sourceTree = "<group>"; };
+		66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMATimedTaskController.m; sourceTree = "<group>"; };
+		66F7320624CCAE33009FF9C3 /* SMATimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMATimeTrackerViewController.h; sourceTree = "<group>"; };
+		66F7320724CCAE33009FF9C3 /* SMATimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMATimeTrackerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +67,9 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
+				66F7320524CCAE0A009FF9C3 /* View Controller */,
+				66F7320024CCAB60009FF9C3 /* Model Controller */,
+				66F731FC24CCA889009FF9C3 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -90,25 +99,31 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		467FC85B23F3768C00C15592 /* Model */ = {
+		66F731FC24CCA889009FF9C3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				66F731FD24CCA8A3009FF9C3 /* SMATimedTask.h */,
+				66F731FE24CCA8A3009FF9C3 /* SMATimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
+		66F7320024CCAB60009FF9C3 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
+				66F7320124CCAB78009FF9C3 /* SMATimedTaskController.h */,
+				66F7320224CCAB78009FF9C3 /* SMATimedTaskController.m */,
 			);
 			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		66F7320524CCAE0A009FF9C3 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				66F7320624CCAE33009FF9C3 /* SMATimeTrackerViewController.h */,
+				66F7320724CCAE33009FF9C3 /* SMATimeTrackerViewController.m */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,8 +196,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66F731FF24CCA8A3009FF9C3 /* SMATimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				66F7320324CCAB78009FF9C3 /* SMATimedTaskController.m in Sources */,
+				66F7320824CCAE33009FF9C3 /* SMATimeTrackerViewController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
