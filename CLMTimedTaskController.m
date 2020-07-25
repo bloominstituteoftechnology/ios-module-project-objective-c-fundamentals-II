@@ -10,4 +10,15 @@
 
 @implementation CLMTimedTaskController
 
+- (instancetype) init{
+    self = [super init];
+    
+    if(self)
+    {
+        _timedTasks = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 @end
