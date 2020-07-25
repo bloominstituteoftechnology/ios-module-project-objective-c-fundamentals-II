@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		6355A06B24CBC58000DF3747 /* CLPTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 6355A06A24CBC58000DF3747 /* CLPTimedTask.m */; };
 		6355A06E24CBCF2A00DF3747 /* CLPTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6355A06D24CBCF2A00DF3747 /* CLPTimedTaskController.m */; };
+		6355A07124CBD2EB00DF3747 /* CLPTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6355A07024CBD2EB00DF3747 /* CLPTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		6355A06A24CBC58000DF3747 /* CLPTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLPTimedTask.m; path = TimeTracker/CLPTimedTask.m; sourceTree = SOURCE_ROOT; };
 		6355A06C24CBCF2A00DF3747 /* CLPTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLPTimedTaskController.h; path = TimeTracker/CLPTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		6355A06D24CBCF2A00DF3747 /* CLPTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLPTimedTaskController.m; path = TimeTracker/CLPTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		6355A06F24CBD2EB00DF3747 /* CLPTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CLPTimeTrackerViewController.h; path = TimeTracker/CLPTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		6355A07024CBD2EB00DF3747 /* CLPTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CLPTimeTrackerViewController.m; path = TimeTracker/CLPTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6355A06F24CBD2EB00DF3747 /* CLPTimeTrackerViewController.h */,
+				6355A07024CBD2EB00DF3747 /* CLPTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			files = (
 				6355A06E24CBCF2A00DF3747 /* CLPTimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				6355A07124CBD2EB00DF3747 /* CLPTimeTrackerViewController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				6355A06B24CBC58000DF3747 /* CLPTimedTask.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
