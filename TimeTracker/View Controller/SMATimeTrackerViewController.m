@@ -48,6 +48,16 @@
 }
 
 - (IBAction)logTimeTapped:(id)sender {
+    [self.timedTaskController createTimedTaskWithClientName:self.clientNameTextField.text
+                                                workSummary:self.workSummaryTextField.text
+                                                 hourlyRate:[self.hourlyRateTextField.text doubleValue]
+                                                 timeWorked:[self.timeWorkedTextField.text doubleValue]];
+    
+    [self.tableView reloadData];
+    self.clientNameTextField.text = @"";
+    self.workSummaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.timeWorkedTextField.text = @"";
 }
 
 /*
