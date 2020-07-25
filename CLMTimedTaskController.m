@@ -7,6 +7,7 @@
 //
 
 #import "CLMTimedTaskController.h"
+#import "CLMTimedTask.h"
 
 @implementation CLMTimedTaskController
 
@@ -19,6 +20,16 @@
     }
     
     return self;
+}
+
+-(void) createTimedTaskWithClient:(NSString *)aClient summary:(NSString *)theSummary hoursWorked:(NSInteger)theHoursWorked hourlyRate:(double)theHourlyRate
+{
+    CLMTimedTask *task = [[CLMTimedTask alloc] initWithClient:aClient
+                                                      summary:theSummary
+                                                   hourlyRate:theHourlyRate
+                                                  hoursWorked:theHoursWorked];
+    
+    [self.timedTasks addObject:task];
 }
 
 @end
