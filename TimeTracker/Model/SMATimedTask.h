@@ -18,6 +18,11 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) double timeWorked;
 @property (nonatomic, readonly) double total;
 
+- (instancetype)initWithClientName:(NSString *)aClientName
+                       workSummary:(NSString *)aWorkSummary
+                        hourlyRate:(double)aHourlyRate
+                        timeWorked:(double)aTimeWorked;
+
 @end
 
 NS_ASSUME_NONNULL_END
