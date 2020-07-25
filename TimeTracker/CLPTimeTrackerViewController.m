@@ -8,6 +8,7 @@
 
 #import "CLPTimeTrackerViewController.h"
 #import "CLPTimedTaskController.h"
+#import "CLPTimedTask.h"
 
 @interface CLPTimeTrackerViewController ()
 
@@ -34,14 +35,33 @@
     
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: - UITableViewDataSource
+
+- (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _timedTaskController.count;
 }
-*/
+
+- (nonnull UITableViewCell *)tableView:(nonnull UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
+
+    CLPTimedTask *timedTask = _timedTaskController.timedTasks[indexPath.row];
+    cell.textLabel.text = timedTask.client;
+    cell.detailTextLabel.text = [self currencyFormattedStringFrom:timedTask.total];
+
+    return cell;
+}
+
+
+// MARK: - Number formatter
+
+- (NSString *)currencyFormattedStringFrom:(NSDecimalNumber *)number {
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterCurrencyStyle;
+    //formatter.currencyCode = self.comparisonCurrency;
+    //formatter.usesSignificantDigits = YES;
+    formatter.minimumFractionDigits = 2;
+    return [formatter stringFromNumber:number];
+}
 
 @end
