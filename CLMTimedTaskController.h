@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@class CLMTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface CLMTimedTaskController : NSObject
 
 // Properties
-@property (nonatomic, readwrite) NSMutableArray *timedTasks;
+@property (nonatomic, readwrite) NSMutableArray<CLMTimedTask *> *timedTasks;
 
 // Methods
 - (void) createTimedTaskWithClient:(NSString *) aClient
