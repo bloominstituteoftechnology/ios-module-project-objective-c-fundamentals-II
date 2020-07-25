@@ -12,6 +12,15 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CLMTimedTaskController : NSObject
 
+// Properties
+@property (nonatomic, readwrite) NSMutableArray *timedTasks;
+
+// Methods
+- (void) createTimedTaskWithClient:(NSString *) aClient
+                           summary:(NSString *)theSummary
+                       hoursWorked:(NSInteger)theHoursWorked
+                        hourlyRate:(double)theHourlyRate;
+
 @end
 
 NS_ASSUME_NONNULL_END
