@@ -40,11 +40,22 @@
 - (IBAction)logTime:(id)sender
 {
     [self logTime];
+    [self.tableView reloadData];
 }
 
 // MARK: - Functions
 - (void) logTime {
+    NSString *client = self.client.text;
+    NSString *summary = self.summary.text;
+    double hourlyRate = [self.hourlyRate.text doubleValue];
+    int hoursWorked = [self.hoursWorked.text intValue];
     
+    [self.timedTaskController createTimedTaskWithClient:client summary:summary hoursWorked:hoursWorked hourlyRate:hourlyRate];
+    
+    self.client.text = @"";
+    self.summary.text = @"";
+    self.hoursWorked.text = @"";
+    self.hourlyRate.text = @"";
 }
 
 /*
