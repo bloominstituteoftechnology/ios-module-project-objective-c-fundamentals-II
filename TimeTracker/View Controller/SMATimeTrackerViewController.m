@@ -7,6 +7,7 @@
 //
 
 #import "SMATimeTrackerViewController.h"
+#import "../Model Controller/SMATimedTaskController.h"
 
 @interface SMATimeTrackerViewController ()
 
@@ -16,13 +17,27 @@
 @property (weak, nonatomic) IBOutlet UITextField *timeWorkedTextField;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic) SMATimedTaskController *timedTaskController;
+
 @end
 
 @implementation SMATimeTrackerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.timedTaskController = [[SMATimedTaskController alloc] init];
+    self.tableView.dataSource = self;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.timedTaskController.timedTasks.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
 }
 
 - (IBAction)logTimeTapped:(id)sender {
