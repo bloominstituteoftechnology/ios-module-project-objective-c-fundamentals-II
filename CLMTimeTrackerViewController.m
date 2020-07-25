@@ -10,6 +10,13 @@
 
 @interface CLMTimeTrackerViewController ()
 
+// MARK: - IBOutlets
+@property (nonatomic) IBOutlet UITextField *client;
+@property (nonatomic) IBOutlet UITextField *summary;
+@property (nonatomic) IBOutlet UITextField *hourlyRate;
+@property (nonatomic) IBOutlet UITextField *hoursWorked;
+@property (nonatomic) IBOutlet UITableView *tableView;
+
 @end
 
 @implementation CLMTimeTrackerViewController
@@ -17,6 +24,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+}
+
+// MARK: - IBAction
+- (IBAction)logTime:(id)sender
+{
+    [self logTime];
+}
+
+// MARK: - Functions
+- (void) logTime {
+    
 }
 
 /*
