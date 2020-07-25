@@ -7,6 +7,7 @@
 //
 
 #import "LSITimedTaskControllerViewController.h"
+#import "LSITime"
 
 @interface LSITimedTaskControllerViewController ()
 

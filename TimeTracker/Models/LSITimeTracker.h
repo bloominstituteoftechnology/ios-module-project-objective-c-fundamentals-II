@@ -23,7 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
                    taskNotes:(NSString *)aTaskNotes
                         rate:(double)aRate
                     manHours:(double)aManHours
-                    totalPay:(double)aTotalPay;
+                    totalPay:(double)aTotalPay;   
+
 @end
 
 NS_ASSUME_NONNULL_END

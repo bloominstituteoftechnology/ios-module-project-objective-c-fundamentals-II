@@ -1,14 +1,15 @@
 //
-//  LSITimeTracker.m
+//  LSITimeTrackerController.m
 //  TimeTracker
 //
-//  Created by Joe on 5/23/20.
+//  Created by Joe on 7/25/20.
 //  Copyright © 2020 Lambda School. All rights reserved.
 //
 
+#import "LSITimeTrackerController.h"
 #import "LSITimeTracker.h"
 
-@implementation LSITimeTracker
+@implementation LSITimeTrackerController
 
 - (instancetype)initWithName:(NSString *)aClientName
                    taskNotes:(NSString *)aTaskNotes
@@ -25,4 +26,15 @@
     }
     return self;
 }
+
+- (double)countTheCost:(double)ofRate times:(double)manHours
+{
+    return ofRate * manHours;
+}
+
+- (double)total
+{
+    return _manHours * _rate;
+}
+
 @end
