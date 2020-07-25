@@ -8,6 +8,7 @@
 
 #import "SMATimeTrackerViewController.h"
 #import "../Model Controller/SMATimedTaskController.h"
+#import "../Model/SMATimedTask.h"
 
 @interface SMATimeTrackerViewController ()
 
@@ -37,7 +38,13 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TimedTaskCell" forIndexPath:indexPath];
     
+    SMATimedTask *timedTask = [self.timedTaskController.timedTasks objectAtIndex:indexPath.row];
+    cell.textLabel.text = timedTask.clientName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", timedTask.total];
+    
+    return cell;
 }
 
 - (IBAction)logTimeTapped:(id)sender {
