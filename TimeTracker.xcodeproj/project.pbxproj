@@ -197,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AEBCD6224CBBFC800BC7C7C /* CLMTimedTaskController.m in Sources */,
+				3AEBCD6824CBC57900BC7C7C /* CLMTiimeTrackerviewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
