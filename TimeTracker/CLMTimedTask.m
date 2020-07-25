@@ -10,4 +10,17 @@
 
 @implementation CLMTimedTask
 
+- (instancetype) initWithClient:(NSString *)aClient summary:(NSString *)theSummary hourlyRate:(double)theHourlyRate hoursWorked:(NSInteger)theHoursWorked{
+    self = [super init];
+    
+    if (self)
+    {
+        _client = aClient;
+        _summary = theSummary;
+        _hourlyRate = theHourlyRate;
+        _hoursWorked = theHoursWorked;
+    }
+    return self;
+}
+
 @end
