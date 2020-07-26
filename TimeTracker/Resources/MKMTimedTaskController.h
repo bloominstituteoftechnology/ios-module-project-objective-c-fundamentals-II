@@ -8,9 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+@class MKMTimedTask;
+
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MKMTimedTaskController : NSObject
+
+@property (nonatomic, readonly, copy) NSArray<MKMTimedTask *> *tasks;
+@property (nonatomic, readonly) NSUInteger taskCount;
+
+- (void)createTimedTask:(MKMTimedTask *)aTask;
 
 @end
 
