@@ -24,6 +24,9 @@
     return self;
 }
 
-- (double)total = 
+- (double)total
+{
+    return _hoursWorked * _hourlyRate;
+}
 
 @end

@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		C9AE232B24CE347A003290A0 /* MKMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE232A24CE347A003290A0 /* MKMTimedTask.m */; };
+		C9AE232E24CE388C003290A0 /* MKMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE232D24CE388C003290A0 /* MKMTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C9AE232924CE347A003290A0 /* MKMTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKMTimedTask.h; path = TimeTracker/Resources/MKMTimedTask.h; sourceTree = SOURCE_ROOT; };
 		C9AE232A24CE347A003290A0 /* MKMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKMTimedTask.m; path = TimeTracker/Resources/MKMTimedTask.m; sourceTree = SOURCE_ROOT; };
+		C9AE232C24CE388C003290A0 /* MKMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKMTimedTaskController.h; path = TimeTracker/Resources/MKMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		C9AE232D24CE388C003290A0 /* MKMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKMTimedTaskController.m; path = TimeTracker/Resources/MKMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C9AE232C24CE388C003290A0 /* MKMTimedTaskController.h */,
+				C9AE232D24CE388C003290A0 /* MKMTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			files = (
 				C9AE232B24CE347A003290A0 /* MKMTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				C9AE232E24CE388C003290A0 /* MKMTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
