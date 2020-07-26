@@ -17,7 +17,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly, copy) NSArray<MKMTimedTask *> *tasks;
 @property (nonatomic, readonly) NSUInteger taskCount;
 
-- (void)createTimedTask:(MKMTimedTask *)aTask;
+- (void)createTimedTask:(NSString *)aClient
+                summary:(NSString *)aSummary
+              houryRate:(double)anHourlyRate
+            hoursWorked:(double)anHoursWorked;
 
 @end
 
