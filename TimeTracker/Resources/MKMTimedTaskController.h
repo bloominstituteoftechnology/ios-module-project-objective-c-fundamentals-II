@@ -22,6 +22,8 @@ NS_ASSUME_NONNULL_BEGIN
               houryRate:(double)anHourlyRate
             hoursWorked:(double)anHoursWorked;
 
+- (MKMTimedTask *)taskAtIndex:(NSUInteger)index;
+
 @end
 
 NS_ASSUME_NONNULL_END
