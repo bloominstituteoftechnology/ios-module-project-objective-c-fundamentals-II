@@ -10,4 +10,20 @@
 
 @implementation MKMTimedTask
 
+- (instancetype)initWithClient:(NSString *)aClient
+                       summary:(NSString *)aSummary
+                    hourlyRate:(double)anHourlyRate
+                   hoursWorked:(double)anHoursWorked
+{
+    if (self = [super init]) {
+        _client = aClient.copy;
+        _summary = aSummary.copy;
+        _hourlyRate = anHourlyRate;
+        _hoursWorked = anHoursWorked;
+    }
+    return self;
+}
+
+- (double)total = 
+
 @end
