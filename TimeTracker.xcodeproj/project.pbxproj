@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		C9AE232B24CE347A003290A0 /* MKMTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE232A24CE347A003290A0 /* MKMTimedTask.m */; };
 		C9AE232E24CE388C003290A0 /* MKMTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE232D24CE388C003290A0 /* MKMTimedTaskController.m */; };
+		C9AE233424CE3CFA003290A0 /* MKMTaskTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9AE233324CE3CFA003290A0 /* MKMTaskTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		C9AE232A24CE347A003290A0 /* MKMTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKMTimedTask.m; path = TimeTracker/Resources/MKMTimedTask.m; sourceTree = SOURCE_ROOT; };
 		C9AE232C24CE388C003290A0 /* MKMTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKMTimedTaskController.h; path = TimeTracker/Resources/MKMTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		C9AE232D24CE388C003290A0 /* MKMTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKMTimedTaskController.m; path = TimeTracker/Resources/MKMTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		C9AE233224CE3CFA003290A0 /* MKMTaskTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKMTaskTrackerViewController.h; path = TimeTracker/Resources/MKMTaskTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		C9AE233324CE3CFA003290A0 /* MKMTaskTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKMTaskTrackerViewController.m; path = TimeTracker/Resources/MKMTaskTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C9AE233224CE3CFA003290A0 /* MKMTaskTrackerViewController.h */,
+				C9AE233324CE3CFA003290A0 /* MKMTaskTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AE233424CE3CFA003290A0 /* MKMTaskTrackerViewController.m in Sources */,
 				C9AE232B24CE347A003290A0 /* MKMTimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				C9AE232E24CE388C003290A0 /* MKMTimedTaskController.m in Sources */,
