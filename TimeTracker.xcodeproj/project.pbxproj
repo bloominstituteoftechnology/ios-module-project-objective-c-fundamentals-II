@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		C3EEB2CD24CBC1A3006CA898 /* JMCTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EEB2CC24CBC1A3006CA898 /* JMCTimedTask.m */; };
+		C3EEB2D024CBE0CD006CA898 /* JMCTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EEB2CF24CBE0CD006CA898 /* JMCTimeTrackerViewController.m */; };
+		C3EEB2D324CBE125006CA898 /* JMCTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = C3EEB2D224CBE125006CA898 /* JMCTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C3EEB2CB24CBC1A3006CA898 /* JMCTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JMCTimedTask.h; sourceTree = "<group>"; };
+		C3EEB2CC24CBC1A3006CA898 /* JMCTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JMCTimedTask.m; sourceTree = "<group>"; };
+		C3EEB2CE24CBE0CD006CA898 /* JMCTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JMCTimeTrackerViewController.h; path = "TimeTracker/View Controller/JMCTimeTrackerViewController.h"; sourceTree = SOURCE_ROOT; };
+		C3EEB2CF24CBE0CD006CA898 /* JMCTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JMCTimeTrackerViewController.m; path = "TimeTracker/View Controller/JMCTimeTrackerViewController.m"; sourceTree = SOURCE_ROOT; };
+		C3EEB2D124CBE125006CA898 /* JMCTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = JMCTimedTaskController.h; path = TimeTracker/Storyboards/JMCTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		C3EEB2D224CBE125006CA898 /* JMCTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = JMCTimedTaskController.m; path = TimeTracker/Storyboards/JMCTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C3EEB2CB24CBC1A3006CA898 /* JMCTimedTask.h */,
+				C3EEB2CC24CBC1A3006CA898 /* JMCTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C3EEB2CE24CBE0CD006CA898 /* JMCTimeTrackerViewController.h */,
+				C3EEB2CF24CBE0CD006CA898 /* JMCTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				C3EEB2D124CBE125006CA898 /* JMCTimedTaskController.h */,
+				C3EEB2D224CBE125006CA898 /* JMCTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -137,6 +152,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JMC;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -181,9 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3EEB2D024CBE0CD006CA898 /* JMCTimeTrackerViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				C3EEB2CD24CBC1A3006CA898 /* JMCTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				C3EEB2D324CBE125006CA898 /* JMCTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
