@@ -67,54 +67,15 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				D7BA4BAA24D118CF00EBB885 /* Models */,
+				D7BA4BA624D1189700EBB885 /* Views */,
+				D7BA4BA524D1188C00EBB885 /* Controllers */,
 				D74AB24E24CCCEA800B5E42A /* Model Controllers */,
-				D70CB2CE24799AD2003F7A27 /* View Controllers */,
-				D70CB2CA24798EFF003F7A27 /* Models */,
-				467FC85423F373D300C15592 /* Storyboards */,
-				467FC85323F373C900C15592 /* Resources */,
+				D7BA4BA924D118B700EBB885 /* Storyboards */,
+				D7BA4BA824D118B100EBB885 /* Resources */,
+				467FC84623F3738C00C15592 /* Assets.xcassets */,
 			);
 			path = TimeTracker;
-			sourceTree = "<group>";
-		};
-		467FC85323F373C900C15592 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				467FC83A23F3738B00C15592 /* AppDelegate.h */,
-				467FC83B23F3738B00C15592 /* AppDelegate.m */,
-				467FC83D23F3738B00C15592 /* SceneDelegate.h */,
-				467FC83E23F3738B00C15592 /* SceneDelegate.m */,
-				467FC84623F3738C00C15592 /* Assets.xcassets */,
-				467FC84B23F3738C00C15592 /* Info.plist */,
-				467FC84C23F3738C00C15592 /* main.m */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		467FC85423F373D300C15592 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				467FC84323F3738B00C15592 /* Main.storyboard */,
-				467FC84823F3738C00C15592 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		D70CB2CA24798EFF003F7A27 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				D70CB2CB24798F0C003F7A27 /* LSITimeTracker.h */,
-				D70CB2CC24798F0C003F7A27 /* LSITimeTracker.m */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D70CB2CE24799AD2003F7A27 /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				D743665424952F8A00576D4D /* LSITimedTaskControllerViewController.h */,
-				D743665524952F8A00576D4D /* LSITimedTaskControllerViewController.m */,
-			);
-			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		D74AB24E24CCCEA800B5E42A /* Model Controllers */ = {
@@ -124,6 +85,53 @@
 				D74AB25324CCCF7F00B5E42A /* LSITimeTrackerController.m */,
 			);
 			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		D7BA4BA524D1188C00EBB885 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D743665524952F8A00576D4D /* LSITimedTaskControllerViewController.m */,
+				D743665424952F8A00576D4D /* LSITimedTaskControllerViewController.h */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		D7BA4BA624D1189700EBB885 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D7BA4BA824D118B100EBB885 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				467FC83A23F3738B00C15592 /* AppDelegate.h */,
+				467FC83B23F3738B00C15592 /* AppDelegate.m */,
+				467FC83D23F3738B00C15592 /* SceneDelegate.h */,
+				467FC83E23F3738B00C15592 /* SceneDelegate.m */,
+				467FC84B23F3738C00C15592 /* Info.plist */,
+				467FC84C23F3738C00C15592 /* main.m */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D7BA4BA924D118B700EBB885 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				467FC84323F3738B00C15592 /* Main.storyboard */,
+				467FC84823F3738C00C15592 /* LaunchScreen.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		D7BA4BAA24D118CF00EBB885 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D70CB2CB24798F0C003F7A27 /* LSITimeTracker.h */,
+				D70CB2CC24798F0C003F7A27 /* LSITimeTracker.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

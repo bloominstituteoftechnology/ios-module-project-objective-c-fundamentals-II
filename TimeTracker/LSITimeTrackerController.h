@@ -10,9 +10,13 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+@class LSITimeTracker;
+
 @interface LSITimeTrackerController : NSObject
 
-- ()countTheCost:(double)ofRate times:(double)manHours;
+@property (nonatomic, readonly, copy) NSArray<LSITimeTracker *> *trackedTimes;
+
+- (LSITimeTracker *)countTheCost:(double)ofRate times:(double)manHours;
 
 @end
 
