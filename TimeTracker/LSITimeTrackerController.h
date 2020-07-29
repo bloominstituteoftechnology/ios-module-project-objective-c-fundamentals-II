@@ -18,6 +18,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (LSITimeTracker *)countTheCost:(double)ofRate times:(double)manHours;
 
+- (void)addTrackedTime:(LSITimeTracker *)aTrackedTime;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,20 +9,19 @@
 #import "LSITimeTrackerController.h"
 #import "LSITimeTracker.h"
 
+@interface LSITimeTrackerController () {
+    NSMutableArray *_internalTrackedTimes;
+}
+
+@end
+
 @implementation LSITimeTrackerController
 
-- (instancetype)initWithName:(NSString *)aClientName
-                   taskNotes:(NSString *)aTaskNotes
-                        rate:(double)aRate
-                    manHours:(double)aManHours
-                    totalPay:(double)aTotalPay
+- (instancetype)init
 {
     if (self = [super init]) {
-        _clientName = aClientName;
-        _taskNotes = aTaskNotes;
-        _rate = aRate;
-        _manHours = aManHours;
-        _totalPay = aTotalPay;
+        _internalTrackedTimes = [[NSMutableArray alloc]init];
+//        [self addTrackedTime];
     }
     return self;
 }
@@ -32,9 +31,9 @@
     return ofRate * manHours;
 }
 
-- (double)total
+- (void)addTrackedTime:(LSITimeTracker *)aTrackedTime
 {
-    return _manHours * _rate;
+    [_internalTrackedTimes addObject:aTrackedTime];
 }
 
 @end
