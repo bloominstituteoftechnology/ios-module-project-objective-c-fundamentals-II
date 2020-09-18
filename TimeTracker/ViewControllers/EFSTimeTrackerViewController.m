@@ -46,6 +46,17 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    NSIndexPath *selectedIndexPath = [tableView indexPathForSelectedRow];
+    EFSTimedTask *currentTask = [self.taskController.taskArray objectAtIndex:selectedIndexPath.row];
+    [tableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionNone];
+    self.clientNameTextField.text = currentTask.clientName;
+    self.workSummaryTextField.text = currentTask.workSummary;
+    self.hourlyRateTextField.text = [NSString stringWithFormat:@"%.0f", currentTask.hourlyRate];
+    self.timeWorkedTextField.text = [NSString stringWithFormat:@"%.0f", currentTask.hoursWorked];
+}
+
 // IBAction
 - (IBAction)logTime:(id)sender {
     
