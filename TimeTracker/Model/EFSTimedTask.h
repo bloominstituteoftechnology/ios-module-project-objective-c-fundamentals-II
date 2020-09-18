@@ -21,8 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (instancetype) initWithName:(NSString *)aClientName
                   workSummary:(NSString *)aWorkSummary
                    hourlyRate:(double)aHourlyRate
-                  hoursWorked:(double)someHoursWorked
-                    totalCost:(double)aTotalCost;
+                  hoursWorked:(double)someHoursWorked;
             
 @end
 

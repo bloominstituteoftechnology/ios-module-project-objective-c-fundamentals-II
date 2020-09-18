@@ -12,15 +12,19 @@
 - (instancetype) initWithName:(NSString *)aClientName
                   workSummary:(NSString *)aWorkSummary
                    hourlyRate:(double)aHourlyRate
-                  hoursWorked:(double)someHoursWorked
-                    totalCost:(double)aTotalCost {
+                  hoursWorked:(double)someHoursWorked {
     if (self = [super init]) {
         _clientName = aClientName.copy;
         _workSummary = aWorkSummary.copy;
         _hourlyRate = aHourlyRate;
         _hoursWorked = someHoursWorked;
-        _totalCost = aTotalCost;
     }
     return self;
 }
+
+- (double)totalCost
+{
+    return _hoursWorked * _hourlyRate;
+}
+
 @end
