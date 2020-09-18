@@ -39,7 +39,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
-    EFSTimedTask *task = [self.taskController taskAtIndex:indexPath.row]
+    EFSTimedTask *task = [self.taskController taskAtIndex:indexPath.row];
+    cell.textLabel.text = task.clientName;
+    NSString *total = [NSString stringWithFormat:@"%0.2f", task.totalCost];
+    cell.detailTextLabel.text = total;
+    return cell;
 }
 
 // IBAction
