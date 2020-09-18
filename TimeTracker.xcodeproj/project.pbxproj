@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B13103025152C0100EB86D7 /* EFSTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13102F25152C0100EB86D7 /* EFSTimedTask.m */; };
+		0B1310352515368800EB86D7 /* EFSTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1310342515368800EB86D7 /* EFSTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		0B13102E25152C0100EB86D7 /* EFSTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFSTimedTask.h; sourceTree = "<group>"; };
 		0B13102F25152C0100EB86D7 /* EFSTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFSTimedTask.m; sourceTree = "<group>"; };
+		0B1310332515368800EB86D7 /* EFSTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFSTimedTaskController.h; sourceTree = "<group>"; };
+		0B1310342515368800EB86D7 /* EFSTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFSTimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +57,8 @@
 		0B13102B25152B8900EB86D7 /* ModelController */ = {
 			isa = PBXGroup;
 			children = (
+				0B1310332515368800EB86D7 /* EFSTimedTaskController.h */,
+				0B1310342515368800EB86D7 /* EFSTimedTaskController.m */,
 			);
 			path = ModelController;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1310352515368800EB86D7 /* EFSTimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				0B13103025152C0100EB86D7 /* EFSTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
