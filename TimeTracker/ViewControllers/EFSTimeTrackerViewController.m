@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *workSummaryTextField;
 @property (weak, nonatomic) IBOutlet UITextField *hourlyRateTextField;
 @property (weak, nonatomic) IBOutlet UITextField *timeWorkedTextField;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // Private Properties
 

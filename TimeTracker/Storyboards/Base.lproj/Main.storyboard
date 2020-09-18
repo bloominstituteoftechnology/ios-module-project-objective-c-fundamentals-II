@@ -96,6 +96,7 @@
                     <connections>
                         <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="Qwu-sG-fet"/>
                         <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="uP8-WQ-gtm"/>
+                        <outlet property="tableView" destination="NGG-z0-Z9V" id="UUU-cQ-g6R"/>
                         <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="xg7-XW-27t"/>
                         <outlet property="workSummaryTextField" destination="Zaq-vp-K0H" id="mf8-Jh-UL6"/>
                     </connections>
