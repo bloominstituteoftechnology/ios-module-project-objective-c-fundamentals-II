@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface EFSTimedTaskController : NSObject
 
-@property (nonatomic) NSMutableArray<EFSTimedTask *> *taskArray;
+@property (nonatomic) NSArray<EFSTimedTask *> *taskArray;
 
 - (EFSTimedTask *)createTimedTaskWith:(NSString *)aClientName workSummary:(NSString *)aWorkSummary hourlyRate:(double)aHourlyRate hoursWorked:(double)someHoursWorked;
 
