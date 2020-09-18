@@ -9,23 +9,23 @@
 #import "EFSTimedTaskController.h"
 #import "EFSTimedTask.h"
 
-@interface EFSTimedTaskController () {
-    NSMutableArray *_timedTasks;
-}
-
-@end
-
 @implementation EFSTimedTaskController
 
 - (instancetype)init
 {
     if (self = [super init]) {
-        _timedTasks = [[NSMutableArray alloc] init];
+        _taskArray = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (EFSTimedTask *)createTimedTaskWith:(NSString *)aClientName
+- (NSUInteger)taskCount
+{
+    return self.taskArray.count;
+}
+
+
+- (void)createTimedTaskWith:(NSString *)aClientName
                           workSummary:(NSString *)aWorkSummary
                            hourlyRate:(double)aHourlyRate
                           hoursWorked:(double)someHoursWorked
@@ -34,13 +34,12 @@
                                                  workSummary:aWorkSummary
                                                   hourlyRate:aHourlyRate
                                                  hoursWorked:someHoursWorked];
-    [_timedTasks addObject:aTask];
-    return aTask;
+    [_taskArray addObject:aTask];
 }
 
 - (EFSTimedTask *)taskAtIndex:(NSUInteger)index
 {
-    return [_timedTasks objectAtIndex:index];
+    return [_taskArray objectAtIndex:index];
 }
 
 

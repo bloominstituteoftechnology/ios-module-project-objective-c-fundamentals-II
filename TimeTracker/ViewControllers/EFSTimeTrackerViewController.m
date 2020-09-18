@@ -27,13 +27,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.taskController = [[EFSTimedTaskController alloc] init];
+    _taskController = [[EFSTimedTaskController alloc] init];
+    _tableView.dataSource = self;
 }
-
 // UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.taskController.taskArray.count;
+    return _taskController.taskCount;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -41,7 +41,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
     EFSTimedTask *task = [self.taskController taskAtIndex:indexPath.row];
     cell.textLabel.text = task.clientName;
-    NSString *total = [NSString stringWithFormat:@"%0.2f", task.totalCost];
+    NSString *total = [NSString stringWithFormat:@"$%0.2f", task.totalCost];
     cell.detailTextLabel.text = total;
     return cell;
 }
@@ -59,8 +59,19 @@
 
 // IBAction
 - (IBAction)logTime:(id)sender {
+    double hourlyRate = [_hourlyRateTextField.text doubleValue];
+    double hoursWorked = [_timeWorkedTextField.text doubleValue];
     
-    
+    [_taskController createTimedTaskWith:_clientNameTextField.text
+                             workSummary:_workSummaryTextField.text
+                              hourlyRate:hourlyRate
+                             hoursWorked:hoursWorked];
+    [_tableView reloadData];
+    _clientNameTextField.text = @"";
+    _workSummaryTextField.text = @"";
+    _hourlyRateTextField.text = @"";
+    _timeWorkedTextField.text = @"";
 }
+
 
 @end
