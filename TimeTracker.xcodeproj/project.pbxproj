@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B13103025152C0100EB86D7 /* EFSTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13102F25152C0100EB86D7 /* EFSTimedTask.m */; };
+		0B1310352515368800EB86D7 /* EFSTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B1310342515368800EB86D7 /* EFSTimedTaskController.m */; };
+		0B13103925153B4100EB86D7 /* EFSTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B13103825153B4100EB86D7 /* EFSTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B13102E25152C0100EB86D7 /* EFSTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFSTimedTask.h; sourceTree = "<group>"; };
+		0B13102F25152C0100EB86D7 /* EFSTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFSTimedTask.m; sourceTree = "<group>"; };
+		0B1310332515368800EB86D7 /* EFSTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFSTimedTaskController.h; sourceTree = "<group>"; };
+		0B1310342515368800EB86D7 /* EFSTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFSTimedTaskController.m; sourceTree = "<group>"; };
+		0B13103725153B4100EB86D7 /* EFSTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EFSTimeTrackerViewController.h; sourceTree = "<group>"; };
+		0B13103825153B4100EB86D7 /* EFSTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EFSTimeTrackerViewController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +48,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B13102A25152B8300EB86D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0B13102E25152C0100EB86D7 /* EFSTimedTask.h */,
+				0B13102F25152C0100EB86D7 /* EFSTimedTask.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0B13102B25152B8900EB86D7 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				0B1310332515368800EB86D7 /* EFSTimedTaskController.h */,
+				0B1310342515368800EB86D7 /* EFSTimedTaskController.m */,
+			);
+			path = ModelController;
+			sourceTree = "<group>";
+		};
+		0B13102C25152B9200EB86D7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B13103725153B4100EB86D7 /* EFSTimeTrackerViewController.h */,
+				0B13103825153B4100EB86D7 /* EFSTimeTrackerViewController.m */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +94,9 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
+				0B13102C25152B9200EB86D7 /* ViewControllers */,
+				0B13102B25152B8900EB86D7 /* ModelController */,
+				0B13102A25152B8300EB86D7 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -90,27 +126,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		467FC85B23F3768C00C15592 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +152,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = EFS;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -181,7 +197,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B1310352515368800EB86D7 /* EFSTimedTaskController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				0B13103025152C0100EB86D7 /* EFSTimedTask.m in Sources */,
+				0B13103925153B4100EB86D7 /* EFSTimeTrackerViewController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
