@@ -33,12 +33,13 @@
 // UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return
+    return self.taskController.taskArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell" forIndexPath:indexPath];
+    EFSTimedTask *task = [self.taskController taskAtIndex:indexPath.row]
 }
 
 // IBAction

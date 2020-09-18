@@ -38,6 +38,10 @@
     return aTask;
 }
 
+- (EFSTimedTask *)taskAtIndex:(NSUInteger)index
+{
+    return [_timedTasks objectAtIndex:index];
+}
 
 
 @end
