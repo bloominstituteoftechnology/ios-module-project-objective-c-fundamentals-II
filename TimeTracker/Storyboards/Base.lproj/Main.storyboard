@@ -12,7 +12,7 @@
         <!--Time Tracker View Controller-->
         <scene sceneID="Oja-gw-Uzb">
             <objects>
-                <viewController id="QVk-7N-MGS" customClass="LSITimeTrackerViewController" sceneMemberID="viewController">
+                <viewController id="QVk-7N-MGS" customClass="EFSTimeTrackerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yH6-Y7-uP0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,6 +93,12 @@
                             <constraint firstItem="2Xn-BO-YQ6" firstAttribute="top" secondItem="iFM-0g-Kt5" secondAttribute="top" constant="8" id="ygK-al-FCb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientNameTextField" destination="sqz-sU-Pxu" id="Qwu-sG-fet"/>
+                        <outlet property="hourlyRateTextField" destination="1s7-qi-GbT" id="uP8-WQ-gtm"/>
+                        <outlet property="timeWorkedTextField" destination="hJY-xA-vK5" id="xg7-XW-27t"/>
+                        <outlet property="workSummaryTextField" destination="Zaq-vp-K0H" id="mf8-Jh-UL6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
