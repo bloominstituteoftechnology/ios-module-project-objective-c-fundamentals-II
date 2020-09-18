@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 // Private Properties
+@property (nonatomic) EFSTimedTaskController *taskController;
 
 @end
 
@@ -26,9 +27,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.taskController = [[EFSTimedTaskController alloc] init];
 }
 
+// UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return
@@ -36,6 +38,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+}
+
+// IBAction
+- (IBAction)logTime:(id)sender {
+    
     
 }
 
