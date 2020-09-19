@@ -13,6 +13,8 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		680A6A002515899400357060 /* LSITimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A69FF2515899400357060 /* LSITimedTask.m */; };
+		680A6A0725158E1000357060 /* LSITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6A0625158E1000357060 /* LSITimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		680A69FE2515899400357060 /* LSITimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSITimedTask.h; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTask.h"; sourceTree = "<group>"; };
+		680A69FF2515899400357060 /* LSITimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LSITimedTask.m; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTask.m"; sourceTree = "<group>"; };
+		680A6A0525158E1000357060 /* LSITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSITimedTaskController.h; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTaskController.h"; sourceTree = "<group>"; };
+		680A6A0625158E1000357060 /* LSITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LSITimedTaskController.m; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTaskController.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +64,8 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
+				680A6A03251589A000357060 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -93,22 +98,27 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				680A69FE2515899400357060 /* LSITimedTask.h */,
+				680A69FF2515899400357060 /* LSITimedTask.m */,
+				680A6A04251589AC00357060 /* View Controller */,
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
+		680A6A03251589A000357060 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				680A6A0525158E1000357060 /* LSITimedTaskController.h */,
+				680A6A0625158E1000357060 /* LSITimedTaskController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		680A6A04251589AC00357060 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +194,8 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				680A6A0725158E1000357060 /* LSITimedTaskController.m in Sources */,
+				680A6A002515899400357060 /* LSITimedTask.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
