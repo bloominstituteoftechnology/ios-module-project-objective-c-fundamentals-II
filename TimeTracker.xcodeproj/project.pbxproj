@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		02D11BB12515931D00ECABD9 /* MJSTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D11BB02515931D00ECABD9 /* MJSTimedTask.m */; };
+		02D11BB52515955D00ECABD9 /* MJSTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D11BB42515955D00ECABD9 /* MJSTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 /* Begin PBXFileReference section */
 		02D11BAF2515931D00ECABD9 /* MJSTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MJSTimedTask.h; path = TimeTracker/MJSTimedTask.h; sourceTree = SOURCE_ROOT; };
 		02D11BB02515931D00ECABD9 /* MJSTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MJSTimedTask.m; path = TimeTracker/MJSTimedTask.m; sourceTree = SOURCE_ROOT; };
+		02D11BB32515955D00ECABD9 /* MJSTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MJSTimedTaskController.h; path = TimeTracker/MJSTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		02D11BB42515955D00ECABD9 /* MJSTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MJSTimedTaskController.m; path = TimeTracker/MJSTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02D11BB32515955D00ECABD9 /* MJSTimedTaskController.h */,
+				02D11BB42515955D00ECABD9 /* MJSTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 				02D11BB12515931D00ECABD9 /* MJSTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				02D11BB52515955D00ECABD9 /* MJSTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
