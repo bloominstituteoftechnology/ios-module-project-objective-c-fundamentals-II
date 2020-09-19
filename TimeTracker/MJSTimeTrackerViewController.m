@@ -33,6 +33,16 @@
 
 }
 
+- (void)updateViews
+{
+    self.clientNameTextField.text = @"";
+    self.summaryTextField.text = @"";
+    self.hourlyRateTextField.text = @"";
+    self.hoursWorkedTextField.text = @"";
+}
+
+
+
 - (IBAction)logTime:(id)sender {
     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
 
@@ -40,8 +50,10 @@
         NSNumber *hoursWorked = [formatter numberFromString:self.hoursWorkedTextField.text];
 
     [self.taskController createTimedTaskWithClientName:self.clientNameTextField.text workSummary:self.summaryTextField.text hourlyRate:hourlyRate.doubleValue hoursWorked:hoursWorked.doubleValue];
-
+    
     [self.tableView reloadData];
+
+    [self updateViews];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -54,7 +66,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"taskCell" forIndexPath:indexPath];
     MJSTimedTask *task = self.taskController.tasks[indexPath.row];
     cell.textLabel.text = task.clientName;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%.2f", task.totalBill];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%.2f", task.totalBill];
     return cell;
 }
 
