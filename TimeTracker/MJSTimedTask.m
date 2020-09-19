@@ -10,4 +10,23 @@
 
 @implementation MJSTimedTask
 
+- (instancetype)initWithClientName:(NSString *)clientName
+                       workSummary:(NSString *)workSummary
+                        hourlyRate:(double)hourlyRate
+                       hoursWorked:(double)hoursWorked {
+
+    if (self = [super init]) {
+        _clientName = clientName;
+        _workSummary = workSummary;
+        _hourlyRate = hourlyRate;
+        _hoursWorked = hoursWorked;
+    }
+
+    return self;
+}
+
+- (double)totalBill {
+    return self.hourlyRate * self.hoursWorked;
+}
+
 @end
