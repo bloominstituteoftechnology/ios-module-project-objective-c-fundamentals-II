@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		680A6A002515899400357060 /* LSITimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A69FF2515899400357060 /* LSITimedTask.m */; };
 		680A6A0725158E1000357060 /* LSITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6A0625158E1000357060 /* LSITimedTaskController.m */; };
+		680A6A0B25159F6800357060 /* LSITimedTaskViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 680A6A0A25159F6800357060 /* LSITimedTaskViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		680A69FF2515899400357060 /* LSITimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LSITimedTask.m; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTask.m"; sourceTree = "<group>"; };
 		680A6A0525158E1000357060 /* LSITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LSITimedTaskController.h; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTaskController.h"; sourceTree = "<group>"; };
 		680A6A0625158E1000357060 /* LSITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = LSITimedTaskController.m; path = "../../../../ios-module-project-objc-fundamentals-i/NOCList-ObjC/NOCList-ObjC/LSITimedTaskController.m"; sourceTree = "<group>"; };
+		680A6A0925159F6800357060 /* LSITimedTaskViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimedTaskViewController.h; sourceTree = "<group>"; };
+		680A6A0A25159F6800357060 /* LSITimedTaskViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimedTaskViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +69,7 @@
 			children = (
 				680A6A03251589A000357060 /* Model Controller */,
 				467FC85B23F3768C00C15592 /* Model */,
+				680A6A04251589AC00357060 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -100,7 +104,6 @@
 			children = (
 				680A69FE2515899400357060 /* LSITimedTask.h */,
 				680A69FF2515899400357060 /* LSITimedTask.m */,
-				680A6A04251589AC00357060 /* View Controller */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -117,6 +120,8 @@
 		680A6A04251589AC00357060 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				680A6A0925159F6800357060 /* LSITimedTaskViewController.h */,
+				680A6A0A25159F6800357060 /* LSITimedTaskViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -191,6 +196,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				680A6A0B25159F6800357060 /* LSITimedTaskViewController.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
