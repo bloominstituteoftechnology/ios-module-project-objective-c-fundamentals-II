@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C7BD3A5251A8C620021558E /* IGFTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BD3A4251A8C620021558E /* IGFTimedTask.m */; };
+		3C7BD3AA251A8F960021558E /* IGFTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BD3A9251A8F960021558E /* IGFTimedTaskController.m */; };
+		3C7BD3AE251A90BA0021558E /* IGFTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C7BD3AD251A90BA0021558E /* IGFTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C7BD3A3251A8C620021558E /* IGFTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IGFTimedTask.h; sourceTree = "<group>"; };
+		3C7BD3A4251A8C620021558E /* IGFTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IGFTimedTask.m; sourceTree = "<group>"; };
+		3C7BD3A8251A8F960021558E /* IGFTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IGFTimedTaskController.h; path = TimeTracker/IGFTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		3C7BD3A9251A8F960021558E /* IGFTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IGFTimedTaskController.m; path = TimeTracker/IGFTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		3C7BD3AC251A90BA0021558E /* IGFTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IGFTimeTrackerViewController.h; path = TimeTracker/IGFTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		3C7BD3AD251A90BA0021558E /* IGFTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = IGFTimeTrackerViewController.m; path = TimeTracker/IGFTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +102,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3C7BD3A3251A8C620021558E /* IGFTimedTask.h */,
+				3C7BD3A4251A8C620021558E /* IGFTimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -100,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3C7BD3AC251A90BA0021558E /* IGFTimeTrackerViewController.h */,
+				3C7BD3AD251A90BA0021558E /* IGFTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -107,6 +120,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				3C7BD3A8251A8F960021558E /* IGFTimedTaskController.h */,
+				3C7BD3A9251A8F960021558E /* IGFTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -182,8 +197,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				3C7BD3AA251A8F960021558E /* IGFTimedTaskController.m in Sources */,
+				3C7BD3A5251A8C620021558E /* IGFTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				3C7BD3AE251A90BA0021558E /* IGFTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
