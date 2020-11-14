@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A146131256044F800074BB3 /* TimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A146130256044F800074BB3 /* TimedTask.m */; };
 		1A14613B2560520900074BB3 /* TimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14613A2560520900074BB3 /* TimedTaskController.m */; };
+		1A146140256066E000074BB3 /* TimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14613F256066E000074BB3 /* TimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		1A146130256044F800074BB3 /* TimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TimedTask.m; path = TimeTracker/TimedTask.m; sourceTree = SOURCE_ROOT; };
 		1A1461392560520900074BB3 /* TimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimedTaskController.h; sourceTree = "<group>"; };
 		1A14613A2560520900074BB3 /* TimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimedTaskController.m; sourceTree = "<group>"; };
+		1A14613E256066E000074BB3 /* TimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimeTrackerViewController.h; sourceTree = "<group>"; };
+		1A14613F256066E000074BB3 /* TimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimeTrackerViewController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 			name = ModelController;
 			sourceTree = "<group>";
 		};
+		1A14613D256066A200074BB3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A14613E256066E000074BB3 /* TimeTrackerViewController.h */,
+				1A14613F256066E000074BB3 /* TimeTrackerViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +96,7 @@
 			children = (
 				1A146137256050F300074BB3 /* Model */,
 				1A1461382560515A00074BB3 /* ModelController */,
+				1A14613D256066A200074BB3 /* ViewController */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -185,6 +198,7 @@
 			files = (
 				1A146131256044F800074BB3 /* TimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				1A146140256066E000074BB3 /* TimeTrackerViewController.m in Sources */,
 				1A14613B2560520900074BB3 /* TimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,

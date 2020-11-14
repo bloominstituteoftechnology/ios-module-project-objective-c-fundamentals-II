@@ -26,7 +26,7 @@
     return self;
 }
 
-#pragma mark - Convenience Accessors
+// MARK: - Convenience Accessors
 
 - (NSArray<TimedTask *> *)tasks
 {
