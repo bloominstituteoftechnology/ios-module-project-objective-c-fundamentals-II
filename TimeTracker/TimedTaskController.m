@@ -55,4 +55,16 @@
     [_internalTasks addObject:aTask];
 }
 
+-(void)editTask:(TimedTask *)task
+             forClient:(NSString *)client
+           withSummary:(NSString *)summary
+            hourlyRate:(double)rate
+           hoursWorked:(double)hours
+{
+    task.client = client;
+    task.summary = summary;
+    task.hourlyRate = rate;
+    task.hoursWorked = hours;
+}
+
 @end
