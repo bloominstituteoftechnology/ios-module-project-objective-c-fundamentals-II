@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1A146131256044F800074BB3 /* TimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A146130256044F800074BB3 /* TimedTask.m */; };
+		1A14613B2560520900074BB3 /* TimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A14613A2560520900074BB3 /* TimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -17,8 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1A14612F256044F800074BB3 /* TimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimedTask.h; sourceTree = SOURCE_ROOT; };
-		1A146130256044F800074BB3 /* TimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimedTask.m; sourceTree = SOURCE_ROOT; };
+		1A14612F256044F800074BB3 /* TimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TimedTask.h; path = TimeTracker/TimedTask.h; sourceTree = SOURCE_ROOT; };
+		1A146130256044F800074BB3 /* TimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TimedTask.m; path = TimeTracker/TimedTask.m; sourceTree = SOURCE_ROOT; };
+		1A1461392560520900074BB3 /* TimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimedTaskController.h; sourceTree = "<group>"; };
+		1A14613A2560520900074BB3 /* TimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A146137256050F300074BB3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A14612F256044F800074BB3 /* TimedTask.h */,
+				1A146130256044F800074BB3 /* TimedTask.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		1A1461382560515A00074BB3 /* ModelController */ = {
+			isa = PBXGroup;
+			children = (
+				1A1461392560520900074BB3 /* TimedTaskController.h */,
+				1A14613A2560520900074BB3 /* TimedTaskController.m */,
+			);
+			name = ModelController;
+			sourceTree = "<group>";
+		};
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
@@ -61,9 +82,8 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
+				1A146137256050F300074BB3 /* Model */,
+				1A1461382560515A00074BB3 /* ModelController */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -91,29 +111,6 @@
 				467FC84823F3738C00C15592 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		467FC85B23F3768C00C15592 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				1A14612F256044F800074BB3 /* TimedTask.h */,
-				1A146130256044F800074BB3 /* TimedTask.m */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +185,7 @@
 			files = (
 				1A146131256044F800074BB3 /* TimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				1A14613B2560520900074BB3 /* TimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
