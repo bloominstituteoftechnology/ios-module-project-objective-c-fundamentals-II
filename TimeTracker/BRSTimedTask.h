@@ -15,26 +15,17 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, readonly) NSString *clientName;
 @property (nonatomic, readonly) NSString *summaryText;
-@property (nonatomic, readonly) double hourlyRateCharged;
-@property (nonatomic, readonly) double amountOfHoursWorked;
+@property (nonatomic, readonly) double hourlyRate;
+@property (nonatomic, readonly) double hoursWorked;
 @property (nonatomic, readonly) double total;
 
 - (instancetype) initWithClientName:(NSString *)aClientName
                         summaryText:(NSString *)aSummaryText
-                    hourlyRateChanged:(double)aHourlyRateChanged
-                   amountOfHoursWorked:(double)aAmountOfHoursWorked
+                          hourlyRate:(double)aHourlyRateChanged
+                          hoursWorked:(double)aHoursWorked
                                  total:(double)aTotal;
                 
 
 @end
 
 NS_ASSUME_NONNULL_END
-
-
-/*
- - The client
- - The summary of the work you did
- - The hourly rate charged
- - The amount of hours worked
- - The total
- */
