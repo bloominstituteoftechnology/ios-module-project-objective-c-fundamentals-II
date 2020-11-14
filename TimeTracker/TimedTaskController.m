@@ -7,7 +7,52 @@
 //
 
 #import "TimedTaskController.h"
+#import "TimedTask.h"
+
+@interface TimedTaskController () {
+    NSMutableArray *_internalTasks;
+}
+
+@end
+
 
 @implementation TimedTaskController
+
+- (instancetype)init
+{
+    if (self = [super init]) {
+        _internalTasks = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
+#pragma mark - Convenience Accessors
+
+- (NSArray<TimedTask *> *)tasks
+{
+    return _internalTasks.copy;
+}
+
+- (NSUInteger)taskCount
+{
+    return _internalTasks.count;
+}
+
+- (TimedTask *)taskAtIndex:(NSUInteger)index
+{
+    return [_internalTasks objectAtIndex:index];
+}
+
+-(void)createTimedTaskWithClient:(NSString *)client
+                         summary:(NSString *)summary
+                      hourlyRate:(double)rate
+                     hoursWorked:(double)hours
+{
+    TimedTask *aTask = [[TimedTask alloc] initWithClient:client
+                                                 summary:summary
+                                              hourlyRate:rate
+                                             hoursWorked:hours];
+    [_internalTasks addObject:aTask];
+}
 
 @end
