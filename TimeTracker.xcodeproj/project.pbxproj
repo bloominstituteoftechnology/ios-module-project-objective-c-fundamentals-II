@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A146131256044F800074BB3 /* TimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A146130256044F800074BB3 /* TimedTask.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1A14612F256044F800074BB3 /* TimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimedTask.h; sourceTree = SOURCE_ROOT; };
+		1A146130256044F800074BB3 /* TimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimedTask.m; sourceTree = SOURCE_ROOT; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -93,6 +96,8 @@
 		467FC85B23F3768C00C15592 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1A14612F256044F800074BB3 /* TimedTask.h */,
+				1A146130256044F800074BB3 /* TimedTask.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A146131256044F800074BB3 /* TimedTask.m in Sources */,
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
