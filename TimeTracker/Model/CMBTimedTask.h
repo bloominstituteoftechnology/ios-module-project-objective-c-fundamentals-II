@@ -13,7 +13,17 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CMBTimedTask : NSObject
 
 //client, summary of work, hourly rate, amount of hours, total
+@property (nonatomic, readonly, copy) NSString *client;
+@property (nonatomic, readonly) NSString *summary;
+@property (nonatomic, readonly) NSInteger rate;
+@property (nonatomic, readonly) double amount;
+@property (nonatomic, readonly) double total;
 
+- (instancetype)initWithName:(NSString *)aClient
+                     summary:(NSString *)aSummary
+                        rate:(NSInteger)aRate
+                      amount:(double)anAmount
+                       total:(double)aTotal;
 
 @end
 
