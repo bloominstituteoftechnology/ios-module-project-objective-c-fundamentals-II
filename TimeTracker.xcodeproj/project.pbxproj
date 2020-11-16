@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		447E027C2562211500AC3BC0 /* CMBTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E027B2562211500AC3BC0 /* CMBTimedTask.m */; };
 		447E02812562225800AC3BC0 /* CMBTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E02802562225800AC3BC0 /* CMBTimeTrackerViewController.m */; };
+		447E028925622AA200AC3BC0 /* CMBTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E028825622AA200AC3BC0 /* CMBTimedTaskController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -22,6 +23,8 @@
 		447E027B2562211500AC3BC0 /* CMBTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBTimedTask.m; sourceTree = "<group>"; };
 		447E027F2562225800AC3BC0 /* CMBTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBTimeTrackerViewController.h; sourceTree = "<group>"; };
 		447E02802562225800AC3BC0 /* CMBTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBTimeTrackerViewController.m; sourceTree = "<group>"; };
+		447E028725622AA200AC3BC0 /* CMBTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBTimedTaskController.h; sourceTree = "<group>"; };
+		447E028825622AA200AC3BC0 /* CMBTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBTimedTaskController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -63,6 +66,15 @@
 			path = "View Controller";
 			sourceTree = "<group>";
 		};
+		447E028625622A7400AC3BC0 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				447E028725622AA200AC3BC0 /* CMBTimedTaskController.h */,
+				447E028825622AA200AC3BC0 /* CMBTimedTaskController.m */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +94,7 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
+				447E028625622A7400AC3BC0 /* Model Controller */,
 				447E027E256221FA00AC3BC0 /* View Controller */,
 				447E0279256220FE00AC3BC0 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
@@ -189,6 +202,7 @@
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				447E02812562225800AC3BC0 /* CMBTimeTrackerViewController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				447E028925622AA200AC3BC0 /* CMBTimedTaskController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
