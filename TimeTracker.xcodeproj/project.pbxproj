@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		447E027C2562211500AC3BC0 /* CMBTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E027B2562211500AC3BC0 /* CMBTimedTask.m */; };
+		447E02812562225800AC3BC0 /* CMBTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 447E02802562225800AC3BC0 /* CMBTimeTrackerViewController.m */; };
 		467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83B23F3738B00C15592 /* AppDelegate.m */; };
 		467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC83E23F3738B00C15592 /* SceneDelegate.m */; };
 		467FC84523F3738B00C15592 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84323F3738B00C15592 /* Main.storyboard */; };
@@ -16,6 +18,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		447E027A2562211500AC3BC0 /* CMBTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBTimedTask.h; sourceTree = "<group>"; };
+		447E027B2562211500AC3BC0 /* CMBTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBTimedTask.m; sourceTree = "<group>"; };
+		447E027F2562225800AC3BC0 /* CMBTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CMBTimeTrackerViewController.h; sourceTree = "<group>"; };
+		447E02802562225800AC3BC0 /* CMBTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CMBTimeTrackerViewController.m; sourceTree = "<group>"; };
 		467FC83723F3738B00C15592 /* TimeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		467FC83A23F3738B00C15592 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		467FC83B23F3738B00C15592 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		447E0279256220FE00AC3BC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				447E027A2562211500AC3BC0 /* CMBTimedTask.h */,
+				447E027B2562211500AC3BC0 /* CMBTimedTask.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		447E027E256221FA00AC3BC0 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				447E027F2562225800AC3BC0 /* CMBTimeTrackerViewController.h */,
+				447E02802562225800AC3BC0 /* CMBTimeTrackerViewController.m */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
 		467FC82E23F3738B00C15592 = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +82,8 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
+				447E027E256221FA00AC3BC0 /* View Controller */,
+				447E0279256220FE00AC3BC0 /* Model */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
 			);
@@ -90,27 +113,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		467FC85B23F3768C00C15592 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +139,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CMB;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -182,7 +185,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
+				447E027C2562211500AC3BC0 /* CMBTimedTask.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
+				447E02812562225800AC3BC0 /* CMBTimeTrackerViewController.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -343,6 +349,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = TimeTracker/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
