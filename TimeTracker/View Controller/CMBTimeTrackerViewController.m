@@ -7,8 +7,27 @@
 //
 
 #import "CMBTimeTrackerViewController.h"
+#import "CMBTimedTaskController.h"
 
-@interface CMBTimeTrackerViewController ()
+@interface CMBTimeTrackerViewController () <UITableViewDataSource, UITableViewDelegate>
+
+//properties
+@property (nonatomic) double amount;
+@property (nonatomic) double total;
+@property (nonatomic) int rate;
+@property (nonatomic) CMBTimedTaskController *taskController;
+
+
+//Outlets
+@property (weak, nonatomic) IBOutlet UITextField *clientName;
+@property (weak, nonatomic) IBOutlet UITextField *summaryTextField;
+@property (weak, nonatomic) IBOutlet UITextField *rateHourly;
+@property (weak, nonatomic) IBOutlet UITextField *amountOfHours;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+
+
+//methods
+
 
 @end
 
@@ -16,8 +35,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.taskController = [[CMBTimedTaskController alloc] init];
+    self.tableView.delegate = self;
+ //   [[self tableView] setDelegate:self];
+    self.tableView.dataSource = self;
+    
 }
+
+- (void)logTimeNamed:(NSString *)name
+{
+    
+}
+
+//Action
+- (IBAction)logTime:(id)sender
+{
+  //  [self asdfasdf]
+}
+
 
 /*
 #pragma mark - Navigation
