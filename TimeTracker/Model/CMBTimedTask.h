@@ -17,13 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSString *summary;
 @property (nonatomic, readonly) NSInteger rate;
 @property (nonatomic, readonly) double amount;
-@property (nonatomic, readonly) double total;
+//@property (nonatomic, readonly) double total = amount + NSInteger
 
 - (instancetype)initWithName:(NSString *)aClient
                      summary:(NSString *)aSummary
                         rate:(NSInteger)aRate
-                      amount:(double)anAmount
-                       total:(double)aTotal;
+                      amount:(double)anAmount;
+                     //  total:(double)aTotal;
 
 @end
 

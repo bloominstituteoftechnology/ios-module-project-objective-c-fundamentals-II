@@ -34,16 +34,14 @@
     CMBTimedTask *aTask = [[CMBTimedTask alloc] initWithName:@"Lambda"
                                                      summary:@"built an app"
                                                         rate:25
-                                                      amount:3.
-                                                       total:75.];
+                                                      amount:3];
     
     [_internalTasks addObject:aTask];
     
     [_internalTasks addObject:[[CMBTimedTask alloc] initWithName:@"Sample"
                                                          summary:@"this is a sample"
                                                             rate:20
-                                                          amount:3.
-                                                           total:60.]];
+                                                          amount:3.]];
 }
 
 - (NSArray<CMBTimedTask *> *)tasks

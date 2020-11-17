@@ -13,7 +13,6 @@
 
 //properties
 @property (nonatomic) double amount;
-@property (nonatomic) double total;
 @property (nonatomic) int rate;
 @property (nonatomic) CMBTimedTaskController *taskController;
 
@@ -23,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *summaryTextField;
 @property (weak, nonatomic) IBOutlet UITextField *rateHourly;
 @property (weak, nonatomic) IBOutlet UITextField *amountOfHours;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalLabel;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 

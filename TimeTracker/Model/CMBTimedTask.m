@@ -13,15 +13,15 @@
 - (instancetype)initWithName:(NSString *)aClient
                      summary:(NSString *)aSummary
                         rate:(NSInteger)aRate
-                      amount:(double)anAmount
-                       total:(double)aTotal;
+                      amount:(double)anAmount;
+                      // total:(double)aTotal;
 {
     if (self = [super init]) {
         _client = aClient.copy;
         _summary = aSummary;
         _rate = aRate;
         _amount = anAmount;
-        _total = aTotal;
+     //   _total = aTotal;
     }
     return self;
 }

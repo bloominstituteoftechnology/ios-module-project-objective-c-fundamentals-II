@@ -98,6 +98,8 @@
                         <outlet property="rateHourly" destination="1s7-qi-GbT" id="DGL-vh-V6u"/>
                         <outlet property="summaryTextField" destination="Zaq-vp-K0H" id="cjo-sT-s0x"/>
                         <outlet property="tableView" destination="NGG-z0-Z9V" id="XiO-dd-hoa"/>
+                        <outlet property="titleLabel" destination="cd5-ta-KIw" id="5VR-IN-fuu"/>
+                        <outlet property="totalLabel" destination="OBw-YS-6xU" id="ckb-hb-V0V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kod-47-YCC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
