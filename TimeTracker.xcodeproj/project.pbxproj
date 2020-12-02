@@ -15,6 +15,7 @@
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		61BA8E91256F8E7100022F3D /* MKJTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8E90256F8E7100022F3D /* MKJTimedTask.m */; };
 		61BA8EBB25776CF500022F3D /* MKJTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EBA25776CF500022F3D /* MKJTimedTaskController.m */; };
+		61BA8EC0257771F800022F3D /* MKJTimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EBF257771F800022F3D /* MKJTimeTrackerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		61BA8E90256F8E7100022F3D /* MKJTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKJTimedTask.m; path = TimeTracker/MKJTimedTask.m; sourceTree = SOURCE_ROOT; };
 		61BA8EB925776CF500022F3D /* MKJTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKJTimedTaskController.h; path = TimeTracker/MKJTimedTaskController.h; sourceTree = SOURCE_ROOT; };
 		61BA8EBA25776CF500022F3D /* MKJTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKJTimedTaskController.m; path = TimeTracker/MKJTimedTaskController.m; sourceTree = SOURCE_ROOT; };
+		61BA8EBE257771F800022F3D /* MKJTimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKJTimeTrackerViewController.h; path = TimeTracker/MKJTimeTrackerViewController.h; sourceTree = SOURCE_ROOT; };
+		61BA8EBF257771F800022F3D /* MKJTimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKJTimeTrackerViewController.m; path = TimeTracker/MKJTimeTrackerViewController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +111,8 @@
 		467FC85C23F376B400C15592 /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61BA8EBE257771F800022F3D /* MKJTimeTrackerViewController.h */,
+				61BA8EBF257771F800022F3D /* MKJTimeTrackerViewController.m */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				61BA8EBB25776CF500022F3D /* MKJTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				61BA8EC0257771F800022F3D /* MKJTimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
