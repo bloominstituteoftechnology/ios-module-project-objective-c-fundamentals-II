@@ -14,6 +14,7 @@
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
 		61BA8E91256F8E7100022F3D /* MKJTimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8E90256F8E7100022F3D /* MKJTimedTask.m */; };
+		61BA8EBB25776CF500022F3D /* MKJTimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61BA8EBA25776CF500022F3D /* MKJTimedTaskController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,8 @@
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		61BA8E8F256F8E7100022F3D /* MKJTimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKJTimedTask.h; path = TimeTracker/MKJTimedTask.h; sourceTree = SOURCE_ROOT; };
 		61BA8E90256F8E7100022F3D /* MKJTimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKJTimedTask.m; path = TimeTracker/MKJTimedTask.m; sourceTree = SOURCE_ROOT; };
+		61BA8EB925776CF500022F3D /* MKJTimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MKJTimedTaskController.h; path = TimeTracker/MKJTimedTaskController.h; sourceTree = SOURCE_ROOT; };
+		61BA8EBA25776CF500022F3D /* MKJTimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MKJTimedTaskController.m; path = TimeTracker/MKJTimedTaskController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +115,8 @@
 		467FC85D23F3784C00C15592 /* Model Controller */ = {
 			isa = PBXGroup;
 			children = (
+				61BA8EB925776CF500022F3D /* MKJTimedTaskController.h */,
+				61BA8EBA25776CF500022F3D /* MKJTimedTaskController.m */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		467FC82F23F3738B00C15592 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = MKJ;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Lambda School";
 				TargetAttributes = {
@@ -188,6 +194,7 @@
 			files = (
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				61BA8E91256F8E7100022F3D /* MKJTimedTask.m in Sources */,
+				61BA8EBB25776CF500022F3D /* MKJTimedTaskController.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
 			);
