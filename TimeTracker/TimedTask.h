@@ -14,13 +14,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property NSString *clientName;
 @property NSString *summaryText;
-@property double *hourlyRate;
-@property double *hoursWorked;
-@property (readonly) double *totalAmount;
+@property (nonatomic, assign) double hourlyRate;
+@property (nonatomic, assign) double hoursWorked;
+@property (readonly) double totalAmount;
 
 
-- (instancetype)initWithClientName:(NSString *)clientName
-                workSummary:(NSString *)summaryText
+- (instancetype)initWithName:(NSString *)clientName
+                summaryText:(NSString *)summaryText
                 hourlyRate:(double)hourlyRate
                 hoursWorked:(double)hoursWorked;
 

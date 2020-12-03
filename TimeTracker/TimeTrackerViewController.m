@@ -7,6 +7,8 @@
 //
 
 #import "TimeTrackerViewController.h"
+#import "TimedTask.h"
+#import "TaskModelController.h"
 
 @interface TimeTrackerViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +19,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *logTimeButton;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property TaskModelController *taskController;
+
 
 @end
 
@@ -26,15 +30,29 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.taskController = [[TaskModelController alloc]init];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
 
 - (void)updateViews
 {
+    _clientNameTextField.text = @"";
+    _summaryTextField.text = @"";
+    _hoursWorkedTextField.text = @"";
+    _hourlyRateTextField.text = @"";
     
 }
 - (IBAction)logTimeButtonTapped:(UIButton *)sender {
+    
+    [_taskController createTimedTaskWith:_clientNameTextField.text summaryText:_summaryTextField.text
+        hourlyRate:[_hourlyRateTextField.text doubleValue]
+                             hoursWorked:[_hoursWorkedTextField.text doubleValue]];
+    
+    [_tableView reloadData];
+    
+    [self updateViews];
+    
 }
 
 /*
@@ -49,7 +67,20 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    return self.taskController.taskArray.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"TaskCell"
+                                                          forIndexPath:indexPath];
     
+    TimedTask *task = [self.taskController.taskArray objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = task.clientName;
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"$%0.2f", task.totalAmount];
+    
+    return cell;
 }
 
 @end

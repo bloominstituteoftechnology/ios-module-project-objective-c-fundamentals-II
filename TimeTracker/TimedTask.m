@@ -11,7 +11,7 @@
 
 @implementation TimedTask
 
-- (instancetype)initWithClientName:(NSString *)clientName workSummary:(NSString *)summaryText hourlyRate:(double)hourlyRate hoursWorked:(double)hoursWorked
+- (instancetype)initWithName:(NSString *)clientName summaryText:(NSString *)summaryText hourlyRate:(double)hourlyRate hoursWorked:(double)hoursWorked
 {
     self = [super init];
     if (self) {
@@ -23,7 +23,7 @@
     return self;
 }
 
-- (double)totalBill {
+- (double)totalAmount {
     return self.hourlyRate * self.hoursWorked;
 }
 
