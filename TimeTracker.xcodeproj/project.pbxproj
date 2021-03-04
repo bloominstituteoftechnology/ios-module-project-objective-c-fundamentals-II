@@ -13,6 +13,9 @@
 		467FC84723F3738C00C15592 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84623F3738C00C15592 /* Assets.xcassets */; };
 		467FC84A23F3738C00C15592 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 467FC84823F3738C00C15592 /* LaunchScreen.storyboard */; };
 		467FC84D23F3738C00C15592 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 467FC84C23F3738C00C15592 /* main.m */; };
+		A8582FAB25F12930004D4B28 /* LSITimedTaskController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8582FAA25F12930004D4B28 /* LSITimedTaskController.m */; };
+		A8582FAF25F12992004D4B28 /* LSITimeTrackerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A8582FAE25F12992004D4B28 /* LSITimeTrackerViewController.m */; };
+		A8597BDB25F0924500FD7472 /* LSITimedTask.m in Sources */ = {isa = PBXBuildFile; fileRef = A8597BDA25F0924500FD7472 /* LSITimedTask.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		467FC84923F3738C00C15592 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		467FC84B23F3738C00C15592 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		467FC84C23F3738C00C15592 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A8582FA925F12930004D4B28 /* LSITimedTaskController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimedTaskController.h; sourceTree = "<group>"; };
+		A8582FAA25F12930004D4B28 /* LSITimedTaskController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimedTaskController.m; sourceTree = "<group>"; };
+		A8582FAD25F12992004D4B28 /* LSITimeTrackerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimeTrackerViewController.h; sourceTree = "<group>"; };
+		A8582FAE25F12992004D4B28 /* LSITimeTrackerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimeTrackerViewController.m; sourceTree = "<group>"; };
+		A8597BD925F0924500FD7472 /* LSITimedTask.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LSITimedTask.h; sourceTree = "<group>"; };
+		A8597BDA25F0924500FD7472 /* LSITimedTask.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LSITimedTask.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +67,14 @@
 		467FC83923F3738B00C15592 /* TimeTracker */ = {
 			isa = PBXGroup;
 			children = (
-				467FC85D23F3784C00C15592 /* Model Controller */,
-				467FC85B23F3768C00C15592 /* Model */,
-				467FC85C23F376B400C15592 /* View Controller */,
 				467FC85423F373D300C15592 /* Storyboards */,
 				467FC85323F373C900C15592 /* Resources */,
+				A8597BD925F0924500FD7472 /* LSITimedTask.h */,
+				A8597BDA25F0924500FD7472 /* LSITimedTask.m */,
+				A8582FA925F12930004D4B28 /* LSITimedTaskController.h */,
+				A8582FAA25F12930004D4B28 /* LSITimedTaskController.m */,
+				A8582FAD25F12992004D4B28 /* LSITimeTrackerViewController.h */,
+				A8582FAE25F12992004D4B28 /* LSITimeTrackerViewController.m */,
 			);
 			path = TimeTracker;
 			sourceTree = "<group>";
@@ -88,27 +100,6 @@
 				467FC84823F3738C00C15592 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
-			sourceTree = "<group>";
-		};
-		467FC85B23F3768C00C15592 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		467FC85C23F376B400C15592 /* View Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controller";
-			sourceTree = "<group>";
-		};
-		467FC85D23F3784C00C15592 /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +175,9 @@
 				467FC83C23F3738B00C15592 /* AppDelegate.m in Sources */,
 				467FC84D23F3738C00C15592 /* main.m in Sources */,
 				467FC83F23F3738B00C15592 /* SceneDelegate.m in Sources */,
+				A8582FAB25F12930004D4B28 /* LSITimedTaskController.m in Sources */,
+				A8597BDB25F0924500FD7472 /* LSITimedTask.m in Sources */,
+				A8582FAF25F12992004D4B28 /* LSITimeTrackerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
