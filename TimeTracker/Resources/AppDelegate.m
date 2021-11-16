@@ -3,7 +3,7 @@
 //  TimeTracker
 //
 //  Created by Spencer Curtis on 2/11/20.
-//  Copyright © 2020 Lambda School. All rights reserved.
+//  Copyright © 2020 BloomTech. All rights reserved.
 //
 
 #import "AppDelegate.h"
